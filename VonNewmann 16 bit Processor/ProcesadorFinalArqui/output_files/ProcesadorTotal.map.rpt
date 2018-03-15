@@ -1,0 +1,849 @@
+Analysis & Synthesis report for ProcesadorTotal
+Fri Jun 02 00:34:44 2017
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Source assignments for Memoria:MemoriaQ|altsyncram:altsyncram_component|altsyncram_ruh1:auto_generated
+ 13. Parameter Settings for User Entity Instance: Memoria:MemoriaQ|altsyncram:altsyncram_component
+ 14. Parameter Settings for User Entity Instance: Sistema:Display|binbcd:binbcdS
+ 15. altsyncram Parameter Settings by Entity Instance
+ 16. Port Connectivity Checks: "Sistema:Display"
+ 17. Port Connectivity Checks: "Procesador:ProcesadorQ|Control:ControlT"
+ 18. Port Connectivity Checks: "Procesador:ProcesadorQ|Selector12IV:Sel_Instruccion"
+ 19. Port Connectivity Checks: "Procesador:ProcesadorQ|SRF:SRFun|FullAdder:FA11"
+ 20. Port Connectivity Checks: "Procesador:ProcesadorQ|SRF:SRFun|FullAdder:FA0"
+ 21. Port Connectivity Checks: "Procesador:ProcesadorQ|Sumador12:SumInstruc"
+ 22. Port Connectivity Checks: "Procesador:ProcesadorQ|SelectorSumIns:SelSumador"
+ 23. Port Connectivity Checks: "Procesador:ProcesadorQ|Comparador:Comparacion|Restador:R|Sumador16:Sum"
+ 24. Port Connectivity Checks: "Procesador:ProcesadorQ|Comparador:Comparacion|Restador:R"
+ 25. Port Connectivity Checks: "Procesador:ProcesadorQ|Selector16III:Sel_Entrada"
+ 26. Port Connectivity Checks: "Procesador:ProcesadorQ|Selector15II:Sele_Sa"
+ 27. Port Connectivity Checks: "Procesador:ProcesadorQ"
+ 28. Post-Synthesis Netlist Statistics for Top Partition
+ 29. Elapsed Time Per Partition
+ 30. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Jun 02 00:34:44 2017       ;
+; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
+; Revision Name                      ; ProcesadorTotal                             ;
+; Top-level Entity Name              ; ProcesadorTotal                             ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 614                                         ;
+;     Total combinational functions  ; 553                                         ;
+;     Dedicated logic registers      ; 203                                         ;
+; Total registers                    ; 203                                         ;
+; Total pins                         ; 143                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 16,384                                      ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE15F17C8L      ;                    ;
+; Top-level entity name                                                      ; ProcesadorTotal    ; ProcesadorTotal    ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                                                        ; Library ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
+; ProcesadorTotal.vhd              ; yes             ; User VHDL File                   ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/ProcesadorTotal.vhd     ;         ;
+; Memoria.vhd                      ; yes             ; User Wizard-Generated File       ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/Memoria.vhd             ;         ;
+; ram.mif                          ; yes             ; User Memory Initialization File  ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/ram.mif                 ;         ;
+; ControladorSwitch.vhd            ; yes             ; User VHDL File                   ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/ControladorSwitch.vhd   ;         ;
+; ControladorOpcion.vhd            ; yes             ; User VHDL File                   ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/ControladorOpcion.vhd   ;         ;
+; IngresoDatos.vhd                 ; yes             ; User VHDL File                   ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/IngresoDatos.vhd        ;         ;
+; ControladorDisplay.vhd           ; yes             ; User VHDL File                   ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/ControladorDisplay.vhd  ;         ;
+; procesador.vhd                   ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/procesador.vhd          ;         ;
+; registro16p.vhd                  ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/registro16p.vhd         ;         ;
+; selector15ii.vhd                 ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selector15ii.vhd        ;         ;
+; selector16iii.vhd                ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selector16iii.vhd       ;         ;
+; selectorcomplemento.vhd          ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selectorcomplemento.vhd ;         ;
+; sumarrestar.vhd                  ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/sumarrestar.vhd         ;         ;
+; sumador16.vhd                    ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/sumador16.vhd           ;         ;
+; fulladder.vhd                    ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/fulladder.vhd           ;         ;
+; comparador.vhd                   ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/comparador.vhd          ;         ;
+; restador.vhd                     ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/restador.vhd            ;         ;
+; complemento.vhd                  ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/complemento.vhd         ;         ;
+; selector4ii.vhd                  ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selector4ii.vhd         ;         ;
+; regbanderas.vhd                  ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/regbanderas.vhd         ;         ;
+; selectorsalida.vhd               ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selectorsalida.vhd      ;         ;
+; selectorsumins.vhd               ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selectorsumins.vhd      ;         ;
+; sumador12.vhd                    ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/sumador12.vhd           ;         ;
+; selector12ii.vhd                 ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selector12ii.vhd        ;         ;
+; registro12p.vhd                  ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/registro12p.vhd         ;         ;
+; srf.vhd                          ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/srf.vhd                 ;         ;
+; selector12iv.vhd                 ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selector12iv.vhd        ;         ;
+; contasc.vhd                      ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/contasc.vhd             ;         ;
+; control.vhd                      ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/control.vhd             ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/altera_lite/16.0/quartus/libraries/megafunctions/altsyncram.tdf                                                  ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/altera_lite/16.0/quartus/libraries/megafunctions/stratix_ram_block.inc                                           ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/altera_lite/16.0/quartus/libraries/megafunctions/lpm_mux.inc                                                     ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                     ; c:/altera_lite/16.0/quartus/libraries/megafunctions/lpm_decode.inc                                                  ;         ;
+; aglobal160.inc                   ; yes             ; Megafunction                     ; c:/altera_lite/16.0/quartus/libraries/megafunctions/aglobal160.inc                                                  ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                     ; c:/altera_lite/16.0/quartus/libraries/megafunctions/a_rdenreg.inc                                                   ;         ;
+; altrom.inc                       ; yes             ; Megafunction                     ; c:/altera_lite/16.0/quartus/libraries/megafunctions/altrom.inc                                                      ;         ;
+; altram.inc                       ; yes             ; Megafunction                     ; c:/altera_lite/16.0/quartus/libraries/megafunctions/altram.inc                                                      ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                     ; c:/altera_lite/16.0/quartus/libraries/megafunctions/altdpram.inc                                                    ;         ;
+; db/altsyncram_ruh1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/db/altsyncram_ruh1.tdf  ;         ;
+; sistema.vhd                      ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/sistema.vhd             ;         ;
+; binbcd.vhd                       ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/binbcd.vhd              ;         ;
+; bcd7seg1.vhd                     ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/bcd7seg1.vhd            ;         ;
+; bcd7seg10.vhd                    ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/bcd7seg10.vhd           ;         ;
+; bcd7seg100.vhd                   ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/bcd7seg100.vhd          ;         ;
+; bcd7seg1000.vhd                  ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/bcd7seg1000.vhd         ;         ;
+; bcd7seg10000.vhd                 ; yes             ; Auto-Found VHDL File             ; C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/bcd7seg10000.vhd        ;         ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 614       ;
+;                                             ;           ;
+; Total combinational functions               ; 553       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 419       ;
+;     -- 3 input functions                    ; 80        ;
+;     -- <=2 input functions                  ; 54        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 553       ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 203       ;
+;     -- Dedicated logic registers            ; 203       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 143       ;
+; Total memory bits                           ; 16384     ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; Clk~input ;
+; Maximum fan-out                             ; 219       ;
+; Total fan-out                               ; 3237      ;
+; Average fan-out                             ; 3.06      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                 ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                    ; Entity Name         ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |ProcesadorTotal                          ; 553 (0)           ; 203 (0)      ; 16384       ; 0            ; 0       ; 0         ; 143  ; 0            ; |ProcesadorTotal                                                                                       ; ProcesadorTotal     ; work         ;
+;    |ControladorDisplay:ContDisplay|       ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|ControladorDisplay:ContDisplay                                                        ; ControladorDisplay  ; work         ;
+;    |ControladorOpcion:ContOpcion|         ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|ControladorOpcion:ContOpcion                                                          ; ControladorOpcion   ; work         ;
+;    |ControladorSwitch:ContSwitch|         ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|ControladorSwitch:ContSwitch                                                          ; ControladorSwitch   ; work         ;
+;    |IngresoDatos:OrDatos|                 ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|IngresoDatos:OrDatos                                                                  ; IngresoDatos        ; work         ;
+;    |Memoria:MemoriaQ|                     ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Memoria:MemoriaQ                                                                      ; Memoria             ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Memoria:MemoriaQ|altsyncram:altsyncram_component                                      ; altsyncram          ; work         ;
+;          |altsyncram_ruh1:auto_generated| ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Memoria:MemoriaQ|altsyncram:altsyncram_component|altsyncram_ruh1:auto_generated       ; altsyncram_ruh1     ; work         ;
+;    |Procesador:ProcesadorQ|               ; 344 (0)           ; 203 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ                                                                ; Procesador          ; work         ;
+;       |Comparador:Comparacion|            ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Comparador:Comparacion                                         ; Comparador          ; work         ;
+;          |Restador:R|                     ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Comparador:Comparacion|Restador:R                              ; Restador            ; work         ;
+;             |Sumador16:Sum|               ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Comparador:Comparacion|Restador:R|Sumador16:Sum                ; Sumador16           ; work         ;
+;                |FullAdder:FA10|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Comparador:Comparacion|Restador:R|Sumador16:Sum|FullAdder:FA10 ; FullAdder           ; work         ;
+;                |FullAdder:FA1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Comparador:Comparacion|Restador:R|Sumador16:Sum|FullAdder:FA1  ; FullAdder           ; work         ;
+;                |FullAdder:FA2|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Comparador:Comparacion|Restador:R|Sumador16:Sum|FullAdder:FA2  ; FullAdder           ; work         ;
+;                |FullAdder:FA3|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Comparador:Comparacion|Restador:R|Sumador16:Sum|FullAdder:FA3  ; FullAdder           ; work         ;
+;                |FullAdder:FA4|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Comparador:Comparacion|Restador:R|Sumador16:Sum|FullAdder:FA4  ; FullAdder           ; work         ;
+;                |FullAdder:FA5|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Comparador:Comparacion|Restador:R|Sumador16:Sum|FullAdder:FA5  ; FullAdder           ; work         ;
+;                |FullAdder:FA6|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Comparador:Comparacion|Restador:R|Sumador16:Sum|FullAdder:FA6  ; FullAdder           ; work         ;
+;                |FullAdder:FA7|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Comparador:Comparacion|Restador:R|Sumador16:Sum|FullAdder:FA7  ; FullAdder           ; work         ;
+;                |FullAdder:FA8|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Comparador:Comparacion|Restador:R|Sumador16:Sum|FullAdder:FA8  ; FullAdder           ; work         ;
+;       |ContAsc:Contador|                  ; 5 (5)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|ContAsc:Contador                                               ; ContAsc             ; work         ;
+;       |Control:ControlT|                  ; 102 (102)         ; 88 (88)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Control:ControlT                                               ; Control             ; work         ;
+;       |RegBanderas:RegistroBanderas|      ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|RegBanderas:RegistroBanderas                                   ; RegBanderas         ; work         ;
+;       |Registro12P:InstrucActual|         ; 0 (0)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Registro12P:InstrucActual                                      ; Registro12P         ; work         ;
+;       |Registro12P:InstrucFunc|           ; 0 (0)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Registro12P:InstrucFunc                                        ; Registro12P         ; work         ;
+;       |Registro12P:RegDir|                ; 0 (0)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Registro12P:RegDir                                             ; Registro12P         ; work         ;
+;       |Registro16P:Reg_Dato_Ent|          ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Registro16P:Reg_Dato_Ent                                       ; Registro16P         ; work         ;
+;       |Registro16P:Reg_Dato_Sal|          ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Registro16P:Reg_Dato_Sal                                       ; Registro16P         ; work         ;
+;       |Registro16P:Reg_Entrada|           ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Registro16P:Reg_Entrada                                        ; Registro16P         ; work         ;
+;       |Registro16P:Reg_Inst|              ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Registro16P:Reg_Inst                                           ; Registro16P         ; work         ;
+;       |Registro16P:Reg_Salida|            ; 0 (0)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Registro16P:Reg_Salida                                         ; Registro16P         ; work         ;
+;       |SRF:SRFun|                         ; 22 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SRF:SRFun                                                      ; SRF                 ; work         ;
+;          |FullAdder:FA0|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SRF:SRFun|FullAdder:FA0                                        ; FullAdder           ; work         ;
+;          |FullAdder:FA10|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SRF:SRFun|FullAdder:FA10                                       ; FullAdder           ; work         ;
+;          |FullAdder:FA11|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SRF:SRFun|FullAdder:FA11                                       ; FullAdder           ; work         ;
+;          |FullAdder:FA1|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SRF:SRFun|FullAdder:FA1                                        ; FullAdder           ; work         ;
+;          |FullAdder:FA2|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SRF:SRFun|FullAdder:FA2                                        ; FullAdder           ; work         ;
+;          |FullAdder:FA3|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SRF:SRFun|FullAdder:FA3                                        ; FullAdder           ; work         ;
+;          |FullAdder:FA4|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SRF:SRFun|FullAdder:FA4                                        ; FullAdder           ; work         ;
+;          |FullAdder:FA5|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SRF:SRFun|FullAdder:FA5                                        ; FullAdder           ; work         ;
+;          |FullAdder:FA6|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SRF:SRFun|FullAdder:FA6                                        ; FullAdder           ; work         ;
+;          |FullAdder:FA7|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SRF:SRFun|FullAdder:FA7                                        ; FullAdder           ; work         ;
+;          |FullAdder:FA8|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SRF:SRFun|FullAdder:FA8                                        ; FullAdder           ; work         ;
+;          |FullAdder:FA9|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SRF:SRFun|FullAdder:FA9                                        ; FullAdder           ; work         ;
+;       |Selector12II:Sel|                  ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Selector12II:Sel                                               ; Selector12II        ; work         ;
+;       |Selector12IV:Sel_Instruccion|      ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Selector12IV:Sel_Instruccion                                   ; Selector12IV        ; work         ;
+;       |Selector15II:Sele_Sa|              ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Selector15II:Sele_Sa                                           ; Selector15II        ; work         ;
+;       |Selector16III:Sel_Entrada|         ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Selector16III:Sel_Entrada                                      ; Selector16III       ; work         ;
+;       |Selector4II:SelRB|                 ; 23 (23)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Selector4II:SelRB                                              ; Selector4II         ; work         ;
+;       |SelectorComplemento:SelectSustra|  ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SelectorComplemento:SelectSustra                               ; SelectorComplemento ; work         ;
+;       |SelectorSalida:Sel_Sal|            ; 26 (26)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SelectorSalida:Sel_Sal                                         ; SelectorSalida      ; work         ;
+;       |SelectorSumIns:SelSumador|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SelectorSumIns:SelSumador                                      ; SelectorSumIns      ; work         ;
+;       |Sumador12:SumInstruc|              ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Sumador12:SumInstruc                                           ; Sumador12           ; work         ;
+;          |FullAdder:FA11|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Sumador12:SumInstruc|FullAdder:FA11                            ; FullAdder           ; work         ;
+;          |FullAdder:FA1|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Sumador12:SumInstruc|FullAdder:FA1                             ; FullAdder           ; work         ;
+;          |FullAdder:FA2|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Sumador12:SumInstruc|FullAdder:FA2                             ; FullAdder           ; work         ;
+;          |FullAdder:FA3|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Sumador12:SumInstruc|FullAdder:FA3                             ; FullAdder           ; work         ;
+;          |FullAdder:FA4|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Sumador12:SumInstruc|FullAdder:FA4                             ; FullAdder           ; work         ;
+;          |FullAdder:FA5|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Sumador12:SumInstruc|FullAdder:FA5                             ; FullAdder           ; work         ;
+;          |FullAdder:FA6|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Sumador12:SumInstruc|FullAdder:FA6                             ; FullAdder           ; work         ;
+;          |FullAdder:FA7|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Sumador12:SumInstruc|FullAdder:FA7                             ; FullAdder           ; work         ;
+;          |FullAdder:FA8|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Sumador12:SumInstruc|FullAdder:FA8                             ; FullAdder           ; work         ;
+;          |FullAdder:FA9|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|Sumador12:SumInstruc|FullAdder:FA9                             ; FullAdder           ; work         ;
+;       |SumarRestar:SumaResta|             ; 29 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SumarRestar:SumaResta                                          ; SumarRestar         ; work         ;
+;          |Sumador16:S|                    ; 29 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SumarRestar:SumaResta|Sumador16:S                              ; Sumador16           ; work         ;
+;             |FullAdder:FA0|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SumarRestar:SumaResta|Sumador16:S|FullAdder:FA0                ; FullAdder           ; work         ;
+;             |FullAdder:FA10|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SumarRestar:SumaResta|Sumador16:S|FullAdder:FA10               ; FullAdder           ; work         ;
+;             |FullAdder:FA11|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SumarRestar:SumaResta|Sumador16:S|FullAdder:FA11               ; FullAdder           ; work         ;
+;             |FullAdder:FA12|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SumarRestar:SumaResta|Sumador16:S|FullAdder:FA12               ; FullAdder           ; work         ;
+;             |FullAdder:FA13|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SumarRestar:SumaResta|Sumador16:S|FullAdder:FA13               ; FullAdder           ; work         ;
+;             |FullAdder:FA14|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SumarRestar:SumaResta|Sumador16:S|FullAdder:FA14               ; FullAdder           ; work         ;
+;             |FullAdder:FA15|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SumarRestar:SumaResta|Sumador16:S|FullAdder:FA15               ; FullAdder           ; work         ;
+;             |FullAdder:FA1|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SumarRestar:SumaResta|Sumador16:S|FullAdder:FA1                ; FullAdder           ; work         ;
+;             |FullAdder:FA2|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SumarRestar:SumaResta|Sumador16:S|FullAdder:FA2                ; FullAdder           ; work         ;
+;             |FullAdder:FA3|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SumarRestar:SumaResta|Sumador16:S|FullAdder:FA3                ; FullAdder           ; work         ;
+;             |FullAdder:FA4|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SumarRestar:SumaResta|Sumador16:S|FullAdder:FA4                ; FullAdder           ; work         ;
+;             |FullAdder:FA5|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SumarRestar:SumaResta|Sumador16:S|FullAdder:FA5                ; FullAdder           ; work         ;
+;             |FullAdder:FA6|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SumarRestar:SumaResta|Sumador16:S|FullAdder:FA6                ; FullAdder           ; work         ;
+;             |FullAdder:FA7|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SumarRestar:SumaResta|Sumador16:S|FullAdder:FA7                ; FullAdder           ; work         ;
+;             |FullAdder:FA8|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SumarRestar:SumaResta|Sumador16:S|FullAdder:FA8                ; FullAdder           ; work         ;
+;             |FullAdder:FA9|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Procesador:ProcesadorQ|SumarRestar:SumaResta|Sumador16:S|FullAdder:FA9                ; FullAdder           ; work         ;
+;    |Sistema:Display|                      ; 174 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Sistema:Display                                                                       ; Sistema             ; work         ;
+;       |BCD7seg10000:BCD7seg10000S|        ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Sistema:Display|BCD7seg10000:BCD7seg10000S                                            ; BCD7seg10000        ; work         ;
+;       |BCD7seg1000:BCD7seg1000S|          ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Sistema:Display|BCD7seg1000:BCD7seg1000S                                              ; BCD7seg1000         ; work         ;
+;       |BCD7seg100:BCD7seg100S|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Sistema:Display|BCD7seg100:BCD7seg100S                                                ; BCD7seg100          ; work         ;
+;       |BCD7seg10:BCD7seg10S|              ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Sistema:Display|BCD7seg10:BCD7seg10S                                                  ; BCD7seg10           ; work         ;
+;       |BCD7seg1:BCD7seg1S|                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Sistema:Display|BCD7seg1:BCD7seg1S                                                    ; BCD7seg1            ; work         ;
+;       |binbcd:binbcdS|                    ; 135 (135)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProcesadorTotal|Sistema:Display|binbcd:binbcdS                                                        ; binbcd              ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                              ;
++--------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+---------+
+; Name                                                                                       ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF     ;
++--------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+---------+
+; Memoria:MemoriaQ|altsyncram:altsyncram_component|altsyncram_ruh1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 1024         ; 16           ; --           ; --           ; 16384 ; ram.mif ;
++--------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+---------+
+
+
++----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                           ;
++-----------------------------------------------------+----------------------------------------+
+; Register name                                       ; Reason for Removal                     ;
++-----------------------------------------------------+----------------------------------------+
+; Procesador:ProcesadorQ|Registro16P:Reg_Salida|dato0 ; Stuck at GND due to stuck port data_in ;
+; Procesador:ProcesadorQ|Registro16P:Reg_Salida|dato1 ; Stuck at GND due to stuck port data_in ;
+; Procesador:ProcesadorQ|Registro16P:Reg_Salida|dato2 ; Stuck at GND due to stuck port data_in ;
+; Procesador:ProcesadorQ|Registro16P:Reg_Salida|dato3 ; Stuck at GND due to stuck port data_in ;
+; Procesador:ProcesadorQ|Registro16P:Reg_Salida|dato4 ; Stuck at GND due to stuck port data_in ;
+; Procesador:ProcesadorQ|Registro16P:Reg_Salida|dato5 ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 6               ;                                        ;
++-----------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 203   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 203   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 115   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------+
+; Inverted Register Statistics                         ;
++--------------------------------------------+---------+
+; Inverted Register                          ; Fan out ;
++--------------------------------------------+---------+
+; Procesador:ProcesadorQ|Control:ControlT|F1 ; 3       ;
+; Total number of inverted registers = 1     ;         ;
++--------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Source assignments for Memoria:MemoriaQ|altsyncram:altsyncram_component|altsyncram_ruh1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                       ;
++---------------------------------+--------------------+------+------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                        ;
++---------------------------------+--------------------+------+------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Memoria:MemoriaQ|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-----------------------------------+
+; Parameter Name                     ; Value                ; Type                              ;
++------------------------------------+----------------------+-----------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                           ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                    ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                           ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                           ;
+; WIDTH_A                            ; 16                   ; Signed Integer                    ;
+; WIDTHAD_A                          ; 10                   ; Signed Integer                    ;
+; NUMWORDS_A                         ; 1024                 ; Signed Integer                    ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                           ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                           ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                           ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                           ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                           ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                           ;
+; WIDTH_B                            ; 1                    ; Untyped                           ;
+; WIDTHAD_B                          ; 1                    ; Untyped                           ;
+; NUMWORDS_B                         ; 1                    ; Untyped                           ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                           ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                           ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                           ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                           ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                           ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                           ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                           ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                           ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                           ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                           ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                           ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                           ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                    ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                           ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                           ;
+; BYTE_SIZE                          ; 8                    ; Untyped                           ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                           ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                           ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                           ;
+; INIT_FILE                          ; ram.mif              ; Untyped                           ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                           ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                           ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                           ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                           ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                           ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                           ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                           ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                           ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                           ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                           ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                           ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                           ;
+; CBXI_PARAMETER                     ; altsyncram_ruh1      ; Untyped                           ;
++------------------------------------+----------------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Sistema:Display|binbcd:binbcdS ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; NBITS          ; 16    ; Signed Integer                                     ;
+; NSALIDA        ; 20    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                             ;
++-------------------------------------------+--------------------------------------------------+
+; Name                                      ; Value                                            ;
++-------------------------------------------+--------------------------------------------------+
+; Number of entity instances                ; 1                                                ;
+; Entity Instance                           ; Memoria:MemoriaQ|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                      ;
+;     -- WIDTH_A                            ; 16                                               ;
+;     -- NUMWORDS_A                         ; 1024                                             ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                           ;
+;     -- WIDTH_B                            ; 1                                                ;
+;     -- NUMWORDS_B                         ; 1                                                ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                           ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                     ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                             ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                        ;
++-------------------------------------------+--------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Sistema:Display"                                                                      ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; bcdver ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Procesador:ProcesadorQ|Control:ControlT"                                                      ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; cnt_iactual[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Procesador:ProcesadorQ|Selector12IV:Sel_Instruccion" ;
++---------+-------+----------+----------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                            ;
++---------+-------+----------+----------------------------------------------------+
+; b[0..1] ; Input ; Info     ; Stuck at GND                                       ;
++---------+-------+----------+----------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Procesador:ProcesadorQ|SRF:SRFun|FullAdder:FA11"                                    ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "Procesador:ProcesadorQ|SRF:SRFun|FullAdder:FA0" ;
++------+-------+----------+--------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                          ;
++------+-------+----------+--------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                     ;
++------+-------+----------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Procesador:ProcesadorQ|Sumador12:SumInstruc"                                        ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cin  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Procesador:ProcesadorQ|SelectorSumIns:SelSumador" ;
++----------------------+-------+----------+------------------------------------+
+; Port                 ; Type  ; Severity ; Details                            ;
++----------------------+-------+----------+------------------------------------+
+; reginstruccion[0..1] ; Input ; Info     ; Stuck at GND                       ;
++----------------------+-------+----------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Procesador:ProcesadorQ|Comparador:Comparacion|Restador:R|Sumador16:Sum"             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cin  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Procesador:ProcesadorQ|Comparador:Comparacion|Restador:R"                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Procesador:ProcesadorQ|Selector16III:Sel_Entrada" ;
++---------+-------+----------+-------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                         ;
++---------+-------+----------+-------------------------------------------------+
+; c[0..5] ; Input ; Info     ; Stuck at GND                                    ;
++---------+-------+----------+-------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "Procesador:ProcesadorQ|Selector15II:Sele_Sa" ;
++---------+-------+----------+--------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                    ;
++---------+-------+----------+--------------------------------------------+
+; a[0..5] ; Input ; Info     ; Stuck at GND                               ;
+; b[0..5] ; Input ; Info     ; Stuck at GND                               ;
++---------+-------+----------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Procesador:ProcesadorQ"                                                                         ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; estadosq[31..88] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; direccion[0..1]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 143                         ;
+; cycloneiii_ff         ; 203                         ;
+;     CLR               ; 88                          ;
+;     ENA CLR           ; 115                         ;
+; cycloneiii_lcell_comb ; 572                         ;
+;     normal            ; 572                         ;
+;         1 data inputs ; 22                          ;
+;         2 data inputs ; 51                          ;
+;         3 data inputs ; 80                          ;
+;         4 data inputs ; 419                         ;
+; cycloneiii_ram_block  ; 16                          ;
+;                       ;                             ;
+; Max LUT depth         ; 18.00                       ;
+; Average LUT depth     ; 8.56                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:05     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+    Info: Processing started: Fri Jun 02 00:34:07 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProcesadorTotal -c ProcesadorTotal
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file procesadortotal.vhd
+    Info (12022): Found design unit 1: ProcesadorTotal-ProcesadorTotalArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/ProcesadorTotal.vhd Line: 52
+    Info (12023): Found entity 1: ProcesadorTotal File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/ProcesadorTotal.vhd Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file memoria.vhd
+    Info (12022): Found design unit 1: memoria-SYN File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/Memoria.vhd Line: 55
+    Info (12023): Found entity 1: Memoria File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/Memoria.vhd Line: 42
+Info (12021): Found 2 design units, including 1 entities, in source file controladorswitch.vhd
+    Info (12022): Found design unit 1: ControladorSwitch-ControladorSwitchArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/ControladorSwitch.vhd Line: 32
+    Info (12023): Found entity 1: ControladorSwitch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/ControladorSwitch.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file controladoropcion.vhd
+    Info (12022): Found design unit 1: ControladorOpcion-ControladorOpcionArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/ControladorOpcion.vhd Line: 32
+    Info (12023): Found entity 1: ControladorOpcion File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/ControladorOpcion.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file ingresodatos.vhd
+    Info (12022): Found design unit 1: IngresoDatos-IngresoDatosArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/IngresoDatos.vhd Line: 32
+    Info (12023): Found entity 1: IngresoDatos File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/IngresoDatos.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file controladordisplay.vhd
+    Info (12022): Found design unit 1: ControladorDisplay-ControladorDisplayArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/ControladorDisplay.vhd Line: 32
+    Info (12023): Found entity 1: ControladorDisplay File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/ControladorDisplay.vhd Line: 22
+Info (12127): Elaborating entity "ProcesadorTotal" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at ProcesadorTotal.vhd(151): object "BCDVER" assigned a value but never read File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/ProcesadorTotal.vhd Line: 151
+Warning (12125): Using design file procesador.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Procesador-ProcesadorArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/procesador.vhd Line: 41
+    Info (12023): Found entity 1: Procesador File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/procesador.vhd Line: 22
+Info (12128): Elaborating entity "Procesador" for hierarchy "Procesador:ProcesadorQ" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/ProcesadorTotal.vhd Line: 167
+Warning (10036): Verilog HDL or VHDL warning at procesador.vhd(275): object "coutSI" assigned a value but never read File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/procesador.vhd Line: 275
+Warning (12125): Using design file registro16p.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Registro16P-Registro16PArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/registro16p.vhd Line: 33
+    Info (12023): Found entity 1: Registro16P File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/registro16p.vhd Line: 22
+Info (12128): Elaborating entity "Registro16P" for hierarchy "Procesador:ProcesadorQ|Registro16P:Reg_Dato_Ent" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/procesador.vhd Line: 300
+Warning (12125): Using design file selector15ii.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Selector15II-Selector15IIArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selector15ii.vhd Line: 31
+    Info (12023): Found entity 1: Selector15II File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selector15ii.vhd Line: 22
+Info (12128): Elaborating entity "Selector15II" for hierarchy "Procesador:ProcesadorQ|Selector15II:Sele_Sa" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/procesador.vhd Line: 302
+Warning (12125): Using design file selector16iii.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Selector16III-Selector16IIIArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selector16iii.vhd Line: 34
+    Info (12023): Found entity 1: Selector16III File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selector16iii.vhd Line: 23
+Info (12128): Elaborating entity "Selector16III" for hierarchy "Procesador:ProcesadorQ|Selector16III:Sel_Entrada" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/procesador.vhd Line: 304
+Warning (12125): Using design file selectorcomplemento.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: SelectorComplemento-SelectorComplementoArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selectorcomplemento.vhd Line: 31
+    Info (12023): Found entity 1: SelectorComplemento File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selectorcomplemento.vhd Line: 22
+Info (12128): Elaborating entity "SelectorComplemento" for hierarchy "Procesador:ProcesadorQ|SelectorComplemento:SelectSustra" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/procesador.vhd Line: 306
+Warning (12125): Using design file sumarrestar.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: SumarRestar-SumarRestarArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/sumarrestar.vhd Line: 33
+    Info (12023): Found entity 1: SumarRestar File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/sumarrestar.vhd Line: 22
+Info (12128): Elaborating entity "SumarRestar" for hierarchy "Procesador:ProcesadorQ|SumarRestar:SumaResta" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/procesador.vhd Line: 307
+Warning (12125): Using design file sumador16.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Sumador16-Sumador16Arch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/sumador16.vhd Line: 32
+    Info (12023): Found entity 1: Sumador16 File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/sumador16.vhd Line: 22
+Info (12128): Elaborating entity "Sumador16" for hierarchy "Procesador:ProcesadorQ|SumarRestar:SumaResta|Sumador16:S" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/sumarrestar.vhd Line: 50
+Warning (12125): Using design file fulladder.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: FullAdder-FullAdderArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/fulladder.vhd Line: 32
+    Info (12023): Found entity 1: FullAdder File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/fulladder.vhd Line: 22
+Info (12128): Elaborating entity "FullAdder" for hierarchy "Procesador:ProcesadorQ|SumarRestar:SumaResta|Sumador16:S|FullAdder:FA0" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/sumador16.vhd Line: 49
+Warning (12125): Using design file comparador.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Comparador-ComparadorArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/comparador.vhd Line: 31
+    Info (12023): Found entity 1: Comparador File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/comparador.vhd Line: 22
+Info (12128): Elaborating entity "Comparador" for hierarchy "Procesador:ProcesadorQ|Comparador:Comparacion" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/procesador.vhd Line: 308
+Warning (10036): Verilog HDL or VHDL warning at comparador.vhd(46): object "CoutResta" assigned a value but never read File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/comparador.vhd Line: 46
+Warning (12125): Using design file restador.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Restador-RestadorArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/restador.vhd Line: 33
+    Info (12023): Found entity 1: Restador File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/restador.vhd Line: 22
+Info (12128): Elaborating entity "Restador" for hierarchy "Procesador:ProcesadorQ|Comparador:Comparacion|Restador:R" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/comparador.vhd Line: 50
+Warning (10541): VHDL Signal Declaration warning at restador.vhd(26): used implicit default value for signal "Cout" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/restador.vhd Line: 26
+Warning (10036): Verilog HDL or VHDL warning at restador.vhd(54): object "carryOut" assigned a value but never read File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/restador.vhd Line: 54
+Warning (12125): Using design file complemento.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Complemento-ComplementoArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/complemento.vhd Line: 30
+    Info (12023): Found entity 1: Complemento File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/complemento.vhd Line: 22
+Info (12128): Elaborating entity "Complemento" for hierarchy "Procesador:ProcesadorQ|Comparador:Comparacion|Restador:R|Complemento:Neg" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/restador.vhd Line: 58
+Warning (12125): Using design file selector4ii.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Selector4II-Selector4IIArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selector4ii.vhd Line: 31
+    Info (12023): Found entity 1: Selector4II File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selector4ii.vhd Line: 22
+Info (12128): Elaborating entity "Selector4II" for hierarchy "Procesador:ProcesadorQ|Selector4II:SelRB" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/procesador.vhd Line: 309
+Warning (12125): Using design file regbanderas.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: RegBanderas-RegBanderasArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/regbanderas.vhd Line: 31
+    Info (12023): Found entity 1: RegBanderas File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/regbanderas.vhd Line: 21
+Info (12128): Elaborating entity "RegBanderas" for hierarchy "Procesador:ProcesadorQ|RegBanderas:RegistroBanderas" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/procesador.vhd Line: 310
+Warning (12125): Using design file selectorsalida.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: SelectorSalida-SelectorSalidaArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selectorsalida.vhd Line: 35
+    Info (12023): Found entity 1: SelectorSalida File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selectorsalida.vhd Line: 23
+Info (12128): Elaborating entity "SelectorSalida" for hierarchy "Procesador:ProcesadorQ|SelectorSalida:Sel_Sal" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/procesador.vhd Line: 311
+Warning (12125): Using design file selectorsumins.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: SelectorSumIns-SelectorSumInsArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selectorsumins.vhd Line: 31
+    Info (12023): Found entity 1: SelectorSumIns File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selectorsumins.vhd Line: 22
+Info (12128): Elaborating entity "SelectorSumIns" for hierarchy "Procesador:ProcesadorQ|SelectorSumIns:SelSumador" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/procesador.vhd Line: 313
+Warning (12125): Using design file sumador12.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Sumador12-Sumador12Arch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/sumador12.vhd Line: 32
+    Info (12023): Found entity 1: Sumador12 File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/sumador12.vhd Line: 22
+Info (12128): Elaborating entity "Sumador12" for hierarchy "Procesador:ProcesadorQ|Sumador12:SumInstruc" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/procesador.vhd Line: 314
+Warning (12125): Using design file selector12ii.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Selector12II-Selector12IIArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selector12ii.vhd Line: 31
+    Info (12023): Found entity 1: Selector12II File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selector12ii.vhd Line: 22
+Info (12128): Elaborating entity "Selector12II" for hierarchy "Procesador:ProcesadorQ|Selector12II:Sel" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/procesador.vhd Line: 315
+Warning (12125): Using design file registro12p.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Registro12P-Registro12PArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/registro12p.vhd Line: 33
+    Info (12023): Found entity 1: Registro12P File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/registro12p.vhd Line: 22
+Info (12128): Elaborating entity "Registro12P" for hierarchy "Procesador:ProcesadorQ|Registro12P:InstrucActual" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/procesador.vhd Line: 316
+Warning (12125): Using design file srf.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: SRF-SRFArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/srf.vhd Line: 31
+    Info (12023): Found entity 1: SRF File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/srf.vhd Line: 22
+Info (12128): Elaborating entity "SRF" for hierarchy "Procesador:ProcesadorQ|SRF:SRFun" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/procesador.vhd Line: 318
+Warning (12125): Using design file selector12iv.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Selector12IV-Selector12IVArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selector12iv.vhd Line: 35
+    Info (12023): Found entity 1: Selector12IV File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/selector12iv.vhd Line: 23
+Info (12128): Elaborating entity "Selector12IV" for hierarchy "Procesador:ProcesadorQ|Selector12IV:Sel_Instruccion" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/procesador.vhd Line: 319
+Warning (12125): Using design file contasc.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: ContAsc-ContAscArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/contasc.vhd Line: 30
+    Info (12023): Found entity 1: ContAsc File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/contasc.vhd Line: 21
+Info (12128): Elaborating entity "ContAsc" for hierarchy "Procesador:ProcesadorQ|ContAsc:Contador" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/procesador.vhd Line: 321
+Warning (12125): Using design file control.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Control-ControlArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/control.vhd Line: 66
+    Info (12023): Found entity 1: Control File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/control.vhd Line: 20
+Info (12128): Elaborating entity "Control" for hierarchy "Procesador:ProcesadorQ|Control:ControlT" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/procesador.vhd Line: 322
+Info (12128): Elaborating entity "Memoria" for hierarchy "Memoria:MemoriaQ" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/ProcesadorTotal.vhd Line: 168
+Info (12128): Elaborating entity "altsyncram" for hierarchy "Memoria:MemoriaQ|altsyncram:altsyncram_component" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/Memoria.vhd Line: 92
+Info (12130): Elaborated megafunction instantiation "Memoria:MemoriaQ|altsyncram:altsyncram_component" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/Memoria.vhd Line: 92
+Info (12133): Instantiated megafunction "Memoria:MemoriaQ|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/Memoria.vhd Line: 92
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "ram.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "1024"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "10"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ruh1.tdf
+    Info (12023): Found entity 1: altsyncram_ruh1 File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/db/altsyncram_ruh1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_ruh1" for hierarchy "Memoria:MemoriaQ|altsyncram:altsyncram_component|altsyncram_ruh1:auto_generated" File: c:/altera_lite/16.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Warning (12125): Using design file sistema.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Sistema-SistemaArch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/sistema.vhd Line: 37
+    Info (12023): Found entity 1: Sistema File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/sistema.vhd Line: 20
+Info (12128): Elaborating entity "Sistema" for hierarchy "Sistema:Display" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/ProcesadorTotal.vhd Line: 169
+Warning (12125): Using design file binbcd.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: binbcd-Behavioral File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/binbcd.vhd Line: 16
+    Info (12023): Found entity 1: binbcd File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/binbcd.vhd Line: 5
+Info (12128): Elaborating entity "binbcd" for hierarchy "Sistema:Display|binbcd:binbcdS" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/sistema.vhd Line: 103
+Warning (12125): Using design file bcd7seg1.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: BCD7seg1-BCD7seg1Arch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/bcd7seg1.vhd Line: 33
+    Info (12023): Found entity 1: BCD7seg1 File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/bcd7seg1.vhd Line: 19
+Info (12128): Elaborating entity "BCD7seg1" for hierarchy "Sistema:Display|BCD7seg1:BCD7seg1S" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/sistema.vhd Line: 104
+Warning (12125): Using design file bcd7seg10.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: BCD7seg10-BCD7seg10Arch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/bcd7seg10.vhd Line: 33
+    Info (12023): Found entity 1: BCD7seg10 File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/bcd7seg10.vhd Line: 19
+Info (12128): Elaborating entity "BCD7seg10" for hierarchy "Sistema:Display|BCD7seg10:BCD7seg10S" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/sistema.vhd Line: 105
+Warning (12125): Using design file bcd7seg100.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: BCD7seg100-BCD7seg100Arch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/bcd7seg100.vhd Line: 33
+    Info (12023): Found entity 1: BCD7seg100 File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/bcd7seg100.vhd Line: 19
+Info (12128): Elaborating entity "BCD7seg100" for hierarchy "Sistema:Display|BCD7seg100:BCD7seg100S" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/sistema.vhd Line: 106
+Warning (12125): Using design file bcd7seg1000.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: BCD7seg1000-BCD7seg1000Arch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/bcd7seg1000.vhd Line: 33
+    Info (12023): Found entity 1: BCD7seg1000 File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/bcd7seg1000.vhd Line: 19
+Info (12128): Elaborating entity "BCD7seg1000" for hierarchy "Sistema:Display|BCD7seg1000:BCD7seg1000S" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/sistema.vhd Line: 107
+Warning (12125): Using design file bcd7seg10000.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: BCD7seg10000-BCD7seg10000Arch File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/bcd7seg10000.vhd Line: 33
+    Info (12023): Found entity 1: BCD7seg10000 File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/bcd7seg10000.vhd Line: 19
+Info (12128): Elaborating entity "BCD7seg10000" for hierarchy "Sistema:Display|BCD7seg10000:BCD7seg10000S" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/sistema.vhd Line: 108
+Info (12128): Elaborating entity "IngresoDatos" for hierarchy "IngresoDatos:OrDatos" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/ProcesadorTotal.vhd Line: 170
+Info (12128): Elaborating entity "ControladorSwitch" for hierarchy "ControladorSwitch:ContSwitch" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/ProcesadorTotal.vhd Line: 171
+Info (12128): Elaborating entity "ControladorOpcion" for hierarchy "ControladorOpcion:ContOpcion" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/ProcesadorTotal.vhd Line: 172
+Info (12128): Elaborating entity "ControladorDisplay" for hierarchy "ControladorDisplay:ContDisplay" File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/ProcesadorTotal.vhd Line: 173
+Info (13000): Registers with preset signals will power-up high File: C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/control.vhd Line: 89
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 784 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 125 output pins
+    Info (21061): Implemented 625 logic cells
+    Info (21064): Implemented 16 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
+    Info: Peak virtual memory: 888 megabytes
+    Info: Processing ended: Fri Jun 02 00:34:44 2017
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:00:49
+
+

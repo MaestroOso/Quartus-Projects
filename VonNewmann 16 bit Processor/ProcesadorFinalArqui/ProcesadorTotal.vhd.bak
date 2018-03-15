@@ -1,0 +1,63 @@
+--******************************************************--
+--        PONTIFICIA UNIVERSIDAD JAVERIANA              --
+--        Diseño de Sistemas Digitales   					  --
+--                                                      --
+-- Nombres  Maria Alejandra Gomez
+--				Oscar Castelblanco Riveros						  --
+--******************************************************--                                            --
+-- Fecha    20 de Agosto de 2016
+--                                    --
+--******************************************************--
+
+--Definicion de las bibliotecas
+--Definicion de las bibliotecas
+library IEEE; 
+use IEEE.std_logic_1164.all;
+
+--******************************************************--
+-- DEFINICIÓN DE ENTIDAD                                --
+--******************************************************--
+
+entity ProcesadorTotal is
+port(
+		Inicio: in std_logic;
+		Interrupcion: in std_logic;
+		MI_Control: in std_logic_vector(0 to 1);
+		DI_Control: in std_logic_vector(0 to 3);
+		Reg_Banderas: in std_logic_vector(0 to 3);
+		Contador: in std_logic_vector(0 to 2);
+		
+		CLK: in std_logic;
+		RESET: in std_logic;
+		
+		
+		Estados: out std_logic_vector(1 to 48)
+	  );
+end Entity ProcesadorTotal;              
+|
+--Definicion de la arquitectura 
+--******************************************************--
+--DEFINICIÓN DE ARQUITECTURA                            --
+--******************************************************--
+
+architecture ProcesadorTotalArch of ProcesadorTotal is
+
+
+
+--******************************************************--
+--DEFINICIÓN DE 
+
+--SEÑALES DE CONEXIÓN                     --
+--******************************************************--
+
+signal estado: std_logic_vector(1 to 88);
+
+--******************************************************--
+--Instancias y Conectividad                             --
+--******************************************************--
+
+begin
+
+--port map ( Data ,  Reloj,    Reset,  Preset , Enable,  Salida
+
+End  ProcesadorTotalArch;

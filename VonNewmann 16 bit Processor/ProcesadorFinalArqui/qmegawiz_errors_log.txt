@@ -1,0 +1,8 @@
+
+
+C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/control.vhd
+
+May 30 08PM:19:01>: MegaWizard Plug-In Manager does not recognize C:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/control.vhd as a wizard-generated
+custom megafunction variation.
+
+Do you want to use a wizard to overwrite it?

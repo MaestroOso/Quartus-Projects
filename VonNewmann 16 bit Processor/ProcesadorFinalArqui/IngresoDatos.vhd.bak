@@ -1,0 +1,41 @@
+--******************************************************--
+--        PONTIFICIA UNIVERSIDAD JAVERIANA              --
+--        Diseno de Sistemas Digitales   					  --
+--                                                      --
+-- Nombres  Oscar Castelblanco
+--          Maria Alejandra Gomez
+--******************************************************--                                            --
+-- Fecha    31 de Mayo de 2017
+--                                    --
+--******************************************************--
+
+--Definicion de las bibliotecas
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+
+--******************************************************--
+
+--******************************************************--
+
+entity IngresoDatos is
+port(
+        Memoria: in std_logic_vector(0 to 15);
+		  Switch: in std_logic_vector(0 to 15);
+		  Opcion: in std_logic_vector(0 to 15);
+		  
+		  Dato: out std_logic_vector(0 to 15)
+);
+end entity IngresoDatos;   
+
+architecture IngresoDatosArch of IngresoDatos is
+
+begin
+
+
+
+End IngresoDatosArch;
+--Definicion de la arquitectura 
+--******************************************************--
+--Aqui funcionamiento del Disenho1                  --

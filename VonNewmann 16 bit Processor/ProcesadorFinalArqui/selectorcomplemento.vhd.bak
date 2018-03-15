@@ -1,0 +1,52 @@
+--******************************************************--
+--        PONTIFICIA UNIVERSIDAD JAVERIANA              --
+--        Diseno de Sistemas Digitales   					  --
+--                                                      --
+-- Nombres  Oscar Castelblanco
+--          Maria Alejandra Gomez
+--******************************************************--                                            --
+-- Fecha    31 de Mayo de 2017
+--                                    --
+--******************************************************--
+
+--Definicion de las bibliotecas
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+
+--******************************************************--
+
+--******************************************************--
+
+entity SelectorComplemento is
+port(
+        A: in std_logic_vector(0 to 15);
+		  Elegir: in std_logic; --0 es A y 1 es ~A
+		  
+		  Salida: out std_logic_vector(0 to 15)
+);
+end entity SelectorComplemento;   
+
+architecture SelectorComplementoArch of SelectorComplemento is
+
+begin
+--0 sale A y 1 sale ~A
+Salida(0) <= (A(0) and not Elegir) or (not A(0) and Elegir);  
+Salida(1) <= (A(1) and not Elegir) or (not A(1) and Elegir);
+Salida(2) <= (A(2) and not Elegir) or (not A(2) and Elegir);
+Salida(3) <= (A(3) and not Elegir) or (not A(3) and Elegir);
+Salida(4) <= (A(4) and not Elegir) or (not A(4) and Elegir);
+Salida(5) <= (A(5) and not Elegir) or (not A(5) and Elegir);
+Salida(6) <= (A(6) and not Elegir) or (not A(6) and Elegir);
+Salida(7) <= (A(7) and not Elegir) or (not A(7) and Elegir);
+Salida(8) <= (A(8) and not Elegir) or (not A(8) and Elegir);
+Salida(9) <= (A(9) and not Elegir) or (not A(9) and Elegir);
+Salida(10) <= (A(10) and not Elegir) or (not A(10) and Elegir);
+Salida(11) <= (A(10) and not Elegir) or (not A(11) and Elegir);
+
+
+End SelectorComplementoArch;
+--Definicion de la arquitectura 
+--******************************************************--
+--Aqui funcionamiento del Disenho1                  --

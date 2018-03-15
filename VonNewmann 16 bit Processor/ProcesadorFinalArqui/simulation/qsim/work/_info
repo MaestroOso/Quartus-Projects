@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/SAMSUNG/Google Drive/Universidad/Arquitectura de Procesadores/ProcesadorFinalArqui/simulation/qsim
+vProcesadorTotal
+Z1 !s110 1496381772
+!i10b 1
+!s100 6h?:z>Ki`[4m=cbiIaKzc3
+Ie:aKI`:cE8HGY]I^?IB=@3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1496381770
+8ProcesadorTotal.vo
+FProcesadorTotal.vo
+L0 32
+Z3 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z4 !s108 1496381772.000000
+!s107 ProcesadorTotal.vo|
+!s90 -work|work|ProcesadorTotal.vo|
+!i113 1
+Z5 o-work work
+n@procesador@total
+vProcesadorTotal_vlg_vec_tst
+R1
+!i10b 1
+!s100 ?f6EQZH6jGCFhB8SlbFAR0
+INdAGF:69?:Hh_Zd@LzV4Z2
+R2
+R0
+w1496381768
+8SimulacionPrograma.vwf.vt
+FSimulacionPrograma.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+R4
+!s107 SimulacionPrograma.vwf.vt|
+!s90 -work|work|SimulacionPrograma.vwf.vt|
+!i113 1
+R5
+n@procesador@total_vlg_vec_tst

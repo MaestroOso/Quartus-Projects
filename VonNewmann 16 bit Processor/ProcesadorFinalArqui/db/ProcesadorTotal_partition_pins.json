@@ -1,0 +1,581 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Estados[30]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[29]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[28]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[27]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[26]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[25]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[24]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[23]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[22]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[21]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[20]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[19]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[18]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[17]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[16]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[15]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Estados[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IActual[15]",
+					"strict" : false
+				},
+				{
+					"name" : "IActual[14]",
+					"strict" : false
+				},
+				{
+					"name" : "IActual[13]",
+					"strict" : false
+				},
+				{
+					"name" : "IActual[12]",
+					"strict" : false
+				},
+				{
+					"name" : "IActual[11]",
+					"strict" : false
+				},
+				{
+					"name" : "IActual[10]",
+					"strict" : false
+				},
+				{
+					"name" : "IActual[9]",
+					"strict" : false
+				},
+				{
+					"name" : "IActual[8]",
+					"strict" : false
+				},
+				{
+					"name" : "IActual[7]",
+					"strict" : false
+				},
+				{
+					"name" : "IActual[6]",
+					"strict" : false
+				},
+				{
+					"name" : "IActual[5]",
+					"strict" : false
+				},
+				{
+					"name" : "IActual[4]",
+					"strict" : false
+				},
+				{
+					"name" : "IActual[3]",
+					"strict" : false
+				},
+				{
+					"name" : "IActual[2]",
+					"strict" : false
+				},
+				{
+					"name" : "IActual[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IActual[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Escribir",
+					"strict" : false
+				},
+				{
+					"name" : "Leer",
+					"strict" : false
+				},
+				{
+					"name" : "Direccion[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Direccion[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Direccion[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Direccion[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Direccion[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Direccion[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Direccion[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Direccion[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Direccion[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Direccion[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoIn[15]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoIn[14]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoIn[13]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoIn[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoIn[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoIn[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoIn[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoIn[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoIn[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoIn[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoIn[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoIn[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoIn[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoIn[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoIn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoIn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoOut[15]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoOut[14]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoOut[13]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoOut[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoOut[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoOut[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoOut[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoOut[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoOut[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DatoOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie10[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie10[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie10[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie10[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie10[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie10[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie10[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie100[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie100[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie100[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie100[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie100[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie100[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie100[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie1000[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie1000[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie1000[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie1000[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie1000[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie1000[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie1000[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie10000[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie10000[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie10000[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie10000[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie10000[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie10000[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Sie10000[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Switch[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Opcion[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Switch[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Opcion[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Switch[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Opcion[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Switch[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Opcion[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Switch[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Switch[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Switch[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Switch[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Switch[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Switch[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Clk",
+					"strict" : false
+				},
+				{
+					"name" : "Reset",
+					"strict" : false
+				},
+				{
+					"name" : "Interrupcion",
+					"strict" : false
+				},
+				{
+					"name" : "Inicio",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,54 @@
+--******************************************************--
+--        PONTIFICIA UNIVERSIDAD JAVERIANA              --
+--        Diseno de Sistemas Digitales   					  --
+--                                                      --
+-- Nombres  Oscar Castelblanco
+--          Maria Alejandra Gomez
+--******************************************************--                                            --
+-- Fecha    31 de Mayo de 2017
+--                                    --
+--******************************************************--
+
+--Definicion de las bibliotecas
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+
+--******************************************************--
+
+--******************************************************--
+
+entity SelectorSumIns is
+port(
+        RegInstruccion: in std_logic_vector(0 to 11);
+		  Control: in std_logic; -- 0 suma 1 al registro y 1 suma el valor en RegInst
+		  
+		  Salida: out std_logic_vector(0 to 11)
+);
+end entity SelectorSumIns;   
+
+architecture SelectorSumInsArch of SelectorSumIns is
+
+
+begin
+
+-- Bit 0 es el LSB
+
+Salida(0) <= (Control and RegInstruccion(0)) or (not Control);
+Salida(1) <= (Control and RegInstruccion(1));
+Salida(2) <= (Control and RegInstruccion(2));
+Salida(3) <= (Control and RegInstruccion(3));
+Salida(4) <= (Control and RegInstruccion(4));
+Salida(5) <= (Control and RegInstruccion(5));
+Salida(6) <= (Control and RegInstruccion(6));
+Salida(7) <= (Control and RegInstruccion(7));
+Salida(8) <= (Control and RegInstruccion(8));
+Salida(9) <= (Control and RegInstruccion(9));
+Salida(10) <= (Control and RegInstruccion(10));
+Salida(11) <= (Control and RegInstruccion(11));
+
+End SelectorSumInsArch;
+--Definicion de la arquitectura 
+--******************************************************--
+--Aqui funcionamiento del Disenho1                  --
