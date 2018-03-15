@@ -1,0 +1,235 @@
+// Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "08/19/2016 15:20:45"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          ArbitrosConEntrada
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module ArbitrosConEntrada_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg Fin;
+reg Patea;
+reg Reloj;
+reg Reset;
+reg RespA;
+reg Sensor;
+reg ValArbitro;
+// wires                                               
+wire empiece1;
+wire [3:0] guardar_calificacion;
+wire guardar_sensor;
+wire guardar_validacion;
+wire reloj1;
+wire [2:0] Resultado;
+wire [13:0] SalidaEstados;
+wire [3:0] salidaspatea;
+
+// assign statements (if any)                          
+ArbitrosConEntrada i1 (
+// port map - connection between master ports and signals/registers   
+	.empiece1(empiece1),
+	.Fin(Fin),
+	.guardar_calificacion(guardar_calificacion),
+	.guardar_sensor(guardar_sensor),
+	.guardar_validacion(guardar_validacion),
+	.Patea(Patea),
+	.Reloj(Reloj),
+	.reloj1(reloj1),
+	.Reset(Reset),
+	.RespA(RespA),
+	.Resultado(Resultado),
+	.SalidaEstados(SalidaEstados),
+	.salidaspatea(salidaspatea),
+	.Sensor(Sensor),
+	.ValArbitro(ValArbitro)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// Reloj
+always
+begin
+	Reloj = 1'b0;
+	Reloj = #10000 1'b1;
+	#10000;
+end 
+
+// Reset
+initial
+begin
+	Reset = 1'b1;
+	Reset = #40000 1'b0;
+end 
+
+// Sensor
+initial
+begin
+	Sensor = 1'b0;
+	Sensor = #40000 1'b1;
+	Sensor = #160000 1'b0;
+	Sensor = #40000 1'b1;
+	Sensor = #20000 1'b0;
+	Sensor = #40000 1'b1;
+	Sensor = #20000 1'b0;
+	Sensor = #20000 1'b1;
+	Sensor = #20000 1'b0;
+	Sensor = #40000 1'b1;
+	Sensor = #80000 1'b0;
+	Sensor = #40000 1'b1;
+	Sensor = #20000 1'b0;
+	Sensor = #20000 1'b1;
+	Sensor = #40000 1'b0;
+	Sensor = #40000 1'b1;
+	Sensor = #20000 1'b0;
+	Sensor = #20000 1'b1;
+	Sensor = #20000 1'b0;
+	Sensor = #60000 1'b1;
+	Sensor = #20000 1'b0;
+	Sensor = #60000 1'b1;
+	Sensor = #20000 1'b0;
+	Sensor = #20000 1'b1;
+	Sensor = #60000 1'b0;
+	Sensor = #20000 1'b1;
+end 
+
+// Patea
+initial
+begin
+	Patea = 1'b0;
+	Patea = #60000 1'b1;
+	Patea = #80000 1'b0;
+	Patea = #40000 1'b1;
+	Patea = #40000 1'b0;
+	Patea = #20000 1'b1;
+	Patea = #60000 1'b0;
+	Patea = #40000 1'b1;
+	Patea = #20000 1'b0;
+	Patea = #80000 1'b1;
+	Patea = #100000 1'b0;
+	Patea = #20000 1'b1;
+	Patea = #60000 1'b0;
+	Patea = #40000 1'b1;
+	Patea = #20000 1'b0;
+	Patea = #40000 1'b1;
+	Patea = #60000 1'b0;
+	Patea = #40000 1'b1;
+	Patea = #80000 1'b0;
+	Patea = #80000 1'b1;
+end 
+
+// RespA
+initial
+begin
+	RespA = 1'b1;
+	RespA = #20000 1'b0;
+	RespA = #20000 1'b1;
+	RespA = #60000 1'b0;
+	RespA = #40000 1'b1;
+	RespA = #20000 1'b0;
+	RespA = #40000 1'b1;
+	RespA = #20000 1'b0;
+	RespA = #120000 1'b1;
+	RespA = #60000 1'b0;
+	RespA = #40000 1'b1;
+	RespA = #40000 1'b0;
+	RespA = #20000 1'b1;
+	RespA = #20000 1'b0;
+	RespA = #20000 1'b1;
+	RespA = #60000 1'b0;
+	RespA = #60000 1'b1;
+	RespA = #20000 1'b0;
+	RespA = #60000 1'b1;
+	RespA = #40000 1'b0;
+	RespA = #60000 1'b1;
+	RespA = #20000 1'b0;
+	RespA = #40000 1'b1;
+	RespA = #40000 1'b0;
+	RespA = #40000 1'b1;
+end 
+
+// ValArbitro
+initial
+begin
+	ValArbitro = 1'b0;
+	ValArbitro = #60000 1'b1;
+	ValArbitro = #40000 1'b0;
+	ValArbitro = #20000 1'b1;
+	ValArbitro = #20000 1'b0;
+	ValArbitro = #60000 1'b1;
+	ValArbitro = #20000 1'b0;
+	ValArbitro = #40000 1'b1;
+	ValArbitro = #40000 1'b0;
+	ValArbitro = #80000 1'b1;
+	ValArbitro = #40000 1'b0;
+	ValArbitro = #80000 1'b1;
+	ValArbitro = #40000 1'b0;
+	ValArbitro = #20000 1'b1;
+	ValArbitro = #40000 1'b0;
+	ValArbitro = #40000 1'b1;
+	ValArbitro = #20000 1'b0;
+	ValArbitro = #20000 1'b1;
+	ValArbitro = #40000 1'b0;
+	ValArbitro = #20000 1'b1;
+	ValArbitro = #180000 1'b0;
+	ValArbitro = #40000 1'b1;
+end 
+
+// Fin
+initial
+begin
+	Fin = 1'b1;
+	Fin = #40000 1'b0;
+	Fin = #40000 1'b1;
+	Fin = #20000 1'b0;
+	Fin = #20000 1'b1;
+	Fin = #20000 1'b0;
+	Fin = #40000 1'b1;
+	Fin = #20000 1'b0;
+	Fin = #20000 1'b1;
+	Fin = #100000 1'b0;
+	Fin = #20000 1'b1;
+	Fin = #40000 1'b0;
+	Fin = #20000 1'b1;
+	Fin = #60000 1'b0;
+	Fin = #20000 1'b1;
+	Fin = #40000 1'b0;
+	Fin = #20000 1'b1;
+	Fin = #20000 1'b0;
+	Fin = #20000 1'b1;
+	Fin = #20000 1'b0;
+	Fin = #60000 1'b1;
+	Fin = #120000 1'b0;
+	Fin = #40000 1'b1;
+	Fin = #20000 1'b0;
+	Fin = #40000 1'b1;
+	Fin = #40000 1'b0;
+	Fin = #20000 1'b1;
+	Fin = #20000 1'b0;
+end 
+endmodule
+

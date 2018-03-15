@@ -1,0 +1,12 @@
+PowerPlay Power Analyzer Status : Successful - Fri Aug 19 15:17:47 2016
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Standard Edition
+Revision Name : ArbitrosConEntrada
+Top-level Entity Name : ArbitrosConEntrada
+Family : MAX 10
+Device : 10M08SAE144C8GES
+Power Models : Final
+Total Thermal Power Dissipation : 116.42 mW
+Core Dynamic Thermal Power Dissipation : 0.00 mW
+Core Static Thermal Power Dissipation : 110.61 mW
+I/O Thermal Power Dissipation : 5.81 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

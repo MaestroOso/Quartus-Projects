@@ -1,0 +1,153 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "empiece1",
+					"strict" : false
+				},
+				{
+					"name" : "guardar_sensor",
+					"strict" : false
+				},
+				{
+					"name" : "guardar_calificacion[0]",
+					"strict" : false
+				},
+				{
+					"name" : "guardar_calificacion[1]",
+					"strict" : false
+				},
+				{
+					"name" : "guardar_calificacion[2]",
+					"strict" : false
+				},
+				{
+					"name" : "guardar_calificacion[3]",
+					"strict" : false
+				},
+				{
+					"name" : "guardar_validacion",
+					"strict" : false
+				},
+				{
+					"name" : "SalidaEstados[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SalidaEstados[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SalidaEstados[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SalidaEstados[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SalidaEstados[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SalidaEstados[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SalidaEstados[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SalidaEstados[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SalidaEstados[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SalidaEstados[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SalidaEstados[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SalidaEstados[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SalidaEstados[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SalidaEstados[13]",
+					"strict" : false
+				},
+				{
+					"name" : "salidaspatea[0]",
+					"strict" : false
+				},
+				{
+					"name" : "salidaspatea[1]",
+					"strict" : false
+				},
+				{
+					"name" : "salidaspatea[2]",
+					"strict" : false
+				},
+				{
+					"name" : "salidaspatea[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Resultado[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Resultado[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Resultado[2]",
+					"strict" : false
+				},
+				{
+					"name" : "reloj1",
+					"strict" : false
+				},
+				{
+					"name" : "Reloj",
+					"strict" : false
+				},
+				{
+					"name" : "Reset",
+					"strict" : false
+				},
+				{
+					"name" : "Sensor",
+					"strict" : false
+				},
+				{
+					"name" : "RespA",
+					"strict" : false
+				},
+				{
+					"name" : "Fin",
+					"strict" : false
+				},
+				{
+					"name" : "Patea",
+					"strict" : false
+				},
+				{
+					"name" : "ValArbitro",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

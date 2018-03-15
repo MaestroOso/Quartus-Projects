@@ -1,0 +1,309 @@
+|ArbitrosConEntrada
+empiece1 << EntradaSerial:BLOQUE_EntradaSerial.Empiece
+guardar_sensor << Arbitros:BLOQUE_Arbitros.guardar_sensor
+guardar_calificacion[0] << Arbitros:BLOQUE_Arbitros.guardar_calificacion[0]
+guardar_calificacion[1] << Arbitros:BLOQUE_Arbitros.guardar_calificacion[1]
+guardar_calificacion[2] << Arbitros:BLOQUE_Arbitros.guardar_calificacion[2]
+guardar_calificacion[3] << Arbitros:BLOQUE_Arbitros.guardar_calificacion[3]
+guardar_validacion << Arbitros:BLOQUE_Arbitros.guardar_validacion
+SalidaEstados[0] << Arbitros:BLOQUE_Arbitros.SalidaEstados[0]
+SalidaEstados[1] << Arbitros:BLOQUE_Arbitros.SalidaEstados[1]
+SalidaEstados[2] << Arbitros:BLOQUE_Arbitros.SalidaEstados[2]
+SalidaEstados[3] << Arbitros:BLOQUE_Arbitros.SalidaEstados[3]
+SalidaEstados[4] << Arbitros:BLOQUE_Arbitros.SalidaEstados[4]
+SalidaEstados[5] << Arbitros:BLOQUE_Arbitros.SalidaEstados[5]
+SalidaEstados[6] << Arbitros:BLOQUE_Arbitros.SalidaEstados[6]
+SalidaEstados[7] << Arbitros:BLOQUE_Arbitros.SalidaEstados[7]
+SalidaEstados[8] << Arbitros:BLOQUE_Arbitros.SalidaEstados[8]
+SalidaEstados[9] << Arbitros:BLOQUE_Arbitros.SalidaEstados[9]
+SalidaEstados[10] << Arbitros:BLOQUE_Arbitros.SalidaEstados[10]
+SalidaEstados[11] << Arbitros:BLOQUE_Arbitros.SalidaEstados[11]
+SalidaEstados[12] << Arbitros:BLOQUE_Arbitros.SalidaEstados[12]
+SalidaEstados[13] << Arbitros:BLOQUE_Arbitros.SalidaEstados[13]
+salidaspatea[0] << Arbitros:BLOQUE_Arbitros.salidaspatea[0]
+salidaspatea[1] << Arbitros:BLOQUE_Arbitros.salidaspatea[1]
+salidaspatea[2] << Arbitros:BLOQUE_Arbitros.salidaspatea[2]
+salidaspatea[3] << Arbitros:BLOQUE_Arbitros.salidaspatea[3]
+Sensor => Arbitros:BLOQUE_Arbitros.Sensor
+RespA => Arbitros:BLOQUE_Arbitros.RespA
+Patea => Arbitros:BLOQUE_Arbitros.Patea
+Reloj => EntradaSerial:BLOQUE_EntradaSerial.Reloj
+Reloj => Arbitros:BLOQUE_Arbitros.Reloj
+Reloj => reloj1.DATAIN
+ValArbitro => Arbitros:BLOQUE_Arbitros.ValArbitro
+Fin => Arbitros:BLOQUE_Arbitros.Fin
+Reset => Arbitros:BLOQUE_Arbitros.Reset
+Reset => EntradaSerial:BLOQUE_EntradaSerial.Restablecimiento
+Resultado[0] << Arbitros:BLOQUE_Arbitros.Resultado[0]
+Resultado[1] << Arbitros:BLOQUE_Arbitros.Resultado[1]
+Resultado[2] << Arbitros:BLOQUE_Arbitros.Resultado[2]
+reloj1 << Reloj.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ArbitrosConEntrada|EntradaSerial:BLOQUE_EntradaSerial
+Reloj => valor_salida[0].CLK
+Reloj => valor_salida[1].CLK
+Reloj => valor_salida[2].CLK
+Reloj => valor_salida[3].CLK
+Reloj => valor_salida[4].CLK
+Reloj => valor_salida[5].CLK
+Reloj => valor_salida[6].CLK
+Reloj => valor_salida[7].CLK
+Reloj => inicio[0].CLK
+Reloj => inicio[1].CLK
+Reloj => inicio[2].CLK
+Reloj => inicio[3].CLK
+Restablecimiento => valor_salida[0].PRESET
+Restablecimiento => valor_salida[1].ACLR
+Restablecimiento => valor_salida[2].ACLR
+Restablecimiento => valor_salida[3].ACLR
+Restablecimiento => valor_salida[4].ACLR
+Restablecimiento => valor_salida[5].ACLR
+Restablecimiento => valor_salida[6].ACLR
+Restablecimiento => valor_salida[7].ACLR
+Restablecimiento => inicio[0].PRESET
+Restablecimiento => inicio[1].ACLR
+Restablecimiento => inicio[2].ACLR
+Restablecimiento => inicio[3].ACLR
+Salida_Serial <= valor_salida[7].DB_MAX_OUTPUT_PORT_TYPE
+Empiece <= inicio[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ArbitrosConEntrada|Arbitros:BLOQUE_Arbitros
+guardar_sensor <= MemSenF:BLOQUE_MemSenF.Comparador
+guardar_calificacion[0] <= MemArb:BLOQUE_MemArb.ComparadorFinal[0]
+guardar_calificacion[1] <= MemArb:BLOQUE_MemArb.ComparadorFinal[1]
+guardar_calificacion[2] <= MemArb:BLOQUE_MemArb.ComparadorFinal[2]
+guardar_calificacion[3] <= MemArb:BLOQUE_MemArb.ComparadorFinal[3]
+guardar_validacion <= MemRespA:BLOQUE_MemRespA.Comparador
+SalidaEstados[0] <= Control:BLOQUE_Control.SalidaEstados[0]
+SalidaEstados[1] <= Control:BLOQUE_Control.SalidaEstados[1]
+SalidaEstados[2] <= Control:BLOQUE_Control.SalidaEstados[2]
+SalidaEstados[3] <= Control:BLOQUE_Control.SalidaEstados[3]
+SalidaEstados[4] <= Control:BLOQUE_Control.SalidaEstados[4]
+SalidaEstados[5] <= Control:BLOQUE_Control.SalidaEstados[5]
+SalidaEstados[6] <= Control:BLOQUE_Control.SalidaEstados[6]
+SalidaEstados[7] <= Control:BLOQUE_Control.SalidaEstados[7]
+SalidaEstados[8] <= Control:BLOQUE_Control.SalidaEstados[8]
+SalidaEstados[9] <= Control:BLOQUE_Control.SalidaEstados[9]
+SalidaEstados[10] <= Control:BLOQUE_Control.SalidaEstados[10]
+SalidaEstados[11] <= Control:BLOQUE_Control.SalidaEstados[11]
+SalidaEstados[12] <= Control:BLOQUE_Control.SalidaEstados[12]
+SalidaEstados[13] <= Control:BLOQUE_Control.SalidaEstados[13]
+salidaspatea[0] <= ContPatea:BLOQUE_ContPatea.salidaspatea[0]
+salidaspatea[1] <= ContPatea:BLOQUE_ContPatea.salidaspatea[1]
+salidaspatea[2] <= ContPatea:BLOQUE_ContPatea.salidaspatea[2]
+salidaspatea[3] <= ContPatea:BLOQUE_ContPatea.salidaspatea[3]
+Sensor => MemSenF:BLOQUE_MemSenF.Sensor
+RespA => MemRespA:BLOQUE_MemRespA.RespA
+Patea => Control:BLOQUE_Control.Patea
+CalInicial => MemArb:BLOQUE_MemArb.CalInicial
+Reloj => MemArb:BLOQUE_MemArb.Reloj
+Reloj => MemRespA:BLOQUE_MemRespA.Reloj
+Reloj => MemSenF:BLOQUE_MemSenF.Reloj
+Reloj => ContRta:BLOQUE_ContRta.Reloj
+Reloj => ContPatea:BLOQUE_ContPatea.Reloj
+Reloj => Control:BLOQUE_Control.Reloj
+ValInicial => Control:BLOQUE_Control.ValInicial
+ValArbitro => Control:BLOQUE_Control.ValArbitro
+Fin => Control:BLOQUE_Control.Fin
+Reset => MemArb:BLOQUE_MemArb.Reset
+Reset => MemRespA:BLOQUE_MemRespA.Reset
+Reset => MemSenF:BLOQUE_MemSenF.Reset
+Reset => ContRta:BLOQUE_ContRta.Reset
+Reset => ContPatea:BLOQUE_ContPatea.Reset
+Reset => Control:BLOQUE_Control.Reset
+Resultado[0] <= ComparadorFinal:BLOQUE_ComparadorFinal.Resultado[0]
+Resultado[1] <= ComparadorFinal:BLOQUE_ComparadorFinal.Resultado[1]
+Resultado[2] <= ComparadorFinal:BLOQUE_ComparadorFinal.Resultado[2]
+
+
+|ArbitrosConEntrada|Arbitros:BLOQUE_Arbitros|MemArb:BLOQUE_MemArb
+Reset => BLOQUE_1.ACLR
+Reset => BLOQUE_2.ACLR
+Reset => BLOQUE_3.ACLR
+Reset => BLOQUE_4.ACLR
+CalInicial => BLOQUE_1.DATAIN
+Reloj => BLOQUE_1.CLK
+Reloj => BLOQUE_2.CLK
+Reloj => BLOQUE_3.CLK
+Reloj => BLOQUE_4.CLK
+Control => BLOQUE_1.ENA
+Control => BLOQUE_2.ENA
+Control => BLOQUE_3.ENA
+Control => BLOQUE_4.ENA
+ComparadorFinal[0] <= BLOQUE_4.DB_MAX_OUTPUT_PORT_TYPE
+ComparadorFinal[1] <= BLOQUE_3.DB_MAX_OUTPUT_PORT_TYPE
+ComparadorFinal[2] <= BLOQUE_2.DB_MAX_OUTPUT_PORT_TYPE
+ComparadorFinal[3] <= BLOQUE_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ArbitrosConEntrada|Arbitros:BLOQUE_Arbitros|MemRespA:BLOQUE_MemRespA
+Reset => BLOQUE_1.ACLR
+RespA => BLOQUE_1.DATAIN
+Reloj => BLOQUE_1.CLK
+Control => BLOQUE_1.ENA
+Comparador <= BLOQUE_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ArbitrosConEntrada|Arbitros:BLOQUE_Arbitros|MemSenF:BLOQUE_MemSenF
+Sensor => BLOQUE_1.DATAIN
+Reset => BLOQUE_1.ACLR
+Reloj => BLOQUE_1.CLK
+Control => BLOQUE_1.ENA
+Comparador <= BLOQUE_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ArbitrosConEntrada|Arbitros:BLOQUE_Arbitros|Comparador:BLOQUE_Comparador
+Control => Control1.IN1
+MemRespA => Control1.IN0
+MemRespA => Control1.IN0
+MemSenF => Control1.IN1
+MemSenF => Control1.IN1
+Control1 <= Control1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ArbitrosConEntrada|Arbitros:BLOQUE_Arbitros|ContRta:BLOQUE_ContRta
+Reset => BLOQUE_1.ACLR
+Reset => BLOQUE_2.ACLR
+Reset => BLOQUE_3.ACLR
+Reset => BLOQUE_4.ACLR
+Control => comb.IN0
+Control => comb.IN0
+Control => comb.IN0
+Control => BLOQUE_1.ENA
+Reloj => BLOQUE_1.CLK
+Reloj => BLOQUE_2.CLK
+Reloj => BLOQUE_3.CLK
+Reloj => BLOQUE_4.CLK
+ComparadorFinal[0] <= BLOQUE_4.DB_MAX_OUTPUT_PORT_TYPE
+ComparadorFinal[1] <= BLOQUE_3.DB_MAX_OUTPUT_PORT_TYPE
+ComparadorFinal[2] <= BLOQUE_2.DB_MAX_OUTPUT_PORT_TYPE
+ComparadorFinal[3] <= BLOQUE_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ArbitrosConEntrada|Arbitros:BLOQUE_Arbitros|ComparadorFinal:BLOQUE_ComparadorFinal
+Control => Resultado.IN1
+Control => Resultado.IN1
+Control => Resultado.IN1
+ContRta[0] => Mejor.IN0
+ContRta[0] => Mejor.IN0
+ContRta[0] => Igual.IN0
+ContRta[0] => Igual.IN0
+ContRta[1] => Mejor.IN0
+ContRta[1] => Mejor.IN0
+ContRta[1] => Igual.IN0
+ContRta[1] => Igual.IN0
+ContRta[2] => Mejor.IN0
+ContRta[2] => Mejor.IN0
+ContRta[2] => Igual.IN0
+ContRta[2] => Igual.IN0
+ContRta[3] => Mejor.IN0
+ContRta[3] => Igual.IN0
+ContRta[3] => Igual.IN0
+MemArb[0] => Mejor.IN1
+MemArb[0] => Igual.IN1
+MemArb[0] => Mejor.IN1
+MemArb[0] => Igual.IN1
+MemArb[1] => Mejor.IN1
+MemArb[1] => Igual.IN1
+MemArb[1] => Mejor.IN1
+MemArb[1] => Igual.IN1
+MemArb[2] => Mejor.IN1
+MemArb[2] => Igual.IN1
+MemArb[2] => Mejor.IN1
+MemArb[2] => Igual.IN1
+MemArb[3] => Igual.IN1
+MemArb[3] => Mejor.IN1
+MemArb[3] => Igual.IN1
+Resultado[0] <= Resultado.DB_MAX_OUTPUT_PORT_TYPE
+Resultado[1] <= Resultado.DB_MAX_OUTPUT_PORT_TYPE
+Resultado[2] <= Resultado.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ArbitrosConEntrada|Arbitros:BLOQUE_Arbitros|ContPatea:BLOQUE_ContPatea
+salidaspatea[0] <= BLOQUE_1.DB_MAX_OUTPUT_PORT_TYPE
+salidaspatea[1] <= BLOQUE_2.DB_MAX_OUTPUT_PORT_TYPE
+salidaspatea[2] <= BLOQUE_3.DB_MAX_OUTPUT_PORT_TYPE
+salidaspatea[3] <= BLOQUE_4.DB_MAX_OUTPUT_PORT_TYPE
+Reset => BLOQUE_1.ACLR
+Reset => BLOQUE_2.ACLR
+Reset => BLOQUE_3.ACLR
+Reset => BLOQUE_4.ACLR
+Control => comb.IN0
+Control => comb.IN0
+Control => comb.IN0
+Control => BLOQUE_1.ENA
+Reloj => BLOQUE_1.CLK
+Reloj => BLOQUE_2.CLK
+Reloj => BLOQUE_3.CLK
+Reloj => BLOQUE_4.CLK
+Control1 <= Control1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ArbitrosConEntrada|Arbitros:BLOQUE_Arbitros|Control:BLOQUE_Control
+SalidaEstados[0] <= BLOQUE_1.DB_MAX_OUTPUT_PORT_TYPE
+SalidaEstados[1] <= BLOQUE_2.DB_MAX_OUTPUT_PORT_TYPE
+SalidaEstados[2] <= BLOQUE_3.DB_MAX_OUTPUT_PORT_TYPE
+SalidaEstados[3] <= BLOQUE_4.DB_MAX_OUTPUT_PORT_TYPE
+SalidaEstados[4] <= BLOQUE_5.DB_MAX_OUTPUT_PORT_TYPE
+SalidaEstados[5] <= BLOQUE_6.DB_MAX_OUTPUT_PORT_TYPE
+SalidaEstados[6] <= BLOQUE_7.DB_MAX_OUTPUT_PORT_TYPE
+SalidaEstados[7] <= BLOQUE_8.DB_MAX_OUTPUT_PORT_TYPE
+SalidaEstados[8] <= BLOQUE_9.DB_MAX_OUTPUT_PORT_TYPE
+SalidaEstados[9] <= BLOQUE_10.DB_MAX_OUTPUT_PORT_TYPE
+SalidaEstados[10] <= BLOQUE_11.DB_MAX_OUTPUT_PORT_TYPE
+SalidaEstados[11] <= BLOQUE_12.DB_MAX_OUTPUT_PORT_TYPE
+SalidaEstados[12] <= BLOQUE_13.DB_MAX_OUTPUT_PORT_TYPE
+SalidaEstados[13] <= BLOQUE_14.DB_MAX_OUTPUT_PORT_TYPE
+Reloj => BLOQUE_1.CLK
+Reloj => BLOQUE_2.CLK
+Reloj => BLOQUE_3.CLK
+Reloj => BLOQUE_4.CLK
+Reloj => BLOQUE_5.CLK
+Reloj => BLOQUE_6.CLK
+Reloj => BLOQUE_7.CLK
+Reloj => BLOQUE_8.CLK
+Reloj => BLOQUE_9.CLK
+Reloj => BLOQUE_10.CLK
+Reloj => BLOQUE_11.CLK
+Reloj => BLOQUE_12.CLK
+Reloj => BLOQUE_13.CLK
+Reloj => BLOQUE_14.CLK
+Patea => comb.IN0
+Patea => comb.IN0
+Fin => comb.IN0
+Fin => comb.IN0
+ValArbitro => comb.IN0
+ValArbitro => comb.IN0
+ValInicial => comb.IN0
+ValInicial => comb.IN0
+Reset => BLOQUE_1.PRESET
+Reset => BLOQUE_2.ACLR
+Reset => BLOQUE_3.ACLR
+Reset => BLOQUE_4.ACLR
+Reset => BLOQUE_5.ACLR
+Reset => BLOQUE_6.ACLR
+Reset => BLOQUE_7.ACLR
+Reset => BLOQUE_8.ACLR
+Reset => BLOQUE_9.ACLR
+Reset => BLOQUE_10.ACLR
+Reset => BLOQUE_11.ACLR
+Reset => BLOQUE_12.ACLR
+Reset => BLOQUE_13.ACLR
+Reset => BLOQUE_14.ACLR
+ContPatea => comb.IN0
+ContPatea => comb.IN0
+ContPatea => comb.IN0
+ContPatea => comb.IN0
+Comparador => comb.IN0
+Comparador => comb.IN0
+MemArb <= MemArb.DB_MAX_OUTPUT_PORT_TYPE
+ContPatea1 <= BLOQUE_10.DB_MAX_OUTPUT_PORT_TYPE
+ComparadorFinal <= BLOQUE_14.DB_MAX_OUTPUT_PORT_TYPE
+ContRta <= BLOQUE_12.DB_MAX_OUTPUT_PORT_TYPE
+MemSenF <= BLOQUE_7.DB_MAX_OUTPUT_PORT_TYPE
+MemRespA <= BLOQUE_9.DB_MAX_OUTPUT_PORT_TYPE
+Comparador1 <= BLOQUE_10.DB_MAX_OUTPUT_PORT_TYPE
+
+

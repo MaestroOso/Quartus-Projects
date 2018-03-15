@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/estudiante/Desktop/ArbitrosConEntradas/simulation/qsim
+vArbitrosConEntrada
+Z1 !s110 1471638070
+!i10b 1
+!s100 Zc1J=4h:AS>;797R;JkDL0
+I1R;bETY>EYaVNMF^fceme3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1471638069
+Z3 8ArbitrosConEntrada.vo
+Z4 FArbitrosConEntrada.vo
+Z5 L0 32
+Z6 OV;L;10.4b;61
+r1
+!s85 0
+31
+Z7 !s108 1471638070.000000
+Z8 !s107 ArbitrosConEntrada.vo|
+Z9 !s90 -work|work|ArbitrosConEntrada.vo|
+!i113 1
+Z10 o-work work
+n@arbitros@con@entrada
+vArbitrosConEntrada_vlg_vec_tst
+R1
+!i10b 1
+!s100 cg5K3::E]oaE9DWU[62ej2
+IR1ESzNIHGbQBQ`zBP2HK81
+R2
+R0
+w1471638045
+8ArbitrosConEntrada.vwf.vt
+FArbitrosConEntrada.vwf.vt
+Z11 L0 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 ArbitrosConEntrada.vwf.vt|
+!s90 -work|work|ArbitrosConEntrada.vwf.vt|
+!i113 1
+R10
+n@arbitros@con@entrada_vlg_vec_tst
+vEntradaSerial
+Z12 !s110 1471616523
+!i10b 1
+!s100 WDhj;VDiiPFjJFPhN0M8N3
+Ik4FTl`ok`UbM906nbO1mZ2
+R2
+R0
+w1471616520
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z13 !s108 1471616523.000000
+R8
+R9
+!i113 1
+R10
+n@entrada@serial
+vEntradaSerial_vlg_vec_tst
+R12
+!i10b 1
+!s100 R<cWook][7LFzjP609Fc61
+IPlV;PSMNZDJ>`16V3=a<l0
+R2
+R0
+w1471616496
+8EntradaSerial.vwf.vt
+FEntradaSerial.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R13
+!s107 EntradaSerial.vwf.vt|
+!s90 -work|work|EntradaSerial.vwf.vt|
+!i113 1
+R10
+n@entrada@serial_vlg_vec_tst
