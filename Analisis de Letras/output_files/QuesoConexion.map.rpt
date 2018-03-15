@@ -1,0 +1,458 @@
+Analysis & Synthesis report for QuesoConexion
+Sun Nov 20 21:41:03 2016
+Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Port Connectivity Checks: "SelecBit:SelectorBits"
+ 11. Port Connectivity Checks: "Registro:RegistroAntiReboteEnviarDatos"
+ 12. Port Connectivity Checks: "Registro:RegistroAntiReboteLetra"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Nov 20 21:41:03 2016           ;
+; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Standard Edition ;
+; Revision Name                      ; QuesoConexion                                   ;
+; Top-level Entity Name              ; QuesoConexion                                   ;
+; Family                             ; MAX 10                                          ;
+; Total logic elements               ; 316                                             ;
+;     Total combinational functions  ; 196                                             ;
+;     Dedicated logic registers      ; 163                                             ;
+; Total registers                    ; 163                                             ;
+; Total pins                         ; 36                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
+; UFM blocks                         ; 0                                               ;
+; ADC blocks                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; 10M08SAE144C8GES   ;                    ;
+; Top-level entity name                                                      ; QuesoConexion      ; QuesoConexion      ;
+; Family name                                                                ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                        ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                           ; Library ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------------------+---------+
+; QuesoConexion.vhd                ; yes             ; User VHDL File        ; C:/Users/estudiante/Desktop/Quesop/QuesoConexion.vhd   ;         ;
+; ContadorLetra.vhd                ; yes             ; User VHDL File        ; C:/Users/estudiante/Desktop/Quesop/ContadorLetra.vhd   ;         ;
+; ContadorSelec.vhd                ; yes             ; User VHDL File        ; C:/Users/estudiante/Desktop/Quesop/ContadorSelec.vhd   ;         ;
+; registro.vhd                     ; yes             ; Auto-Found VHDL File  ; C:/Users/estudiante/Desktop/Quesop/registro.vhd        ;         ;
+; registropalabra.vhd              ; yes             ; Auto-Found VHDL File  ; C:/Users/estudiante/Desktop/Quesop/registropalabra.vhd ;         ;
+; registro5p.vhd                   ; yes             ; Auto-Found VHDL File  ; C:/Users/estudiante/Desktop/Quesop/registro5p.vhd      ;         ;
+; selecpalabra.vhd                 ; yes             ; Auto-Found VHDL File  ; C:/Users/estudiante/Desktop/Quesop/selecpalabra.vhd    ;         ;
+; mux3_1.vhd                       ; yes             ; Auto-Found VHDL File  ; C:/Users/estudiante/Desktop/Quesop/mux3_1.vhd          ;         ;
+; contador.vhd                     ; yes             ; Auto-Found VHDL File  ; C:/Users/estudiante/Desktop/Quesop/contador.vhd        ;         ;
+; selecletra.vhd                   ; yes             ; Auto-Found VHDL File  ; C:/Users/estudiante/Desktop/Quesop/selecletra.vhd      ;         ;
+; mux8_1.vhd                       ; yes             ; Auto-Found VHDL File  ; C:/Users/estudiante/Desktop/Quesop/mux8_1.vhd          ;         ;
+; contadortiempo.vhd               ; yes             ; Auto-Found VHDL File  ; C:/Users/estudiante/Desktop/Quesop/contadortiempo.vhd  ;         ;
+; contadorbits.vhd                 ; yes             ; Auto-Found VHDL File  ; C:/Users/estudiante/Desktop/Quesop/contadorbits.vhd    ;         ;
+; selecbit.vhd                     ; yes             ; Auto-Found VHDL File  ; C:/Users/estudiante/Desktop/Quesop/selecbit.vhd        ;         ;
+; mux10_1.vhd                      ; yes             ; Auto-Found VHDL File  ; C:/Users/estudiante/Desktop/Quesop/mux10_1.vhd         ;         ;
+; control.vhd                      ; yes             ; Auto-Found VHDL File  ; C:/Users/estudiante/Desktop/Quesop/control.vhd         ;         ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 316       ;
+;                                             ;           ;
+; Total combinational functions               ; 196       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 101       ;
+;     -- 3 input functions                    ; 41        ;
+;     -- <=2 input functions                  ; 54        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 196       ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 163       ;
+;     -- Dedicated logic registers            ; 163       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 36        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 164       ;
+; Total fan-out                               ; 1301      ;
+; Average fan-out                             ; 3.02      ;
++---------------------------------------------+-----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                         ;
++---------------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                  ; LC Combinationals ; LC Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                      ; Library Name ;
++---------------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------+--------------+
+; |QuesoConexion                              ; 196 (16)          ; 163 (0)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 36   ; 0            ; 0          ; |QuesoConexion                                           ; work         ;
+;    |Contador:ContadorRegistro|              ; 5 (5)             ; 3 (3)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|Contador:ContadorRegistro                 ; work         ;
+;    |ContadorBits:ContadorBit|               ; 3 (3)             ; 2 (2)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|ContadorBits:ContadorBit                  ; work         ;
+;    |ContadorLetra:ContadorLetras|           ; 8 (8)             ; 4 (4)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|ContadorLetra:ContadorLetras              ; work         ;
+;    |ContadorSelec:ContadorSelector|         ; 8 (8)             ; 4 (4)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|ContadorSelec:ContadorSelector            ; work         ;
+;    |ContadorTiempo:ContadorTiempos|         ; 31 (31)           ; 13 (13)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|ContadorTiempo:ContadorTiempos            ; work         ;
+;    |Control:Controll|                       ; 28 (28)           ; 15 (15)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|Control:Controll                          ; work         ;
+;    |Registro:RegistroAntiReboteEnviarDatos| ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|Registro:RegistroAntiReboteEnviarDatos    ; work         ;
+;    |Registro:RegistroAntiReboteLetra|       ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|Registro:RegistroAntiReboteLetra          ; work         ;
+;    |RegistroPalabra:Registro1|              ; 0 (0)             ; 40 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro1                 ; work         ;
+;       |Registro5P:Reg1|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro1|Registro5P:Reg1 ; work         ;
+;       |Registro5P:Reg2|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro1|Registro5P:Reg2 ; work         ;
+;       |Registro5P:Reg3|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro1|Registro5P:Reg3 ; work         ;
+;       |Registro5P:Reg4|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro1|Registro5P:Reg4 ; work         ;
+;       |Registro5P:Reg5|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro1|Registro5P:Reg5 ; work         ;
+;       |Registro5P:Reg6|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro1|Registro5P:Reg6 ; work         ;
+;       |Registro5P:Reg7|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro1|Registro5P:Reg7 ; work         ;
+;       |Registro5P:Reg8|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro1|Registro5P:Reg8 ; work         ;
+;    |RegistroPalabra:Registro2|              ; 0 (0)             ; 40 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro2                 ; work         ;
+;       |Registro5P:Reg1|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro2|Registro5P:Reg1 ; work         ;
+;       |Registro5P:Reg2|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro2|Registro5P:Reg2 ; work         ;
+;       |Registro5P:Reg3|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro2|Registro5P:Reg3 ; work         ;
+;       |Registro5P:Reg4|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro2|Registro5P:Reg4 ; work         ;
+;       |Registro5P:Reg5|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro2|Registro5P:Reg5 ; work         ;
+;       |Registro5P:Reg6|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro2|Registro5P:Reg6 ; work         ;
+;       |Registro5P:Reg7|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro2|Registro5P:Reg7 ; work         ;
+;       |Registro5P:Reg8|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro2|Registro5P:Reg8 ; work         ;
+;    |RegistroPalabra:Registro3|              ; 0 (0)             ; 40 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro3                 ; work         ;
+;       |Registro5P:Reg1|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro3|Registro5P:Reg1 ; work         ;
+;       |Registro5P:Reg2|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro3|Registro5P:Reg2 ; work         ;
+;       |Registro5P:Reg3|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro3|Registro5P:Reg3 ; work         ;
+;       |Registro5P:Reg4|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro3|Registro5P:Reg4 ; work         ;
+;       |Registro5P:Reg5|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro3|Registro5P:Reg5 ; work         ;
+;       |Registro5P:Reg6|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro3|Registro5P:Reg6 ; work         ;
+;       |Registro5P:Reg7|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro3|Registro5P:Reg7 ; work         ;
+;       |Registro5P:Reg8|                     ; 0 (0)             ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|RegistroPalabra:Registro3|Registro5P:Reg8 ; work         ;
+;    |SelecBit:SelectorBits|                  ; 1 (0)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|SelecBit:SelectorBits                     ; work         ;
+;       |Mux10_1:Mux1|                        ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|SelecBit:SelectorBits|Mux10_1:Mux1        ; work         ;
+;    |SelecLetra:SelectorLetra|               ; 96 (0)            ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|SelecLetra:SelectorLetra                  ; work         ;
+;       |Mux8_1:Mux1|                         ; 23 (23)           ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|SelecLetra:SelectorLetra|Mux8_1:Mux1      ; work         ;
+;       |Mux8_1:Mux2|                         ; 18 (18)           ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|SelecLetra:SelectorLetra|Mux8_1:Mux2      ; work         ;
+;       |Mux8_1:Mux3|                         ; 20 (20)           ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|SelecLetra:SelectorLetra|Mux8_1:Mux3      ; work         ;
+;       |Mux8_1:Mux4|                         ; 18 (18)           ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|SelecLetra:SelectorLetra|Mux8_1:Mux4      ; work         ;
+;       |Mux8_1:Mux5|                         ; 17 (17)           ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |QuesoConexion|SelecLetra:SelectorLetra|Mux8_1:Mux5      ; work         ;
++---------------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 163   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 163   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 146   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; Control:Controll|F14                   ; 3       ;
+; Control:Controll|F1                    ; 3       ;
+; Control:Controll|F0                    ; 3       ;
+; Total number of inverted registers = 3 ;         ;
++----------------------------------------+---------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "SelecBit:SelectorBits" ;
++---------+-------+----------+----------------------+
+; Port    ; Type  ; Severity ; Details              ;
++---------+-------+----------+----------------------+
+; bits[0] ; Input ; Info     ; Stuck at GND         ;
+; bits[6] ; Input ; Info     ; Stuck at GND         ;
+; bits[7] ; Input ; Info     ; Stuck at VCC         ;
+; bits[8] ; Input ; Info     ; Stuck at GND         ;
+; bits[9] ; Input ; Info     ; Stuck at VCC         ;
++---------+-------+----------+----------------------+
+
+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "Registro:RegistroAntiReboteEnviarDatos" ;
++--------+-------+----------+----------------------------------------+
+; Port   ; Type  ; Severity ; Details                                ;
++--------+-------+----------+----------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                           ;
++--------+-------+----------+----------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "Registro:RegistroAntiReboteLetra" ;
++--------+-------+----------+----------------------------------+
+; Port   ; Type  ; Severity ; Details                          ;
++--------+-------+----------+----------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                     ;
++--------+-------+----------+----------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 36                          ;
+; cycloneiii_ff         ; 163                         ;
+;     CLR               ; 17                          ;
+;     ENA CLR           ; 146                         ;
+; cycloneiii_lcell_comb ; 202                         ;
+;     normal            ; 202                         ;
+;         1 data inputs ; 32                          ;
+;         2 data inputs ; 28                          ;
+;         3 data inputs ; 41                          ;
+;         4 data inputs ; 101                         ;
+;                       ;                             ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 4.54                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
+    Info: Processing started: Sun Nov 20 21:40:37 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off QuesoConexion -c QuesoConexion
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file quesoconexion.vhd
+    Info (12022): Found design unit 1: QuesoConexion-QuesoConexionArch File: C:/Users/estudiante/Desktop/Quesop/QuesoConexion.vhd Line: 50
+    Info (12023): Found entity 1: QuesoConexion File: C:/Users/estudiante/Desktop/Quesop/QuesoConexion.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file contadorletra.vhd
+    Info (12022): Found design unit 1: ContadorLetra-ContadorLetraArch File: C:/Users/estudiante/Desktop/Quesop/ContadorLetra.vhd Line: 36
+    Info (12023): Found entity 1: ContadorLetra File: C:/Users/estudiante/Desktop/Quesop/ContadorLetra.vhd Line: 23
+Info (12021): Found 2 design units, including 1 entities, in source file contadorselec.vhd
+    Info (12022): Found design unit 1: ContadorSelec-ContadorSelecArch File: C:/Users/estudiante/Desktop/Quesop/ContadorSelec.vhd Line: 36
+    Info (12023): Found entity 1: ContadorSelec File: C:/Users/estudiante/Desktop/Quesop/ContadorSelec.vhd Line: 23
+Info (12127): Elaborating entity "QuesoConexion" for the top level hierarchy
+Warning (12125): Using design file registro.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Registro-RegistroArch File: C:/Users/estudiante/Desktop/Quesop/registro.vhd Line: 33
+    Info (12023): Found entity 1: Registro File: C:/Users/estudiante/Desktop/Quesop/registro.vhd Line: 22
+Info (12128): Elaborating entity "Registro" for hierarchy "Registro:RegistroAntiReboteLetra" File: C:/Users/estudiante/Desktop/Quesop/QuesoConexion.vhd Line: 240
+Warning (12125): Using design file registropalabra.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: RegistroPalabra-RegistroPalabraArch File: C:/Users/estudiante/Desktop/Quesop/registropalabra.vhd Line: 34
+    Info (12023): Found entity 1: RegistroPalabra File: C:/Users/estudiante/Desktop/Quesop/registropalabra.vhd Line: 23
+Info (12128): Elaborating entity "RegistroPalabra" for hierarchy "RegistroPalabra:Registro1" File: C:/Users/estudiante/Desktop/Quesop/QuesoConexion.vhd Line: 244
+Warning (12125): Using design file registro5p.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Registro5P-Registro5PArch File: C:/Users/estudiante/Desktop/Quesop/registro5p.vhd Line: 34
+    Info (12023): Found entity 1: Registro5P File: C:/Users/estudiante/Desktop/Quesop/registro5p.vhd Line: 23
+Info (12128): Elaborating entity "Registro5P" for hierarchy "RegistroPalabra:Registro1|Registro5P:Reg1" File: C:/Users/estudiante/Desktop/Quesop/registropalabra.vhd Line: 59
+Warning (12125): Using design file selecpalabra.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: SelecPalabra-SelecPalabraArch File: C:/Users/estudiante/Desktop/Quesop/selecpalabra.vhd Line: 39
+    Info (12023): Found entity 1: SelecPalabra File: C:/Users/estudiante/Desktop/Quesop/selecpalabra.vhd Line: 21
+Info (12128): Elaborating entity "SelecPalabra" for hierarchy "SelecPalabra:SelectorPalabra" File: C:/Users/estudiante/Desktop/Quesop/QuesoConexion.vhd Line: 248
+Warning (12125): Using design file mux3_1.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Mux3_1-Mux3_1Arch File: C:/Users/estudiante/Desktop/Quesop/mux3_1.vhd Line: 33
+    Info (12023): Found entity 1: Mux3_1 File: C:/Users/estudiante/Desktop/Quesop/mux3_1.vhd Line: 23
+Info (12128): Elaborating entity "Mux3_1" for hierarchy "SelecPalabra:SelectorPalabra|Mux3_1:Mux0" File: C:/Users/estudiante/Desktop/Quesop/selecpalabra.vhd Line: 53
+Warning (12125): Using design file contador.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Contador-ContadorArch File: C:/Users/estudiante/Desktop/Quesop/contador.vhd Line: 35
+    Info (12023): Found entity 1: Contador File: C:/Users/estudiante/Desktop/Quesop/contador.vhd Line: 23
+Info (12128): Elaborating entity "Contador" for hierarchy "Contador:ContadorRegistro" File: C:/Users/estudiante/Desktop/Quesop/QuesoConexion.vhd Line: 250
+Warning (12125): Using design file selecletra.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: SelecLetra-SelecLetraArch File: C:/Users/estudiante/Desktop/Quesop/selecletra.vhd Line: 36
+    Info (12023): Found entity 1: SelecLetra File: C:/Users/estudiante/Desktop/Quesop/selecletra.vhd Line: 21
+Info (12128): Elaborating entity "SelecLetra" for hierarchy "SelecLetra:SelectorLetra" File: C:/Users/estudiante/Desktop/Quesop/QuesoConexion.vhd Line: 252
+Warning (12125): Using design file mux8_1.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Mux8_1-Mux8_1Arch File: C:/Users/estudiante/Desktop/Quesop/mux8_1.vhd Line: 33
+    Info (12023): Found entity 1: Mux8_1 File: C:/Users/estudiante/Desktop/Quesop/mux8_1.vhd Line: 23
+Info (12128): Elaborating entity "Mux8_1" for hierarchy "SelecLetra:SelectorLetra|Mux8_1:Mux1" File: C:/Users/estudiante/Desktop/Quesop/selecletra.vhd Line: 53
+Warning (12125): Using design file contadortiempo.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: ContadorTiempo-ContadorTiempoArch File: C:/Users/estudiante/Desktop/Quesop/contadortiempo.vhd Line: 35
+    Info (12023): Found entity 1: ContadorTiempo File: C:/Users/estudiante/Desktop/Quesop/contadortiempo.vhd Line: 23
+Info (12128): Elaborating entity "ContadorTiempo" for hierarchy "ContadorTiempo:ContadorTiempos" File: C:/Users/estudiante/Desktop/Quesop/QuesoConexion.vhd Line: 254
+Warning (12125): Using design file contadorbits.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: ContadorBits-ContadorBitsArch File: C:/Users/estudiante/Desktop/Quesop/contadorbits.vhd Line: 40
+    Info (12023): Found entity 1: ContadorBits File: C:/Users/estudiante/Desktop/Quesop/contadorbits.vhd Line: 23
+Info (12128): Elaborating entity "ContadorBits" for hierarchy "ContadorBits:ContadorBit" File: C:/Users/estudiante/Desktop/Quesop/QuesoConexion.vhd Line: 256
+Info (12128): Elaborating entity "ContadorLetra" for hierarchy "ContadorLetra:ContadorLetras" File: C:/Users/estudiante/Desktop/Quesop/QuesoConexion.vhd Line: 258
+Info (12128): Elaborating entity "ContadorSelec" for hierarchy "ContadorSelec:ContadorSelector" File: C:/Users/estudiante/Desktop/Quesop/QuesoConexion.vhd Line: 260
+Warning (12125): Using design file selecbit.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: SelecBit-SelecBitArch File: C:/Users/estudiante/Desktop/Quesop/selecbit.vhd Line: 36
+    Info (12023): Found entity 1: SelecBit File: C:/Users/estudiante/Desktop/Quesop/selecbit.vhd Line: 21
+Info (12128): Elaborating entity "SelecBit" for hierarchy "SelecBit:SelectorBits" File: C:/Users/estudiante/Desktop/Quesop/QuesoConexion.vhd Line: 261
+Warning (12125): Using design file mux10_1.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Mux10_1-Mux10_1Arch File: C:/Users/estudiante/Desktop/Quesop/mux10_1.vhd Line: 33
+    Info (12023): Found entity 1: Mux10_1 File: C:/Users/estudiante/Desktop/Quesop/mux10_1.vhd Line: 23
+Info (12128): Elaborating entity "Mux10_1" for hierarchy "SelecBit:SelectorBits|Mux10_1:Mux1" File: C:/Users/estudiante/Desktop/Quesop/selecbit.vhd Line: 50
+Warning (12125): Using design file control.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Control-ControlArch File: C:/Users/estudiante/Desktop/Quesop/control.vhd Line: 58
+    Info (12023): Found entity 1: Control File: C:/Users/estudiante/Desktop/Quesop/control.vhd Line: 22
+Info (12128): Elaborating entity "Control" for hierarchy "Control:Controll" File: C:/Users/estudiante/Desktop/Quesop/QuesoConexion.vhd Line: 263
+Info (13000): Registers with preset signals will power-up high File: C:/Users/estudiante/Desktop/Quesop/control.vhd Line: 98
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 352 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 21 output pins
+    Info (21061): Implemented 316 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 876 megabytes
+    Info: Processing ended: Sun Nov 20 21:41:04 2016
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:22
+
+

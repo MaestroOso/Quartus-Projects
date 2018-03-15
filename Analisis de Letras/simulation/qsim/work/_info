@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/estudiante/Downloads/Quesop/Quesop/Quesito/simulation/qsim
+vQuesoConexion
+Z0 !s110 1479359351
+!i10b 1
+!s100 ig`XOIJ`;_>f;=>NBLCSh0
+Iaom_HkLYW?3BBHM1z5e7o1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/SAMSUNG/Downloads/Quesop (1)/Quesop/simulation/qsim
+w1479359349
+8QuesoConexion.vo
+FQuesoConexion.vo
+L0 32
+Z3 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z4 !s108 1479359351.000000
+!s107 QuesoConexion.vo|
+!s90 -work|work|QuesoConexion.vo|
+!i113 1
+Z5 o-work work
+n@queso@conexion
+vQuesoConexion_vlg_vec_tst
+R0
+!i10b 1
+!s100 JH8RNLPMjKj<[lGT?]AVT2
+IFQB_m9N8O8<hIT:CnBn@21
+R1
+R2
+w1479359347
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+n@queso@conexion_vlg_vec_tst

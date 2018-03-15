@@ -1,0 +1,153 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Led0",
+					"strict" : false
+				},
+				{
+					"name" : "Led1",
+					"strict" : false
+				},
+				{
+					"name" : "Led2",
+					"strict" : false
+				},
+				{
+					"name" : "Led3",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosControl[14]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosControl[13]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosControl[12]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosControl[11]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosControl[10]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosControl[9]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosControl[8]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosControl[7]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosControl[6]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosControl[5]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosControl[4]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosControl[3]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosControl[2]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosControl[1]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosControl[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ComunicacionPC",
+					"strict" : false
+				},
+				{
+					"name" : "Reloj",
+					"strict" : false
+				},
+				{
+					"name" : "Selector[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Selector[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "RESET",
+					"strict" : false
+				},
+				{
+					"name" : "Inicio",
+					"strict" : false
+				},
+				{
+					"name" : "FinPalabra",
+					"strict" : false
+				},
+				{
+					"name" : "Letra[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Letra[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Letra[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Letra[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Letra[0]",
+					"strict" : false
+				},
+				{
+					"name" : "EnviarDatos",
+					"strict" : false
+				},
+				{
+					"name" : "AntiReboteEnviar",
+					"strict" : false
+				},
+				{
+					"name" : "HayLetra",
+					"strict" : false
+				},
+				{
+					"name" : "AntiReboteLetra",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
