@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Mon Oct 10 17:26:46 2016
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Standard Edition
+Revision Name : SistemaChocoIN
+Top-level Entity Name : SistemaChocoIN
+Family : MAX 10
+Total logic elements : 311
+    Total combinational functions : 304
+    Dedicated logic registers : 117
+Total registers : 117
+Total pins : 90
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

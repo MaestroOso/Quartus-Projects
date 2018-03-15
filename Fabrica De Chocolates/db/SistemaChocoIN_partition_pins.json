@@ -1,0 +1,321 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LedTGB1",
+					"strict" : false
+				},
+				{
+					"name" : "LedTMB1",
+					"strict" : false
+				},
+				{
+					"name" : "LedTPB1",
+					"strict" : false
+				},
+				{
+					"name" : "LedTGB2",
+					"strict" : false
+				},
+				{
+					"name" : "LedTMB2",
+					"strict" : false
+				},
+				{
+					"name" : "LedTPB2",
+					"strict" : false
+				},
+				{
+					"name" : "DisplayOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DisplayOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DisplayOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DisplayOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DisplayOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DisplayOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DisplayOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CatodoDisplayOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CatodoDisplayOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CatodoDisplayOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SalidaPrecioChocolate[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SalidaPrecioChocolate[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SalidaPrecioChocolate[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LedFC1",
+					"strict" : false
+				},
+				{
+					"name" : "LedFC2",
+					"strict" : false
+				},
+				{
+					"name" : "Clkout",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosSC[10]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosSC[9]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosSC[8]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosSC[7]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosSC[6]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosSC[5]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosSC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosSC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosSC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosSC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo1[14]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo1[13]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo1[12]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo1[11]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo1[10]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo1[9]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo1[8]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo2[14]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo2[13]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo2[12]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo2[11]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo2[10]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo2[9]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo2[8]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "EstadosBrazo2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Entradachoco",
+					"strict" : false
+				},
+				{
+					"name" : "Seleccionador[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Seleccionador[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Seleccionador[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ConfirmarCaja1",
+					"strict" : false
+				},
+				{
+					"name" : "ConfirmarCaja2",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "RESET",
+					"strict" : false
+				},
+				{
+					"name" : "TamCajas1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "TamCajas1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "TamCajas2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "TamCajas2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "INICIO",
+					"strict" : false
+				},
+				{
+					"name" : "FinDia",
+					"strict" : false
+				},
+				{
+					"name" : "SensorChoco1",
+					"strict" : false
+				},
+				{
+					"name" : "AntiRebote1",
+					"strict" : false
+				},
+				{
+					"name" : "SensorChoco2",
+					"strict" : false
+				},
+				{
+					"name" : "AntiRebote2",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

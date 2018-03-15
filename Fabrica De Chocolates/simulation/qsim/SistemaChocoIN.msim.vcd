@@ -1,0 +1,2950 @@
+$comment
+	File created using the following command:
+		vcd file SistemaChocoIN.msim.vcd -direction
+$end
+$date
+	Mon Oct 10 17:30:25 2016
+$end
+$version
+	ModelSim Version 10.4b
+$end
+$timescale
+	1ps
+$end
+
+$scope module SistemaChocoIN_vlg_vec_tst $end
+$var reg 1 ! AntiRebote1 $end
+$var reg 1 " AntiRebote2 $end
+$var reg 1 # CLK $end
+$var reg 1 $ ConfirmarCaja1 $end
+$var reg 1 % ConfirmarCaja2 $end
+$var reg 1 & FinDia $end
+$var reg 1 ' INICIO $end
+$var reg 1 ( RESET $end
+$var reg 3 ) Seleccionador [0:2] $end
+$var reg 1 * SensorChoco1 $end
+$var reg 1 + SensorChoco2 $end
+$var reg 2 , TamCajas1 [0:1] $end
+$var reg 2 - TamCajas2 [0:1] $end
+$var wire 1 . CatodoDisplayOut [0] $end
+$var wire 1 / CatodoDisplayOut [1] $end
+$var wire 1 0 CatodoDisplayOut [2] $end
+$var wire 1 1 Clkout $end
+$var wire 1 2 DisplayOut [0] $end
+$var wire 1 3 DisplayOut [1] $end
+$var wire 1 4 DisplayOut [2] $end
+$var wire 1 5 DisplayOut [3] $end
+$var wire 1 6 DisplayOut [4] $end
+$var wire 1 7 DisplayOut [5] $end
+$var wire 1 8 DisplayOut [6] $end
+$var wire 1 9 Entradachoco $end
+$var wire 1 : EstadosBrazo1 [0] $end
+$var wire 1 ; EstadosBrazo1 [1] $end
+$var wire 1 < EstadosBrazo1 [2] $end
+$var wire 1 = EstadosBrazo1 [3] $end
+$var wire 1 > EstadosBrazo1 [4] $end
+$var wire 1 ? EstadosBrazo1 [5] $end
+$var wire 1 @ EstadosBrazo1 [6] $end
+$var wire 1 A EstadosBrazo1 [7] $end
+$var wire 1 B EstadosBrazo1 [8] $end
+$var wire 1 C EstadosBrazo1 [9] $end
+$var wire 1 D EstadosBrazo1 [10] $end
+$var wire 1 E EstadosBrazo1 [11] $end
+$var wire 1 F EstadosBrazo1 [12] $end
+$var wire 1 G EstadosBrazo1 [13] $end
+$var wire 1 H EstadosBrazo1 [14] $end
+$var wire 1 I EstadosBrazo2 [0] $end
+$var wire 1 J EstadosBrazo2 [1] $end
+$var wire 1 K EstadosBrazo2 [2] $end
+$var wire 1 L EstadosBrazo2 [3] $end
+$var wire 1 M EstadosBrazo2 [4] $end
+$var wire 1 N EstadosBrazo2 [5] $end
+$var wire 1 O EstadosBrazo2 [6] $end
+$var wire 1 P EstadosBrazo2 [7] $end
+$var wire 1 Q EstadosBrazo2 [8] $end
+$var wire 1 R EstadosBrazo2 [9] $end
+$var wire 1 S EstadosBrazo2 [10] $end
+$var wire 1 T EstadosBrazo2 [11] $end
+$var wire 1 U EstadosBrazo2 [12] $end
+$var wire 1 V EstadosBrazo2 [13] $end
+$var wire 1 W EstadosBrazo2 [14] $end
+$var wire 1 X EstadosSC [0] $end
+$var wire 1 Y EstadosSC [1] $end
+$var wire 1 Z EstadosSC [2] $end
+$var wire 1 [ EstadosSC [3] $end
+$var wire 1 \ EstadosSC [4] $end
+$var wire 1 ] EstadosSC [5] $end
+$var wire 1 ^ EstadosSC [6] $end
+$var wire 1 _ EstadosSC [7] $end
+$var wire 1 ` EstadosSC [8] $end
+$var wire 1 a EstadosSC [9] $end
+$var wire 1 b EstadosSC [10] $end
+$var wire 1 c LedFC1 $end
+$var wire 1 d LedFC2 $end
+$var wire 1 e LedTGB1 $end
+$var wire 1 f LedTGB2 $end
+$var wire 1 g LedTMB1 $end
+$var wire 1 h LedTMB2 $end
+$var wire 1 i LedTPB1 $end
+$var wire 1 j LedTPB2 $end
+$var wire 1 k SalidaPrecioChocolate [0] $end
+$var wire 1 l SalidaPrecioChocolate [1] $end
+$var wire 1 m SalidaPrecioChocolate [2] $end
+$var wire 1 n SalidaPrecioChocolate [3] $end
+$var wire 1 o SalidaPrecioChocolate [4] $end
+$var wire 1 p SalidaPrecioChocolate [5] $end
+$var wire 1 q SalidaPrecioChocolate [6] $end
+$var wire 1 r SalidaPrecioChocolate [7] $end
+$var wire 1 s SalidaPrecioChocolate [8] $end
+$var wire 1 t SalidaPrecioChocolate [9] $end
+$var wire 1 u SalidaPrecioChocolate [10] $end
+$var wire 1 v SalidaPrecioChocolate [11] $end
+
+$scope module i1 $end
+$var wire 1 w gnd $end
+$var wire 1 x vcc $end
+$var wire 1 y unknown $end
+$var tri1 1 z devclrn $end
+$var tri1 1 { devpor $end
+$var tri1 1 | devoe $end
+$var wire 1 } ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 ~ ~QUARTUS_CREATED_UNVM~~busy $end
+$var wire 1 !! ~QUARTUS_CREATED_ADC1~~eoc $end
+$var wire 1 "! LedTGB1~output_o $end
+$var wire 1 #! LedTMB1~output_o $end
+$var wire 1 $! LedTPB1~output_o $end
+$var wire 1 %! LedTGB2~output_o $end
+$var wire 1 &! LedTMB2~output_o $end
+$var wire 1 '! LedTPB2~output_o $end
+$var wire 1 (! DisplayOut[6]~output_o $end
+$var wire 1 )! DisplayOut[5]~output_o $end
+$var wire 1 *! DisplayOut[4]~output_o $end
+$var wire 1 +! DisplayOut[3]~output_o $end
+$var wire 1 ,! DisplayOut[2]~output_o $end
+$var wire 1 -! DisplayOut[1]~output_o $end
+$var wire 1 .! DisplayOut[0]~output_o $end
+$var wire 1 /! CatodoDisplayOut[2]~output_o $end
+$var wire 1 0! CatodoDisplayOut[1]~output_o $end
+$var wire 1 1! CatodoDisplayOut[0]~output_o $end
+$var wire 1 2! SalidaPrecioChocolate[11]~output_o $end
+$var wire 1 3! SalidaPrecioChocolate[10]~output_o $end
+$var wire 1 4! SalidaPrecioChocolate[9]~output_o $end
+$var wire 1 5! SalidaPrecioChocolate[8]~output_o $end
+$var wire 1 6! SalidaPrecioChocolate[7]~output_o $end
+$var wire 1 7! SalidaPrecioChocolate[6]~output_o $end
+$var wire 1 8! SalidaPrecioChocolate[5]~output_o $end
+$var wire 1 9! SalidaPrecioChocolate[4]~output_o $end
+$var wire 1 :! SalidaPrecioChocolate[3]~output_o $end
+$var wire 1 ;! SalidaPrecioChocolate[2]~output_o $end
+$var wire 1 <! SalidaPrecioChocolate[1]~output_o $end
+$var wire 1 =! SalidaPrecioChocolate[0]~output_o $end
+$var wire 1 >! LedFC1~output_o $end
+$var wire 1 ?! LedFC2~output_o $end
+$var wire 1 @! Clkout~output_o $end
+$var wire 1 A! EstadosSC[10]~output_o $end
+$var wire 1 B! EstadosSC[9]~output_o $end
+$var wire 1 C! EstadosSC[8]~output_o $end
+$var wire 1 D! EstadosSC[7]~output_o $end
+$var wire 1 E! EstadosSC[6]~output_o $end
+$var wire 1 F! EstadosSC[5]~output_o $end
+$var wire 1 G! EstadosSC[4]~output_o $end
+$var wire 1 H! EstadosSC[3]~output_o $end
+$var wire 1 I! EstadosSC[2]~output_o $end
+$var wire 1 J! EstadosSC[1]~output_o $end
+$var wire 1 K! EstadosSC[0]~output_o $end
+$var wire 1 L! EstadosBrazo1[14]~output_o $end
+$var wire 1 M! EstadosBrazo1[13]~output_o $end
+$var wire 1 N! EstadosBrazo1[12]~output_o $end
+$var wire 1 O! EstadosBrazo1[11]~output_o $end
+$var wire 1 P! EstadosBrazo1[10]~output_o $end
+$var wire 1 Q! EstadosBrazo1[9]~output_o $end
+$var wire 1 R! EstadosBrazo1[8]~output_o $end
+$var wire 1 S! EstadosBrazo1[7]~output_o $end
+$var wire 1 T! EstadosBrazo1[6]~output_o $end
+$var wire 1 U! EstadosBrazo1[5]~output_o $end
+$var wire 1 V! EstadosBrazo1[4]~output_o $end
+$var wire 1 W! EstadosBrazo1[3]~output_o $end
+$var wire 1 X! EstadosBrazo1[2]~output_o $end
+$var wire 1 Y! EstadosBrazo1[1]~output_o $end
+$var wire 1 Z! EstadosBrazo1[0]~output_o $end
+$var wire 1 [! EstadosBrazo2[14]~output_o $end
+$var wire 1 \! EstadosBrazo2[13]~output_o $end
+$var wire 1 ]! EstadosBrazo2[12]~output_o $end
+$var wire 1 ^! EstadosBrazo2[11]~output_o $end
+$var wire 1 _! EstadosBrazo2[10]~output_o $end
+$var wire 1 `! EstadosBrazo2[9]~output_o $end
+$var wire 1 a! EstadosBrazo2[8]~output_o $end
+$var wire 1 b! EstadosBrazo2[7]~output_o $end
+$var wire 1 c! EstadosBrazo2[6]~output_o $end
+$var wire 1 d! EstadosBrazo2[5]~output_o $end
+$var wire 1 e! EstadosBrazo2[4]~output_o $end
+$var wire 1 f! EstadosBrazo2[3]~output_o $end
+$var wire 1 g! EstadosBrazo2[2]~output_o $end
+$var wire 1 h! EstadosBrazo2[1]~output_o $end
+$var wire 1 i! EstadosBrazo2[0]~output_o $end
+$var wire 1 j! Entradachoco~output_o $end
+$var wire 1 k! CLK~input_o $end
+$var wire 1 l! CLK~inputclkctrl_outclk $end
+$var wire 1 m! SistemChocolate|Brazo1|ContadorGrande|dato3~0_combout $end
+$var wire 1 n! RESET~input_o $end
+$var wire 1 o! SistemChocolate|Brazo1|ContadorGrande|dato1~0_combout $end
+$var wire 1 p! SistemChocolate|Brazo1|ContadorGrande|dato4~0_combout $end
+$var wire 1 q! SistemChocolate|Brazo1|ContadorGrande|comb~1_combout $end
+$var wire 1 r! SistemChocolate|Brazo1|ContadorGrande|dato4~q $end
+$var wire 1 s! SistemChocolate|Brazo1|ContadorGrande|dato2~0_combout $end
+$var wire 1 t! SensorChoco1~input_o $end
+$var wire 1 u! comb~0_combout $end
+$var wire 1 v! Senso1|dato1~feeder_combout $end
+$var wire 1 w! AntiRebote1~input_o $end
+$var wire 1 x! Senso1|dato1~q $end
+$var wire 1 y! SistemChocolate|Brazo1|ContadorGrande|comb~2_combout $end
+$var wire 1 z! SistemChocolate|Brazo1|ContadorGrande|dato2~q $end
+$var wire 1 {! SistemChocolate|Brazo1|ContadorGrande|dato5~0_combout $end
+$var wire 1 |! SistemChocolate|Brazo1|ContadorGrande|comb~3_combout $end
+$var wire 1 }! SistemChocolate|Brazo1|ContadorGrande|dato5~q $end
+$var wire 1 ~! SistemChocolate|Brazo1|ContadorGrande|FinCajaTG~0_combout $end
+$var wire 1 !" SistemChocolate|Brazo1|ControlTotal|F12~feeder_combout $end
+$var wire 1 "" SistemChocolate|Brazo1|ControlTotal|F12~q $end
+$var wire 1 #" SistemChocolate|Brazo1|ContadorGrande|FinalizadorTG~0_combout $end
+$var wire 1 $" TamCajas1[1]~input_o $end
+$var wire 1 %" TamCajas1[0]~input_o $end
+$var wire 1 &" ConfirmarCaja1~input_o $end
+$var wire 1 '" SistemChocolate|Brazo1|ControlTotal|comb~16_combout $end
+$var wire 1 (" SistemChocolate|Brazo1|ControlTotal|F5~q $end
+$var wire 1 )" SistemChocolate|Brazo1|ContadorPequeno|dato5~0_combout $end
+$var wire 1 *" SistemChocolate|Brazo1|ContadorPequeno|dato3~0_combout $end
+$var wire 1 +" SistemChocolate|Brazo1|ContadorPequeno|dato2~0_combout $end
+$var wire 1 ," SistemChocolate|Brazo1|ContadorPequeno|dato1~0_combout $end
+$var wire 1 -" SistemChocolate|Brazo1|ControlTotal|ContTP~combout $end
+$var wire 1 ." SistemChocolate|Brazo1|ContadorPequeno|dato1~q $end
+$var wire 1 /" SistemChocolate|Brazo1|ContadorPequeno|dato4~0_combout $end
+$var wire 1 0" SistemChocolate|Brazo1|ContadorPequeno|comb~1_combout $end
+$var wire 1 1" SistemChocolate|Brazo1|ContadorPequeno|dato4~q $end
+$var wire 1 2" SistemChocolate|Brazo1|ContadorPequeno|FinalizadorTP~0_combout $end
+$var wire 1 3" SistemChocolate|Brazo1|ContadorPequeno|FinalizadorTP~1_combout $end
+$var wire 1 4" FinDia~input_o $end
+$var wire 1 5" SistemChocolate|Brazo1|ContadorMediano|dato2~0_combout $end
+$var wire 1 6" SistemChocolate|Brazo1|ContadorMediano|dato1~0_combout $end
+$var wire 1 7" SistemChocolate|Brazo1|ControlTotal|comb~17_combout $end
+$var wire 1 8" SistemChocolate|Brazo1|ControlTotal|F4~q $end
+$var wire 1 9" SistemChocolate|Brazo1|ControlTotal|comb~11_combout $end
+$var wire 1 :" SistemChocolate|Brazo1|ContadorMediano|dato5~0_combout $end
+$var wire 1 ;" SistemChocolate|Brazo1|ContadorMediano|dato4~0_combout $end
+$var wire 1 <" SistemChocolate|Brazo1|ContadorMediano|dato3~0_combout $end
+$var wire 1 =" SistemChocolate|Brazo1|ContadorMediano|comb~0_combout $end
+$var wire 1 >" SistemChocolate|Brazo1|ContadorMediano|dato3~q $end
+$var wire 1 ?" SistemChocolate|Brazo1|ContadorMediano|comb~3_combout $end
+$var wire 1 @" SistemChocolate|Brazo1|ContadorMediano|dato4~q $end
+$var wire 1 A" SistemChocolate|Brazo1|ContadorMediano|comb~1_combout $end
+$var wire 1 B" SistemChocolate|Brazo1|ContadorMediano|dato5~q $end
+$var wire 1 C" SistemChocolate|Brazo1|ContadorMediano|FinalizadorTM~combout $end
+$var wire 1 D" SistemChocolate|Brazo1|ControlTotal|F13~feeder_combout $end
+$var wire 1 E" SistemChocolate|Brazo1|ControlTotal|F13~q $end
+$var wire 1 F" SistemChocolate|Brazo1|ContadorMediano|FinCajaTM~0_combout $end
+$var wire 1 G" SistemChocolate|Brazo1|ControlTotal|comb~10_combout $end
+$var wire 1 H" SistemChocolate|Brazo1|ControlTotal|comb~12_combout $end
+$var wire 1 I" SistemChocolate|Brazo1|ControlTotal|F7~q $end
+$var wire 1 J" SistemChocolate|Brazo1|ControlTotal|comb~5_combout $end
+$var wire 1 K" SistemChocolate|Brazo1|ControlTotal|F10~q $end
+$var wire 1 L" SistemChocolate|Brazo1|ControlTotal|ContTM~combout $end
+$var wire 1 M" SistemChocolate|Brazo1|ContadorMediano|dato1~q $end
+$var wire 1 N" SistemChocolate|Brazo1|ContadorMediano|comb~2_combout $end
+$var wire 1 O" SistemChocolate|Brazo1|ContadorMediano|dato2~q $end
+$var wire 1 P" SistemChocolate|Brazo1|ContadorMediano|FinalizadorTM~0_combout $end
+$var wire 1 Q" SistemChocolate|Brazo1|ControlTotal|TerminoBrazo~0_combout $end
+$var wire 1 R" SistemChocolate|Brazo1|ControlTotal|TerminoBrazo~combout $end
+$var wire 1 S" SistemChocolate|Brazo2|ContadorPequeno|dato5~0_combout $end
+$var wire 1 T" SistemChocolate|Brazo2|ContadorPequeno|dato4~0_combout $end
+$var wire 1 U" SistemChocolate|Brazo2|ContadorPequeno|dato3~0_combout $end
+$var wire 1 V" SistemChocolate|Brazo2|ContadorPequeno|dato2~0_combout $end
+$var wire 1 W" SistemChocolate|Brazo2|ContadorPequeno|dato1~0_combout $end
+$var wire 1 X" SensorChoco2~input_o $end
+$var wire 1 Y" comb~1_combout $end
+$var wire 1 Z" AntiRebote2~input_o $end
+$var wire 1 [" Senso2|dato1~q $end
+$var wire 1 \" TamCajas2[0]~input_o $end
+$var wire 1 ]" ConfirmarCaja2~input_o $end
+$var wire 1 ^" TamCajas2[1]~input_o $end
+$var wire 1 _" SistemChocolate|Brazo2|ControlTotal|comb~18_combout $end
+$var wire 1 `" SistemChocolate|Brazo2|ControlTotal|F3~q $end
+$var wire 1 a" SistemChocolate|Brazo2|ControlTotal|comb~0_combout $end
+$var wire 1 b" SistemChocolate|Brazo2|ContadorPequeno|FinalizadorTP~0_combout $end
+$var wire 1 c" SistemChocolate|Brazo2|ControlTotal|comb~1_combout $end
+$var wire 1 d" SistemChocolate|Central|Control|comb~3_combout $end
+$var wire 1 e" SistemChocolate|Central|Control|F7~q $end
+$var wire 1 f" SistemChocolate|Central|Control|In_HabilitaB2~combout $end
+$var wire 1 g" SistemChocolate|Central|Control|Enable_HabilitaB2~combout $end
+$var wire 1 h" SistemChocolate|Central|RegistroHabilita2|dato1~q $end
+$var wire 1 i" SistemChocolate|Brazo2|ControlTotal|comb~14_combout $end
+$var wire 1 j" SistemChocolate|Brazo2|ControlTotal|comb~6_combout $end
+$var wire 1 k" SistemChocolate|Brazo2|ControlTotal|F9~q $end
+$var wire 1 l" SistemChocolate|Brazo2|ControlTotal|ContTG~combout $end
+$var wire 1 m" SistemChocolate|Brazo2|ControlTotal|F12~q $end
+$var wire 1 n" SistemChocolate|Brazo2|ContadorGrande|dato3~0_combout $end
+$var wire 1 o" SistemChocolate|Brazo2|ContadorGrande|dato1~0_combout $end
+$var wire 1 p" SistemChocolate|Brazo2|ContadorGrande|dato1~q $end
+$var wire 1 q" SistemChocolate|Brazo2|ContadorGrande|dato2~0_combout $end
+$var wire 1 r" SistemChocolate|Brazo2|ContadorGrande|comb~2_combout $end
+$var wire 1 s" SistemChocolate|Brazo2|ContadorGrande|dato2~q $end
+$var wire 1 t" SistemChocolate|Brazo2|ContadorGrande|comb~0_combout $end
+$var wire 1 u" SistemChocolate|Brazo2|ContadorGrande|dato3~q $end
+$var wire 1 v" SistemChocolate|Brazo2|ContadorGrande|dato4~0_combout $end
+$var wire 1 w" SistemChocolate|Brazo2|ContadorGrande|comb~1_combout $end
+$var wire 1 x" SistemChocolate|Brazo2|ContadorGrande|dato4~q $end
+$var wire 1 y" SistemChocolate|Brazo2|ContadorGrande|dato5~0_combout $end
+$var wire 1 z" SistemChocolate|Brazo2|ContadorGrande|comb~3_combout $end
+$var wire 1 {" SistemChocolate|Brazo2|ContadorGrande|dato5~q $end
+$var wire 1 |" SistemChocolate|Brazo2|ContadorGrande|FinCajaTG~0_combout $end
+$var wire 1 }" SistemChocolate|Brazo2|ControlTotal|comb~13_combout $end
+$var wire 1 ~" SistemChocolate|Brazo2|ContadorGrande|FinalizadorTG~0_combout $end
+$var wire 1 !# SistemChocolate|Brazo2|ContadorGrande|FinalizadorTG~1_combout $end
+$var wire 1 "# SistemChocolate|Brazo2|ControlTotal|comb~15_combout $end
+$var wire 1 ## SistemChocolate|Brazo2|ControlTotal|F6~q $end
+$var wire 1 $# SistemChocolate|Brazo2|ControlTotal|comb~17_combout $end
+$var wire 1 %# SistemChocolate|Brazo2|ControlTotal|F4~q $end
+$var wire 1 &# SistemChocolate|Brazo2|ContadorMediano|dato5~0_combout $end
+$var wire 1 '# SistemChocolate|Brazo2|ContadorMediano|dato4~0_combout $end
+$var wire 1 (# SistemChocolate|Brazo2|ContadorMediano|dato3~0_combout $end
+$var wire 1 )# SistemChocolate|Brazo2|ContadorMediano|dato1~0_combout $end
+$var wire 1 *# SistemChocolate|Brazo2|ControlTotal|comb~5_combout $end
+$var wire 1 +# SistemChocolate|Brazo2|ControlTotal|F10~q $end
+$var wire 1 ,# SistemChocolate|Brazo2|ControlTotal|ContTM~combout $end
+$var wire 1 -# SistemChocolate|Brazo2|ContadorMediano|dato1~q $end
+$var wire 1 .# SistemChocolate|Brazo2|ContadorMediano|dato2~0_combout $end
+$var wire 1 /# SistemChocolate|Brazo2|ContadorMediano|comb~2_combout $end
+$var wire 1 0# SistemChocolate|Brazo2|ContadorMediano|dato2~q $end
+$var wire 1 1# SistemChocolate|Brazo2|ContadorMediano|comb~0_combout $end
+$var wire 1 2# SistemChocolate|Brazo2|ContadorMediano|dato3~q $end
+$var wire 1 3# SistemChocolate|Brazo2|ContadorMediano|comb~3_combout $end
+$var wire 1 4# SistemChocolate|Brazo2|ContadorMediano|dato4~q $end
+$var wire 1 5# SistemChocolate|Brazo2|ContadorMediano|comb~1_combout $end
+$var wire 1 6# SistemChocolate|Brazo2|ContadorMediano|dato5~q $end
+$var wire 1 7# SistemChocolate|Brazo2|ContadorMediano|FinalizadorTM~0_combout $end
+$var wire 1 8# SistemChocolate|Brazo2|ContadorMediano|FinalizadorTM~combout $end
+$var wire 1 9# SistemChocolate|Brazo2|ControlTotal|F13~feeder_combout $end
+$var wire 1 :# SistemChocolate|Brazo2|ControlTotal|F13~q $end
+$var wire 1 ;# SistemChocolate|Brazo2|ContadorMediano|FinCajaTM~0_combout $end
+$var wire 1 <# SistemChocolate|Brazo2|ControlTotal|comb~10_combout $end
+$var wire 1 =# SistemChocolate|Brazo2|ControlTotal|comb~11_combout $end
+$var wire 1 ># SistemChocolate|Brazo2|ControlTotal|comb~12_combout $end
+$var wire 1 ?# SistemChocolate|Brazo2|ControlTotal|F7~q $end
+$var wire 1 @# SistemChocolate|Brazo2|ControlTotal|comb~22_combout $end
+$var wire 1 A# SistemChocolate|Brazo2|ControlTotal|comb~21_combout $end
+$var wire 1 B# SistemChocolate|Brazo2|ControlTotal|F14~feeder_combout $end
+$var wire 1 C# SistemChocolate|Brazo2|ControlTotal|F14~q $end
+$var wire 1 D# SistemChocolate|Brazo2|ContadorPequeno|FinCajaTP~0_combout $end
+$var wire 1 E# SistemChocolate|Brazo2|ControlTotal|comb~19_combout $end
+$var wire 1 F# SistemChocolate|Brazo2|ControlTotal|comb~20_combout $end
+$var wire 1 G# SistemChocolate|Brazo2|ControlTotal|comb~23_combout $end
+$var wire 1 H# SistemChocolate|Brazo2|ControlTotal|F1~q $end
+$var wire 1 I# SistemChocolate|Brazo2|ControlTotal|comb~2_combout $end
+$var wire 1 J# SistemChocolate|Brazo2|ControlTotal|comb~3_combout $end
+$var wire 1 K# SistemChocolate|Brazo2|ControlTotal|F2~q $end
+$var wire 1 L# SistemChocolate|Brazo2|ControlTotal|comb~16_combout $end
+$var wire 1 M# SistemChocolate|Brazo2|ControlTotal|F5~q $end
+$var wire 1 N# SistemChocolate|Brazo2|ControlTotal|comb~8_combout $end
+$var wire 1 O# SistemChocolate|Brazo2|ControlTotal|comb~7_combout $end
+$var wire 1 P# SistemChocolate|Brazo2|ContadorPequeno|FinalizadorTP~1_combout $end
+$var wire 1 Q# SistemChocolate|Brazo2|ControlTotal|comb~9_combout $end
+$var wire 1 R# SistemChocolate|Brazo2|ControlTotal|F8~q $end
+$var wire 1 S# SistemChocolate|Brazo2|ControlTotal|comb~4_combout $end
+$var wire 1 T# SistemChocolate|Brazo2|ControlTotal|F11~q $end
+$var wire 1 U# SistemChocolate|Brazo2|ControlTotal|ContTP~combout $end
+$var wire 1 V# SistemChocolate|Brazo2|ContadorPequeno|dato1~q $end
+$var wire 1 W# SistemChocolate|Brazo2|ContadorPequeno|comb~2_combout $end
+$var wire 1 X# SistemChocolate|Brazo2|ContadorPequeno|dato2~q $end
+$var wire 1 Y# SistemChocolate|Brazo2|ContadorPequeno|comb~0_combout $end
+$var wire 1 Z# SistemChocolate|Brazo2|ContadorPequeno|dato3~q $end
+$var wire 1 [# SistemChocolate|Brazo2|ContadorPequeno|comb~1_combout $end
+$var wire 1 \# SistemChocolate|Brazo2|ContadorPequeno|dato4~q $end
+$var wire 1 ]# SistemChocolate|Brazo2|ContadorPequeno|comb~3_combout $end
+$var wire 1 ^# SistemChocolate|Brazo2|ContadorPequeno|dato5~q $end
+$var wire 1 _# SistemChocolate|Brazo2|ControlTotal|TerminoBrazo~0_combout $end
+$var wire 1 `# SistemChocolate|Brazo2|ControlTotal|TerminoBrazo~combout $end
+$var wire 1 a# SistemChocolate|Central|Control|comb~2_combout $end
+$var wire 1 b# SistemChocolate|Central|Control|F8~q $end
+$var wire 1 c# SistemChocolate|Central|Control|comb~4_combout $end
+$var wire 1 d# SistemChocolate|Central|Control|comb~5_combout $end
+$var wire 1 e# SistemChocolate|Central|Control|F6~q $end
+$var wire 1 f# SistemChocolate|Central|Control|comb~1_combout $end
+$var wire 1 g# SistemChocolate|Central|Control|F9~q $end
+$var wire 1 h# INICIO~input_o $end
+$var wire 1 i# SistemChocolate|Central|Control|comb~0_combout $end
+$var wire 1 j# SistemChocolate|Central|Control|F10~q $end
+$var wire 1 k# SistemChocolate|Central|Control|comb~7_combout $end
+$var wire 1 l# SistemChocolate|Central|Control|F1~q $end
+$var wire 1 m# SistemChocolate|Central|Control|comb~6_combout $end
+$var wire 1 n# SistemChocolate|Central|Control|F2~q $end
+$var wire 1 o# SistemChocolate|Central|Control|F3~q $end
+$var wire 1 p# SistemChocolate|Central|Control|F4~q $end
+$var wire 1 q# SistemChocolate|Central|Control|F5~feeder_combout $end
+$var wire 1 r# SistemChocolate|Central|Control|F5~q $end
+$var wire 1 s# SistemChocolate|Central|Control|In_HabilitaB1~combout $end
+$var wire 1 t# SistemChocolate|Central|Control|Enable_HabilitaB1~0_combout $end
+$var wire 1 u# SistemChocolate|Central|RegistroHabilita1|dato1~q $end
+$var wire 1 v# SistemChocolate|Brazo1|ControlTotal|comb~8_combout $end
+$var wire 1 w# SistemChocolate|Brazo1|ContadorPequeno|FinCajaTP~0_combout $end
+$var wire 1 x# SistemChocolate|Brazo1|ControlTotal|F14~feeder_combout $end
+$var wire 1 y# SistemChocolate|Brazo1|ControlTotal|F14~q $end
+$var wire 1 z# SistemChocolate|Brazo1|ControlTotal|comb~7_combout $end
+$var wire 1 {# SistemChocolate|Brazo1|ControlTotal|comb~9_combout $end
+$var wire 1 |# SistemChocolate|Brazo1|ControlTotal|F8~q $end
+$var wire 1 }# SistemChocolate|Brazo1|ControlTotal|comb~4_combout $end
+$var wire 1 ~# SistemChocolate|Brazo1|ControlTotal|F11~q $end
+$var wire 1 !$ SistemChocolate|Brazo1|ContadorPequeno|comb~2_combout $end
+$var wire 1 "$ SistemChocolate|Brazo1|ContadorPequeno|dato2~q $end
+$var wire 1 #$ SistemChocolate|Brazo1|ContadorPequeno|comb~0_combout $end
+$var wire 1 $$ SistemChocolate|Brazo1|ContadorPequeno|dato3~q $end
+$var wire 1 %$ SistemChocolate|Brazo1|ContadorPequeno|comb~3_combout $end
+$var wire 1 &$ SistemChocolate|Brazo1|ContadorPequeno|dato5~q $end
+$var wire 1 '$ SistemChocolate|Brazo1|ControlTotal|comb~0_combout $end
+$var wire 1 ($ SistemChocolate|Brazo1|ControlTotal|comb~1_combout $end
+$var wire 1 )$ SistemChocolate|Brazo1|ControlTotal|comb~21_combout $end
+$var wire 1 *$ SistemChocolate|Brazo1|ControlTotal|comb~22_combout $end
+$var wire 1 +$ SistemChocolate|Brazo1|ControlTotal|comb~19_combout $end
+$var wire 1 ,$ SistemChocolate|Brazo1|ControlTotal|comb~20_combout $end
+$var wire 1 -$ SistemChocolate|Brazo1|ControlTotal|comb~23_combout $end
+$var wire 1 .$ SistemChocolate|Brazo1|ControlTotal|F1~q $end
+$var wire 1 /$ SistemChocolate|Brazo1|ControlTotal|comb~2_combout $end
+$var wire 1 0$ SistemChocolate|Brazo1|ControlTotal|comb~3_combout $end
+$var wire 1 1$ SistemChocolate|Brazo1|ControlTotal|F2~q $end
+$var wire 1 2$ SistemChocolate|Brazo1|ControlTotal|comb~18_combout $end
+$var wire 1 3$ SistemChocolate|Brazo1|ControlTotal|F3~q $end
+$var wire 1 4$ SistemChocolate|Brazo1|ControlTotal|comb~13_combout $end
+$var wire 1 5$ SistemChocolate|Brazo1|ControlTotal|comb~14_combout $end
+$var wire 1 6$ SistemChocolate|Brazo1|ControlTotal|comb~15_combout $end
+$var wire 1 7$ SistemChocolate|Brazo1|ControlTotal|F6~q $end
+$var wire 1 8$ SistemChocolate|Brazo1|ControlTotal|comb~6_combout $end
+$var wire 1 9$ SistemChocolate|Brazo1|ControlTotal|F9~q $end
+$var wire 1 :$ SistemChocolate|Brazo1|ControlTotal|ContTG~combout $end
+$var wire 1 ;$ SistemChocolate|Brazo1|ContadorGrande|dato1~q $end
+$var wire 1 <$ SistemChocolate|Brazo1|ContadorGrande|comb~0_combout $end
+$var wire 1 =$ SistemChocolate|Brazo1|ContadorGrande|dato3~q $end
+$var wire 1 >$ SistemChocolate|Brazo1|ContadorGrande|FinalizadorTG~1_combout $end
+$var wire 1 ?$ EntradaPrecio|inicio[0]~feeder_combout $end
+$var wire 1 @$ EntradaPrecio|inicio[1]~1_combout $end
+$var wire 1 A$ EntradaPrecio|inicio[2]~0_combout $end
+$var wire 1 B$ SistemChocolate|Central|RegistroChocolate|dato1~0_combout $end
+$var wire 1 C$ SistemChocolate|Central|Control|Enable_Chocolate~0_combout $end
+$var wire 1 D$ SistemChocolate|Central|RegistroChocolate|dato1~q $end
+$var wire 1 E$ SistemChocolate|Central|RegistroChocolate|dato2~q $end
+$var wire 1 F$ SistemChocolate|Central|RegistroChocolate|dato3~q $end
+$var wire 1 G$ SistemChocolate|Brazo2|ControlTotal|EnableRegistro~0_combout $end
+$var wire 1 H$ SistemChocolate|Brazo2|RegistroGanancias|dato0~q $end
+$var wire 1 I$ SistemChocolate|Brazo2|Sumador|SumadorOut[1]~1_combout $end
+$var wire 1 J$ SistemChocolate|Brazo2|RegistroGanancias|dato1~q $end
+$var wire 1 K$ SistemChocolate|Brazo2|Sumador|Carry[1]~0_combout $end
+$var wire 1 L$ SistemChocolate|Brazo2|Sumador|SumadorOut[2]~0_combout $end
+$var wire 1 M$ SistemChocolate|Brazo2|RegistroGanancias|dato2~q $end
+$var wire 1 N$ SistemChocolate|Brazo2|RegistroGanancias|dato3~q $end
+$var wire 1 O$ SistemChocolate|Brazo2|Sumador|Carry~1_combout $end
+$var wire 1 P$ SistemChocolate|Brazo2|RegistroGanancias|dato4~q $end
+$var wire 1 Q$ SistemChocolate|Brazo2|RegistroGanancias|dato5~q $end
+$var wire 1 R$ SistemChocolate|Brazo2|RegistroGanancias|dato6~q $end
+$var wire 1 S$ SistemChocolate|Brazo2|Sumador|Carry~2_combout $end
+$var wire 1 T$ SistemChocolate|Brazo2|RegistroGanancias|dato7~q $end
+$var wire 1 U$ SistemChocolate|Brazo2|RegistroGanancias|dato8~q $end
+$var wire 1 V$ SistemChocolate|Brazo2|RegistroGanancias|dato9~q $end
+$var wire 1 W$ SistemChocolate|Brazo2|Sumador|Carry~3_combout $end
+$var wire 1 X$ SistemChocolate|Brazo2|RegistroGanancias|dato10~q $end
+$var wire 1 Y$ SistemChocolate|Brazo2|RegistroGanancias|dato11~q $end
+$var wire 1 Z$ SistemChocolate|Brazo1|ControlTotal|EnableRegistro~0_combout $end
+$var wire 1 [$ SistemChocolate|Brazo1|RegistroGanancias|dato0~q $end
+$var wire 1 \$ SistemChocolate|Brazo1|Sumador|SumadorOut[1]~1_combout $end
+$var wire 1 ]$ SistemChocolate|Brazo1|RegistroGanancias|dato1~q $end
+$var wire 1 ^$ SistemChocolate|Brazo1|Sumador|Carry[1]~0_combout $end
+$var wire 1 _$ SistemChocolate|Brazo1|Sumador|SumadorOut[2]~0_combout $end
+$var wire 1 `$ SistemChocolate|Brazo1|RegistroGanancias|dato2~q $end
+$var wire 1 a$ SistemChocolate|Brazo1|RegistroGanancias|dato3~q $end
+$var wire 1 b$ SistemChocolate|Brazo1|Sumador|Carry~1_combout $end
+$var wire 1 c$ SistemChocolate|Brazo1|RegistroGanancias|dato4~q $end
+$var wire 1 d$ SistemChocolate|Brazo1|RegistroGanancias|dato5~q $end
+$var wire 1 e$ SistemChocolate|Brazo1|RegistroGanancias|dato6~q $end
+$var wire 1 f$ SistemChocolate|Brazo1|Sumador|Carry~4_combout $end
+$var wire 1 g$ SistemChocolate|Brazo1|RegistroGanancias|dato7~q $end
+$var wire 1 h$ SistemChocolate|Brazo1|Sumador|Carry~2_combout $end
+$var wire 1 i$ SistemChocolate|Brazo1|RegistroGanancias|dato8~q $end
+$var wire 1 j$ SistemChocolate|Brazo1|RegistroGanancias|dato9~q $end
+$var wire 1 k$ SistemChocolate|Brazo1|Sumador|Carry~3_combout $end
+$var wire 1 l$ SistemChocolate|Brazo1|RegistroGanancias|dato10~q $end
+$var wire 1 m$ SistemChocolate|Brazo1|RegistroGanancias|dato11~q $end
+$var wire 1 n$ Seleccionador[2]~input_o $end
+$var wire 1 o$ Seleccionador[0]~input_o $end
+$var wire 1 p$ Seleccionador[1]~input_o $end
+$var wire 1 q$ SistemChocolate|Central|SeleccionadorBits|Mux3|Out_Mux~2_combout $end
+$var wire 1 r$ SistemChocolate|Central|ContadorCambio|F1~0_combout $end
+$var wire 1 s$ SistemChocolate|Central|ContadorCambio|F1~q $end
+$var wire 1 t$ SistemChocolate|Central|ContadorCambio|F2~q $end
+$var wire 1 u$ SistemChocolate|Central|ContadorCambio|F0~0_combout $end
+$var wire 1 v$ SistemChocolate|Central|ContadorCambio|F0~q $end
+$var wire 1 w$ SistemChocolate|Central|SeleccionadorBits|Mux3|Out_Mux~0_combout $end
+$var wire 1 x$ SistemChocolate|Central|SeleccionadorBits|Mux4|Out_Mux~1_combout $end
+$var wire 1 y$ SistemChocolate|Central|SeleccionadorBits|Mux3|Out_Mux~3_combout $end
+$var wire 1 z$ SistemChocolate|Central|SeleccionadorBits|Mux4|Out_Mux~2_combout $end
+$var wire 1 {$ SistemChocolate|Central|SumadorGanancias|Carry[1]~0_combout $end
+$var wire 1 |$ SistemChocolate|Central|SumadorGanancias|Carry[3]~1_combout $end
+$var wire 1 }$ SistemChocolate|Central|SumadorGanancias|Carry[3]~2_combout $end
+$var wire 1 ~$ SistemChocolate|Central|SumadorGanancias|Carry[5]~3_combout $end
+$var wire 1 !% SistemChocolate|Central|SumadorGanancias|Carry[5]~4_combout $end
+$var wire 1 "% SistemChocolate|Central|SumadorGanancias|Carry[7]~5_combout $end
+$var wire 1 #% SistemChocolate|Central|SumadorGanancias|Carry[7]~6_combout $end
+$var wire 1 $% SistemChocolate|Central|SumadorGanancias|Carry[9]~7_combout $end
+$var wire 1 %% SistemChocolate|Central|SumadorGanancias|Carry[9]~8_combout $end
+$var wire 1 &% SistemChocolate|Central|SumadorGanancias|SumadorOut[11]~0_combout $end
+$var wire 1 '% SistemChocolate|Central|SeleccionadorBits|Mux3|Out_Mux~1_combout $end
+$var wire 1 (% SistemChocolate|Central|SeleccionadorBits|Mux4|Out_Mux~0_combout $end
+$var wire 1 )% SistemChocolate|Central|SeleccionadorBits|Mux2|Out_Mux~0_combout $end
+$var wire 1 *% SistemChocolate|Central|SeleccionadorBits|Mux2|Out_Mux~1_combout $end
+$var wire 1 +% SistemChocolate|Brazo2|ContadorCantidad|dato4~0_combout $end
+$var wire 1 ,% SistemChocolate|Brazo2|ContadorCantidad|dato1~0_combout $end
+$var wire 1 -% SistemChocolate|Brazo2|ContadorCantidad|dato1~q $end
+$var wire 1 .% SistemChocolate|Brazo2|ContadorCantidad|dato3~0_combout $end
+$var wire 1 /% SistemChocolate|Brazo2|ContadorCantidad|dato2~0_combout $end
+$var wire 1 0% SistemChocolate|Brazo2|ContadorCantidad|comb~2_combout $end
+$var wire 1 1% SistemChocolate|Brazo2|ContadorCantidad|dato2~q $end
+$var wire 1 2% SistemChocolate|Brazo2|ContadorCantidad|comb~1_combout $end
+$var wire 1 3% SistemChocolate|Brazo2|ContadorCantidad|dato3~q $end
+$var wire 1 4% SistemChocolate|Brazo2|ContadorCantidad|comb~0_combout $end
+$var wire 1 5% SistemChocolate|Brazo2|ContadorCantidad|dato4~q $end
+$var wire 1 6% SistemChocolate|Central|SeleccionNumeros|Mux4|Out_Mux~1_combout $end
+$var wire 1 7% SistemChocolate|Central|SumadorGanancias|SumadorOut[3]~1_combout $end
+$var wire 1 8% SistemChocolate|Central|SeleccionadorBits|Mux3|Out_Mux~4_combout $end
+$var wire 1 9% SistemChocolate|Central|SeleccionNumeros|Mux4|Out_Mux~0_combout $end
+$var wire 1 :% SistemChocolate|Brazo1|ContadorCantidad|dato3~0_combout $end
+$var wire 1 ;% SistemChocolate|Brazo1|ContadorCantidad|dato2~0_combout $end
+$var wire 1 <% SistemChocolate|Brazo1|ContadorCantidad|dato1~0_combout $end
+$var wire 1 =% SistemChocolate|Brazo1|ContadorCantidad|dato1~q $end
+$var wire 1 >% SistemChocolate|Brazo1|ContadorCantidad|comb~2_combout $end
+$var wire 1 ?% SistemChocolate|Brazo1|ContadorCantidad|dato2~q $end
+$var wire 1 @% SistemChocolate|Brazo1|ContadorCantidad|comb~1_combout $end
+$var wire 1 A% SistemChocolate|Brazo1|ContadorCantidad|dato3~q $end
+$var wire 1 B% SistemChocolate|Central|SumadorCantidades|Carry[2]~0_combout $end
+$var wire 1 C% SistemChocolate|Brazo1|ContadorCantidad|dato4~0_combout $end
+$var wire 1 D% SistemChocolate|Brazo1|ContadorCantidad|comb~0_combout $end
+$var wire 1 E% SistemChocolate|Brazo1|ContadorCantidad|dato4~q $end
+$var wire 1 F% SistemChocolate|Central|SumadorCantidades|Carry[1]~1_combout $end
+$var wire 1 G% SistemChocolate|Central|SumadorCantidades|Carry[2]~2_combout $end
+$var wire 1 H% SistemChocolate|Central|SeleccionNumeros|Mux4|Out_Mux~2_combout $end
+$var wire 1 I% SistemChocolate|Central|SeleccionNumeros|Mux4|Out_Mux~3_combout $end
+$var wire 1 J% SistemChocolate|Central|SeleccionadorBits|Mux4|Out_Mux~3_combout $end
+$var wire 1 K% SistemChocolate|Central|SeleccionadorBits|Mux4|Out_Mux~4_combout $end
+$var wire 1 L% SistemChocolate|Central|SeleccionadorBits|Mux4|Out_Mux~5_combout $end
+$var wire 1 M% SistemChocolate|Central|SeleccionadorBits|Mux4|Out_Mux~6_combout $end
+$var wire 1 N% SistemChocolate|Central|SeleccionadorBits|Mux4|Out_Mux~7_combout $end
+$var wire 1 O% SistemChocolate|Central|SeleccionadorBits|Mux4|Out_Mux~8_combout $end
+$var wire 1 P% SistemChocolate|Central|SeleccionadorBits|Mux1|Out_Mux~1_combout $end
+$var wire 1 Q% SistemChocolate|Central|SeleccionadorBits|Mux1|Out_Mux~0_combout $end
+$var wire 1 R% SistemChocolate|Central|SeleccionadorBits|Mux1|Out_Mux~2_combout $end
+$var wire 1 S% SistemChocolate|Brazo2|ContadorCantidad|dato5~0_combout $end
+$var wire 1 T% SistemChocolate|Brazo2|ContadorCantidad|comb~5_combout $end
+$var wire 1 U% SistemChocolate|Brazo2|ContadorCantidad|comb~6_combout $end
+$var wire 1 V% SistemChocolate|Brazo2|ContadorCantidad|dato5~q $end
+$var wire 1 W% SistemChocolate|Central|SumadorCantidades|Carry[3]~4_combout $end
+$var wire 1 X% SistemChocolate|Central|SeleccionNumeros|Mux5|Out_Mux~4_combout $end
+$var wire 1 Y% SistemChocolate|Brazo1|ContadorCantidad|dato5~0_combout $end
+$var wire 1 Z% SistemChocolate|Brazo1|ContadorCantidad|comb~5_combout $end
+$var wire 1 [% SistemChocolate|Brazo1|ContadorCantidad|comb~6_combout $end
+$var wire 1 \% SistemChocolate|Brazo1|ContadorCantidad|dato5~q $end
+$var wire 1 ]% SistemChocolate|Central|SeleccionNumeros|Mux5|Out_Mux~3_combout $end
+$var wire 1 ^% SistemChocolate|Central|SeleccionNumeros|Mux5|Out_Mux~5_combout $end
+$var wire 1 _% SistemChocolate|Central|SeleccionNumeros|Mux5|Out_Mux~2_combout $end
+$var wire 1 `% SistemChocolate|Central|SeleccionNumeros|Mux5|Out_Mux~6_combout $end
+$var wire 1 a% SistemChocolate|Central|SeleccionNumeros|Mux1|Out_Mux~1_combout $end
+$var wire 1 b% SistemChocolate|Central|SeleccionNumeros|Mux1|Out_Mux~0_combout $end
+$var wire 1 c% SistemChocolate|Central|SeleccionNumeros|Mux1|Out_Mux~2_combout $end
+$var wire 1 d% SistemChocolate|Central|SeleccionNumeros|Mux1|Out_Mux~3_combout $end
+$var wire 1 e% SistemChocolate|Central|SeleccionadorBits|Mux1|Out_Mux~3_combout $end
+$var wire 1 f% SistemChocolate|Central|SeleccionadorBits|Mux1|Out_Mux~4_combout $end
+$var wire 1 g% SistemChocolate|Central|SeleccionNumeros|Mux3|Out_Mux~1_combout $end
+$var wire 1 h% SistemChocolate|Central|SeleccionNumeros|Mux3|Out_Mux~0_combout $end
+$var wire 1 i% SistemChocolate|Central|SeleccionNumeros|Mux3|Out_Mux~2_combout $end
+$var wire 1 j% SistemChocolate|Central|SeleccionNumeros|Mux3|Out_Mux~3_combout $end
+$var wire 1 k% SistemChocolate|Central|SeleccionadorBits|Mux3|Out_Mux~8_combout $end
+$var wire 1 l% SistemChocolate|Central|SumadorCantidades|Carry[4]~3_combout $end
+$var wire 1 m% SistemChocolate|Central|SumadorCantidades|Carry[4]~5_combout $end
+$var wire 1 n% SistemChocolate|Brazo2|ContadorCantidad|dato6~0_combout $end
+$var wire 1 o% SistemChocolate|Brazo2|ContadorCantidad|comb~3_combout $end
+$var wire 1 p% SistemChocolate|Brazo2|ContadorCantidad|comb~4_combout $end
+$var wire 1 q% SistemChocolate|Brazo2|ContadorCantidad|dato6~q $end
+$var wire 1 r% SistemChocolate|Brazo1|ContadorCantidad|dato6~0_combout $end
+$var wire 1 s% SistemChocolate|Brazo1|ContadorCantidad|comb~3_combout $end
+$var wire 1 t% SistemChocolate|Brazo1|ContadorCantidad|comb~4_combout $end
+$var wire 1 u% SistemChocolate|Brazo1|ContadorCantidad|dato6~q $end
+$var wire 1 v% SistemChocolate|Central|SumadorCantidades|Carry[5]~6_combout $end
+$var wire 1 w% SistemChocolate|Central|SeleccionadorBits|Mux3|Out_Mux~9_combout $end
+$var wire 1 x% SistemChocolate|Central|SeleccionadorBits|Mux3|Out_Mux~10_combout $end
+$var wire 1 y% SistemChocolate|Central|SeleccionadorBits|Mux3|Out_Mux~11_combout $end
+$var wire 1 z% SistemChocolate|Central|SeleccionadorBits|Mux3|Out_Mux~12_combout $end
+$var wire 1 {% SistemChocolate|Central|SeleccionadorBits|Mux3|Out_Mux~5_combout $end
+$var wire 1 |% SistemChocolate|Central|SeleccionadorBits|Mux3|Out_Mux~6_combout $end
+$var wire 1 }% SistemChocolate|Central|SumadorGanancias|SumadorOut[10]~4_combout $end
+$var wire 1 ~% SistemChocolate|Central|SeleccionadorBits|Mux3|Out_Mux~7_combout $end
+$var wire 1 !& SistemChocolate|Central|SeleccionadorBits|Mux3|Out_Mux~13_combout $end
+$var wire 1 "& SistemChocolate|Central|SeleccionadorBits|Mux2|Out_Mux~4_combout $end
+$var wire 1 #& SistemChocolate|Central|SeleccionadorBits|Mux2|Out_Mux~5_combout $end
+$var wire 1 $& SistemChocolate|Central|SumadorCantidades|SumadorOut[1]~0_combout $end
+$var wire 1 %& SistemChocolate|Central|SeleccionNumeros|Mux2|Out_Mux~2_combout $end
+$var wire 1 && SistemChocolate|Central|SeleccionNumeros|Mux2|Out_Mux~1_combout $end
+$var wire 1 '& SistemChocolate|Central|SumadorGanancias|SumadorOut[1]~3_combout $end
+$var wire 1 (& SistemChocolate|Central|SeleccionNumeros|Mux2|Out_Mux~0_combout $end
+$var wire 1 )& SistemChocolate|Central|SeleccionNumeros|Mux2|Out_Mux~3_combout $end
+$var wire 1 *& SistemChocolate|Central|SeleccionNumeros|Mux6|Out_Mux~2_combout $end
+$var wire 1 +& SistemChocolate|Central|SeleccionNumeros|Mux6|Out_Mux~1_combout $end
+$var wire 1 ,& SistemChocolate|Central|SeleccionNumeros|Mux6|Out_Mux~3_combout $end
+$var wire 1 -& SistemChocolate|Central|SumadorGanancias|SumadorOut[5]~2_combout $end
+$var wire 1 .& SistemChocolate|Central|SeleccionNumeros|Mux6|Out_Mux~0_combout $end
+$var wire 1 /& SistemChocolate|Central|SeleccionadorBits|Mux2|Out_Mux~2_combout $end
+$var wire 1 0& SistemChocolate|Central|SeleccionadorBits|Mux2|Out_Mux~3_combout $end
+$var wire 1 1& SistemChocolate|Central|SeleccionadorBits|Mux2|Out_Mux~6_combout $end
+$var wire 1 2& SistemChocolate|Central|SeleccionadorBits|Mux2|Out_Mux~7_combout $end
+$var wire 1 3& SistemChocolate|Central|BinarioSieteSegmentos|Out_7segmentos~0_combout $end
+$var wire 1 4& SistemChocolate|Central|BinarioSieteSegmentos|Out_7segmentos~1_combout $end
+$var wire 1 5& SistemChocolate|Central|BinarioSieteSegmentos|Out_7segmentos~2_combout $end
+$var wire 1 6& SistemChocolate|Central|BinarioSieteSegmentos|Out_7segmentos~3_combout $end
+$var wire 1 7& SistemChocolate|Central|BinarioSieteSegmentos|Out_7segmentos~4_combout $end
+$var wire 1 8& SistemChocolate|Central|BinarioSieteSegmentos|Out_7segmentos~5_combout $end
+$var wire 1 9& SistemChocolate|Central|BinarioSieteSegmentos|Out_7segmentos~6_combout $end
+$var wire 1 :& SistemChocolate|Brazo1|LedFinCaja~combout $end
+$var wire 1 ;& SistemChocolate|Brazo2|LedFinCaja~combout $end
+$var wire 1 <& SistemChocolate|Central|SumadorCantidades|SumadorOut [0] $end
+$var wire 1 =& SistemChocolate|Central|SumadorCantidades|SumadorOut [1] $end
+$var wire 1 >& SistemChocolate|Central|SumadorCantidades|SumadorOut [2] $end
+$var wire 1 ?& SistemChocolate|Central|SumadorCantidades|SumadorOut [3] $end
+$var wire 1 @& SistemChocolate|Central|SumadorCantidades|SumadorOut [4] $end
+$var wire 1 A& SistemChocolate|Central|SumadorCantidades|SumadorOut [5] $end
+$var wire 1 B& SistemChocolate|Central|SumadorCantidades|SumadorOut [6] $end
+$var wire 1 C& SistemChocolate|Central|SumadorCantidades|SumadorOut [7] $end
+$var wire 1 D& SistemChocolate|Central|SumadorCantidades|SumadorOut [8] $end
+$var wire 1 E& SistemChocolate|Central|SumadorCantidades|SumadorOut [9] $end
+$var wire 1 F& SistemChocolate|Central|SumadorCantidades|SumadorOut [10] $end
+$var wire 1 G& SistemChocolate|Central|SumadorCantidades|SumadorOut [11] $end
+$var wire 1 H& EntradaPrecio|inicio [2] $end
+$var wire 1 I& EntradaPrecio|inicio [1] $end
+$var wire 1 J& EntradaPrecio|inicio [0] $end
+$var wire 1 K& SistemChocolate|Brazo2|Sumador|SumadorOut [0] $end
+$var wire 1 L& SistemChocolate|Brazo2|Sumador|SumadorOut [1] $end
+$var wire 1 M& SistemChocolate|Brazo2|Sumador|SumadorOut [2] $end
+$var wire 1 N& SistemChocolate|Brazo2|Sumador|SumadorOut [3] $end
+$var wire 1 O& SistemChocolate|Brazo2|Sumador|SumadorOut [4] $end
+$var wire 1 P& SistemChocolate|Brazo2|Sumador|SumadorOut [5] $end
+$var wire 1 Q& SistemChocolate|Brazo2|Sumador|SumadorOut [6] $end
+$var wire 1 R& SistemChocolate|Brazo2|Sumador|SumadorOut [7] $end
+$var wire 1 S& SistemChocolate|Brazo2|Sumador|SumadorOut [8] $end
+$var wire 1 T& SistemChocolate|Brazo2|Sumador|SumadorOut [9] $end
+$var wire 1 U& SistemChocolate|Brazo2|Sumador|SumadorOut [10] $end
+$var wire 1 V& SistemChocolate|Brazo2|Sumador|SumadorOut [11] $end
+$var wire 1 W& SistemChocolate|Brazo1|Sumador|SumadorOut [0] $end
+$var wire 1 X& SistemChocolate|Brazo1|Sumador|SumadorOut [1] $end
+$var wire 1 Y& SistemChocolate|Brazo1|Sumador|SumadorOut [2] $end
+$var wire 1 Z& SistemChocolate|Brazo1|Sumador|SumadorOut [3] $end
+$var wire 1 [& SistemChocolate|Brazo1|Sumador|SumadorOut [4] $end
+$var wire 1 \& SistemChocolate|Brazo1|Sumador|SumadorOut [5] $end
+$var wire 1 ]& SistemChocolate|Brazo1|Sumador|SumadorOut [6] $end
+$var wire 1 ^& SistemChocolate|Brazo1|Sumador|SumadorOut [7] $end
+$var wire 1 _& SistemChocolate|Brazo1|Sumador|SumadorOut [8] $end
+$var wire 1 `& SistemChocolate|Brazo1|Sumador|SumadorOut [9] $end
+$var wire 1 a& SistemChocolate|Brazo1|Sumador|SumadorOut [10] $end
+$var wire 1 b& SistemChocolate|Brazo1|Sumador|SumadorOut [11] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x!
+x"
+0#
+0$
+0%
+0&
+1'
+1(
+b0 )
+0*
+0+
+b11 ,
+b0 -
+00
+0/
+1.
+01
+18
+07
+06
+05
+04
+03
+02
+19
+0H
+0G
+0F
+0E
+0D
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+1;
+0:
+0W
+0V
+0U
+0T
+0S
+0R
+0Q
+0P
+0O
+0N
+0M
+0L
+0K
+1J
+0I
+0b
+0a
+0`
+0_
+0^
+0]
+0\
+0[
+0Z
+1Y
+0X
+0c
+0d
+1e
+1f
+1g
+1h
+1i
+0j
+0v
+0u
+0t
+0s
+0r
+0q
+0p
+0o
+0n
+0m
+0l
+0k
+0w
+1x
+xy
+1z
+1{
+1|
+0}
+z~
+z!!
+1"!
+1#!
+1$!
+1%!
+1&!
+0'!
+1(!
+0)!
+0*!
+0+!
+0,!
+0-!
+0.!
+0/!
+00!
+11!
+02!
+03!
+04!
+05!
+06!
+07!
+08!
+09!
+0:!
+0;!
+0<!
+0=!
+0>!
+0?!
+0@!
+0A!
+0B!
+0C!
+0D!
+0E!
+0F!
+0G!
+0H!
+0I!
+1J!
+0K!
+0L!
+0M!
+0N!
+0O!
+0P!
+0Q!
+0R!
+0S!
+0T!
+0U!
+0V!
+0W!
+0X!
+1Y!
+0Z!
+0[!
+0\!
+0]!
+0^!
+0_!
+0`!
+0a!
+0b!
+0c!
+0d!
+0e!
+0f!
+0g!
+1h!
+0i!
+1j!
+0k!
+0l!
+1m!
+1n!
+1o!
+1p!
+0q!
+0r!
+1s!
+0t!
+0u!
+0v!
+xw!
+0x!
+0y!
+0z!
+1{!
+0|!
+0}!
+0~!
+0!"
+0""
+0#"
+1$"
+1%"
+0&"
+0'"
+0("
+1)"
+1*"
+1+"
+1,"
+0-"
+0."
+1/"
+00"
+01"
+02"
+03"
+04"
+15"
+16"
+07"
+08"
+09"
+1:"
+1;"
+1<"
+0="
+0>"
+0?"
+0@"
+0A"
+0B"
+0C"
+0D"
+0E"
+0F"
+0G"
+0H"
+0I"
+0J"
+0K"
+0L"
+0M"
+0N"
+0O"
+0P"
+0Q"
+0R"
+1S"
+1T"
+1U"
+1V"
+1W"
+0X"
+0Y"
+xZ"
+0["
+0\"
+0]"
+0^"
+0_"
+0`"
+0a"
+0b"
+0c"
+0d"
+0e"
+0f"
+0g"
+0h"
+0i"
+0j"
+0k"
+0l"
+0m"
+1n"
+1o"
+0p"
+1q"
+0r"
+0s"
+0t"
+0u"
+1v"
+0w"
+0x"
+1y"
+0z"
+0{"
+0|"
+0}"
+0~"
+0!#
+0"#
+0##
+0$#
+0%#
+1&#
+1'#
+1(#
+1)#
+0*#
+0+#
+0,#
+0-#
+1.#
+0/#
+00#
+01#
+02#
+03#
+04#
+05#
+06#
+07#
+08#
+09#
+0:#
+0;#
+0<#
+0=#
+0>#
+0?#
+1@#
+0A#
+0B#
+0C#
+0D#
+0E#
+0F#
+0G#
+0H#
+0I#
+0J#
+0K#
+0L#
+0M#
+0N#
+0O#
+0P#
+0Q#
+0R#
+0S#
+0T#
+0U#
+0V#
+0W#
+0X#
+0Y#
+0Z#
+0[#
+0\#
+0]#
+0^#
+0_#
+0`#
+0a#
+0b#
+0c#
+0d#
+0e#
+0f#
+0g#
+1h#
+0i#
+0j#
+1k#
+0l#
+1m#
+0n#
+0o#
+0p#
+0q#
+0r#
+0s#
+0t#
+0u#
+0v#
+0w#
+0x#
+0y#
+0z#
+0{#
+0|#
+0}#
+0~#
+0!$
+0"$
+0#$
+0$$
+0%$
+0&$
+0'$
+0($
+0)$
+1*$
+0+$
+0,$
+0-$
+0.$
+0/$
+00$
+01$
+02$
+03$
+04$
+05$
+06$
+07$
+08$
+09$
+0:$
+0;$
+0<$
+0=$
+0>$
+1?$
+1@$
+1A$
+1B$
+0C$
+0D$
+0E$
+0F$
+0G$
+0H$
+0I$
+0J$
+0K$
+0L$
+0M$
+0N$
+0O$
+0P$
+0Q$
+0R$
+0S$
+0T$
+0U$
+0V$
+0W$
+0X$
+0Y$
+0Z$
+0[$
+0\$
+0]$
+0^$
+0_$
+0`$
+0a$
+0b$
+0c$
+0d$
+0e$
+0f$
+0g$
+0h$
+0i$
+0j$
+0k$
+0l$
+0m$
+0n$
+0o$
+0p$
+0q$
+1r$
+0s$
+0t$
+1u$
+0v$
+0w$
+0x$
+0y$
+0z$
+0{$
+0|$
+0}$
+0~$
+0!%
+0"%
+0#%
+0$%
+0%%
+0&%
+0'%
+0(%
+1)%
+0*%
+1+%
+1,%
+0-%
+1.%
+1/%
+00%
+01%
+02%
+03%
+04%
+05%
+06%
+07%
+08%
+09%
+1:%
+1;%
+1<%
+0=%
+0>%
+0?%
+0@%
+0A%
+0B%
+1C%
+0D%
+0E%
+0F%
+0G%
+0H%
+0I%
+0J%
+0K%
+0L%
+0M%
+0N%
+0O%
+0P%
+0Q%
+0R%
+1S%
+0T%
+0U%
+0V%
+0W%
+0X%
+1Y%
+0Z%
+0[%
+0\%
+0]%
+0^%
+0_%
+0`%
+0a%
+0b%
+0c%
+0d%
+0e%
+0f%
+0g%
+0h%
+0i%
+0j%
+0k%
+0l%
+0m%
+1n%
+0o%
+0p%
+0q%
+1r%
+0s%
+0t%
+0u%
+0v%
+0w%
+0x%
+0y%
+0z%
+0{%
+0|%
+0}%
+0~%
+0!&
+0"&
+0#&
+0$&
+0%&
+0&&
+0'&
+0(&
+0)&
+0*&
+0+&
+0,&
+0-&
+0.&
+0/&
+00&
+01&
+02&
+03&
+14&
+15&
+16&
+17&
+18&
+19&
+0:&
+0;&
+zG&
+zF&
+zE&
+zD&
+zC&
+zB&
+zA&
+z@&
+0?&
+z>&
+z=&
+z<&
+0J&
+0I&
+0H&
+0V&
+0U&
+0T&
+0S&
+0R&
+0Q&
+0P&
+0O&
+0N&
+zM&
+zL&
+0K&
+0b&
+0a&
+0`&
+0_&
+0^&
+0]&
+0\&
+0[&
+0Z&
+zY&
+zX&
+0W&
+$end
+#5000
+1#
+1k!
+1l!
+1@!
+11
+1H&
+1I&
+1J&
+1l#
+1n#
+1I!
+0J!
+0j!
+1C$
+09
+0Y
+1Z
+0B$
+0A$
+0@$
+0m#
+0J&
+0I&
+0H&
+1j!
+19
+1@$
+1A$
+1B$
+#10000
+0#
+0k!
+0l!
+0@!
+01
+#15000
+1#
+1k!
+1l!
+1@!
+11
+1D$
+1o#
+0n#
+0I!
+1H!
+1=!
+1k
+1[
+0Z
+1W&
+1K&
+#20000
+0#
+0k!
+0l!
+0@!
+01
+#25000
+1#
+1k!
+1l!
+1@!
+11
+1H&
+1I&
+1J&
+1E$
+1p#
+0o#
+0H!
+1G!
+1<!
+0j!
+09
+1l
+1\
+0[
+0B$
+0A$
+0@$
+1\$
+1I$
+1q#
+#30000
+b1 -
+0#
+1^"
+0k!
+0l!
+0@!
+01
+#35000
+1#
+1k!
+1l!
+1@!
+11
+0H&
+0I&
+1F$
+0D$
+1r#
+0p#
+0G!
+1F!
+0=!
+1;!
+1j!
+1t#
+1g"
+0C$
+19
+1m
+0k
+1]
+0\
+1B$
+1A$
+1_$
+1L$
+0W&
+0K&
+1s#
+1d#
+1f"
+0q#
+#40000
+0#
+0k!
+0l!
+0@!
+01
+#45000
+1#
+1k!
+1l!
+1@!
+11
+1H&
+1u#
+1h"
+0r#
+1e#
+1E!
+0F!
+0j!
+1/$
+1I#
+0t#
+0g"
+1c#
+09
+0]
+1^
+0B$
+1-$
+1G#
+0s#
+0d#
+0f"
+10$
+1J#
+1d#
+#50000
+0#
+0k!
+0l!
+0@!
+01
+#55000
+1#
+1k!
+1l!
+1@!
+11
+1.$
+1H#
+11$
+1K#
+1g!
+1X!
+0h!
+0Y!
+0/$
+0*$
+0I#
+0@#
+1'$
+1a"
+0;
+0J
+1<
+1K
+1:&
+1;&
+1?!
+1>!
+1($
+1c"
+1c
+1d
+00$
+0J#
+10$
+1J#
+#60000
+1$
+1%
+0#
+1]"
+1&"
+0k!
+0l!
+0@!
+0a"
+0'$
+01
+0;&
+1$#
+0:&
+1'"
+0>!
+0?!
+0c"
+0($
+0d
+0c
+0J#
+00$
+#65000
+1#
+1k!
+1l!
+1@!
+11
+01$
+0K#
+1%#
+1("
+1U!
+1e!
+0g!
+0X!
+0<
+0K
+1M
+1?
+0'"
+0$#
+1>#
+1{#
+#70000
+0$
+0%
+0#
+0]"
+0&"
+0k!
+0l!
+0@!
+01
+#75000
+1#
+1k!
+1l!
+1@!
+11
+1|#
+1?#
+0%#
+0("
+0U!
+0e!
+1b!
+1R!
+1*$
+1v#
+1@#
+1=#
+1B
+1P
+0M
+0?
+0>#
+0{#
+1{#
+1>#
+#80000
+0#
+0k!
+0l!
+0@!
+01
+#85000
+1#
+1k!
+1l!
+1@!
+11
+#90000
+0#
+0k!
+0l!
+0@!
+01
+#95000
+1#
+1k!
+1l!
+1@!
+11
+#100000
+0#
+0k!
+0l!
+0@!
+01
+#105000
+1#
+1k!
+1l!
+1@!
+11
+#110000
+0#
+0k!
+0l!
+0@!
+01
+#115000
+1#
+1k!
+1l!
+1@!
+11
+#120000
+1*
+1+
+0#
+1X"
+1t!
+0k!
+0l!
+0@!
+1u!
+01
+1Y"
+1v!
+#125000
+1#
+1k!
+1l!
+1@!
+11
+#130000
+0*
+0+
+0#
+0X"
+0t!
+0k!
+0l!
+0@!
+0u!
+01
+0Y"
+0v!
+#135000
+1#
+1k!
+1l!
+1@!
+11
+#140000
+0#
+0k!
+0l!
+0@!
+01
+#145000
+1#
+1k!
+1l!
+1@!
+11
+#150000
+0#
+0k!
+0l!
+0@!
+01
+#155000
+1#
+1k!
+1l!
+1@!
+11
+#160000
+0#
+0k!
+0l!
+0@!
+01
+#165000
+1#
+1k!
+1l!
+1@!
+11
+#170000
+1*
+1+
+0#
+1X"
+1t!
+0k!
+0l!
+0@!
+1u!
+01
+1Y"
+1v!
+#175000
+1#
+1k!
+1l!
+1@!
+11
+#180000
+0*
+0+
+0#
+0X"
+0t!
+0k!
+0l!
+0@!
+0u!
+01
+0Y"
+0v!
+#185000
+1#
+1k!
+1l!
+1@!
+11
+#190000
+0#
+0k!
+0l!
+0@!
+01
+#195000
+1#
+1k!
+1l!
+1@!
+11
+#200000
+0#
+0k!
+0l!
+0@!
+01
+#205000
+1#
+1k!
+1l!
+1@!
+11
+#210000
+0#
+0k!
+0l!
+0@!
+01
+#215000
+1#
+1k!
+1l!
+1@!
+11
+#220000
+1*
+1+
+0#
+1X"
+1t!
+0k!
+0l!
+0@!
+1u!
+01
+1Y"
+1v!
+#225000
+1#
+1k!
+1l!
+1@!
+11
+#230000
+0*
+0+
+0#
+0X"
+0t!
+0k!
+0l!
+0@!
+0u!
+01
+0Y"
+0v!
+#235000
+1#
+1k!
+1l!
+1@!
+11
+#240000
+0#
+0k!
+0l!
+0@!
+01
+#245000
+1#
+1k!
+1l!
+1@!
+11
+#250000
+0#
+0k!
+0l!
+0@!
+01
+#255000
+1#
+1k!
+1l!
+1@!
+11
+#260000
+0#
+0k!
+0l!
+0@!
+01
+#265000
+1#
+1k!
+1l!
+1@!
+11
+#270000
+1*
+1+
+0#
+1X"
+1t!
+0k!
+0l!
+0@!
+1u!
+01
+1Y"
+1v!
+#275000
+1#
+1k!
+1l!
+1@!
+11
+#280000
+0*
+0+
+0#
+0X"
+0t!
+0k!
+0l!
+0@!
+0u!
+01
+0Y"
+0v!
+#285000
+1#
+1k!
+1l!
+1@!
+11
+#290000
+0#
+0k!
+0l!
+0@!
+01
+#295000
+1#
+1k!
+1l!
+1@!
+11
+#300000
+0#
+0k!
+0l!
+0@!
+01
+#305000
+1#
+1k!
+1l!
+1@!
+11
+#310000
+0#
+0k!
+0l!
+0@!
+01
+#315000
+1#
+1k!
+1l!
+1@!
+11
+#320000
+1*
+1+
+0#
+1X"
+1t!
+0k!
+0l!
+0@!
+1u!
+01
+1Y"
+1v!
+#325000
+1#
+1k!
+1l!
+1@!
+11
+#330000
+0*
+0+
+0#
+0X"
+0t!
+0k!
+0l!
+0@!
+0u!
+01
+0Y"
+0v!
+#335000
+1#
+1k!
+1l!
+1@!
+11
+#340000
+0#
+0k!
+0l!
+0@!
+01
+#345000
+1#
+1k!
+1l!
+1@!
+11
+#350000
+1$
+0#
+1&"
+0k!
+0l!
+0@!
+01
+#355000
+1#
+1k!
+1l!
+1@!
+11
+#360000
+0#
+0k!
+0l!
+0@!
+01
+#365000
+1#
+1k!
+1l!
+1@!
+11
+#370000
+1*
+1+
+0$
+0#
+0&"
+1X"
+1t!
+0k!
+0l!
+0@!
+1u!
+01
+1Y"
+1v!
+#375000
+1#
+1k!
+1l!
+1@!
+11
+#380000
+0*
+0+
+0#
+0X"
+0t!
+0k!
+0l!
+0@!
+0u!
+01
+0Y"
+0v!
+#385000
+1#
+1k!
+1l!
+1@!
+11
+#390000
+0#
+0k!
+0l!
+0@!
+01
+#395000
+1#
+1k!
+1l!
+1@!
+11
+#400000
+0#
+0k!
+0l!
+0@!
+01
+#405000
+1#
+1k!
+1l!
+1@!
+11
+#410000
+0#
+0k!
+0l!
+0@!
+01
+#415000
+1#
+1k!
+1l!
+1@!
+11
+#420000
+1*
+1+
+0#
+1X"
+1t!
+0k!
+0l!
+0@!
+1u!
+01
+1Y"
+1v!
+#425000
+1#
+1k!
+1l!
+1@!
+11
+#430000
+0*
+0+
+0#
+0X"
+0t!
+0k!
+0l!
+0@!
+0u!
+01
+0Y"
+0v!
+#435000
+1#
+1k!
+1l!
+1@!
+11
+#440000
+0#
+0k!
+0l!
+0@!
+01
+#445000
+1#
+1k!
+1l!
+1@!
+11
+#450000
+1%
+0#
+1]"
+0k!
+0l!
+0@!
+01
+#455000
+1#
+1k!
+1l!
+1@!
+11
+#460000
+0%
+0#
+0]"
+0k!
+0l!
+0@!
+01
+#465000
+1#
+1k!
+1l!
+1@!
+11
+#470000
+1*
+1+
+0#
+1X"
+1t!
+0k!
+0l!
+0@!
+1u!
+01
+1Y"
+1v!
+#475000
+1#
+1k!
+1l!
+1@!
+11
+#480000
+0*
+0+
+0#
+0X"
+0t!
+0k!
+0l!
+0@!
+0u!
+01
+0Y"
+0v!
+#485000
+1#
+1k!
+1l!
+1@!
+11
+#490000
+0#
+0k!
+0l!
+0@!
+01
+#495000
+1#
+1k!
+1l!
+1@!
+11
+#500000
+0#
+0k!
+0l!
+0@!
+01
+#505000
+1#
+1k!
+1l!
+1@!
+11
+#510000
+0#
+0k!
+0l!
+0@!
+01
+#515000
+1#
+1k!
+1l!
+1@!
+11
+#520000
+1*
+1+
+0#
+1X"
+1t!
+0k!
+0l!
+0@!
+1u!
+01
+1Y"
+1v!
+#525000
+1#
+1k!
+1l!
+1@!
+11
+#530000
+0*
+0+
+0#
+0X"
+0t!
+0k!
+0l!
+0@!
+0u!
+01
+0Y"
+0v!
+#535000
+1#
+1k!
+1l!
+1@!
+11
+#540000
+0#
+0k!
+0l!
+0@!
+01
+#545000
+1#
+1k!
+1l!
+1@!
+11
+#550000
+0#
+0k!
+0l!
+0@!
+01
+#555000
+1#
+1k!
+1l!
+1@!
+11
+#560000
+0#
+0k!
+0l!
+0@!
+01
+#565000
+1#
+1k!
+1l!
+1@!
+11
+#570000
+1*
+1+
+0#
+1X"
+1t!
+0k!
+0l!
+0@!
+1u!
+01
+1Y"
+1v!
+#575000
+1#
+1k!
+1l!
+1@!
+11
+#580000
+0*
+0+
+0#
+0X"
+0t!
+0k!
+0l!
+0@!
+0u!
+01
+0Y"
+0v!
+#585000
+1#
+1k!
+1l!
+1@!
+11
+#590000
+1$
+0#
+1&"
+0k!
+0l!
+0@!
+01
+#595000
+1#
+1k!
+1l!
+1@!
+11
+#600000
+0#
+0k!
+0l!
+0@!
+01
+#605000
+1#
+1k!
+1l!
+1@!
+11
+#610000
+0$
+0#
+0&"
+0k!
+0l!
+0@!
+01
+#615000
+1#
+1k!
+1l!
+1@!
+11
+#620000
+1*
+1+
+0#
+1X"
+1t!
+0k!
+0l!
+0@!
+1u!
+01
+1Y"
+1v!
+#625000
+1#
+1k!
+1l!
+1@!
+11
+#630000
+0*
+0+
+0#
+0X"
+0t!
+0k!
+0l!
+0@!
+0u!
+01
+0Y"
+0v!
+#635000
+1#
+1k!
+1l!
+1@!
+11
+#640000
+0#
+0k!
+0l!
+0@!
+01
+#645000
+1#
+1k!
+1l!
+1@!
+11
+#650000
+0#
+0k!
+0l!
+0@!
+01
+#655000
+1#
+1k!
+1l!
+1@!
+11
+#660000
+0#
+0k!
+0l!
+0@!
+01
+#665000
+1#
+1k!
+1l!
+1@!
+11
+#670000
+1*
+1+
+0#
+1X"
+1t!
+0k!
+0l!
+0@!
+1u!
+01
+1Y"
+1v!
+#675000
+1#
+1k!
+1l!
+1@!
+11
+#680000
+0*
+0+
+0#
+0X"
+0t!
+0k!
+0l!
+0@!
+0u!
+01
+0Y"
+0v!
+#685000
+1#
+1k!
+1l!
+1@!
+11
+#690000
+0#
+0k!
+0l!
+0@!
+01
+#695000
+1#
+1k!
+1l!
+1@!
+11
+#700000
+0#
+0k!
+0l!
+0@!
+01
+#705000
+1#
+1k!
+1l!
+1@!
+11
+#710000
+0#
+0k!
+0l!
+0@!
+01
+#715000
+1#
+1k!
+1l!
+1@!
+11
+#720000
+1*
+1+
+0#
+1X"
+1t!
+0k!
+0l!
+0@!
+1u!
+01
+1Y"
+1v!
+#725000
+1#
+1k!
+1l!
+1@!
+11
+#730000
+0*
+0+
+0#
+0X"
+0t!
+0k!
+0l!
+0@!
+0u!
+01
+0Y"
+0v!
+#735000
+1#
+1k!
+1l!
+1@!
+11
+#740000
+0#
+0k!
+0l!
+0@!
+01
+#745000
+1#
+1k!
+1l!
+1@!
+11
+#750000
+0#
+0k!
+0l!
+0@!
+01
+#755000
+1#
+1k!
+1l!
+1@!
+11
+#760000
+0#
+0k!
+0l!
+0@!
+01
+#765000
+1#
+1k!
+1l!
+1@!
+11
+#770000
+1*
+1+
+0#
+1X"
+1t!
+0k!
+0l!
+0@!
+1u!
+01
+1Y"
+1v!
+#775000
+1#
+1k!
+1l!
+1@!
+11
+#780000
+0*
+0+
+0#
+0X"
+0t!
+0k!
+0l!
+0@!
+0u!
+01
+0Y"
+0v!
+#785000
+1#
+1k!
+1l!
+1@!
+11
+#790000
+1%
+1*
+1+
+0#
+1X"
+1t!
+1]"
+0k!
+0l!
+0@!
+1u!
+01
+1Y"
+1v!
+#795000
+1#
+1k!
+1l!
+1@!
+11
+#800000
+0#
+0k!
+0l!
+0@!
+01
+#805000
+1#
+1k!
+1l!
+1@!
+11
+#810000
+0%
+0*
+0+
+0#
+0X"
+0t!
+0]"
+0k!
+0l!
+0@!
+0u!
+01
+0Y"
+0v!
+#815000
+1#
+1k!
+1l!
+1@!
+11
+#820000
+1*
+1+
+0#
+1X"
+1t!
+0k!
+0l!
+0@!
+1u!
+01
+1Y"
+1v!
+#825000
+1#
+1k!
+1l!
+1@!
+11
+#830000
+b0 -
+0*
+0+
+0#
+0X"
+0t!
+0^"
+0k!
+0l!
+0@!
+0u!
+01
+0Y"
+0v!
+#835000
+1#
+1k!
+1l!
+1@!
+11
+#840000
+0#
+0k!
+0l!
+0@!
+01
+#845000
+1#
+1k!
+1l!
+1@!
+11
+#850000
+1*
+1+
+0#
+1X"
+1t!
+0k!
+0l!
+0@!
+1u!
+01
+1Y"
+1v!
+#855000
+1#
+1k!
+1l!
+1@!
+11
+#860000
+z&
+0*
+0+
+0#
+0X"
+0t!
+z4"
+0k!
+0l!
+0@!
+0u!
+xc#
+01
+0Y"
+xf#
+0v!
+xd#
+#865000
+1#
+1k!
+1l!
+1@!
+11
+xg#
+xe#
+xE!
+xB!
+xt#
+xg"
+xa
+x^
+xi#
+#870000
+0#
+0k!
+0l!
+0@!
+01
+#875000
+1#
+1k!
+1l!
+1@!
+11
+xj#
+xA!
+xb
+#880000
+0#
+0k!
+0l!
+0@!
+01
+#885000
+1#
+1k!
+1l!
+1@!
+11
+#890000
+0#
+0k!
+0l!
+0@!
+01
+#895000
+1#
+1k!
+1l!
+1@!
+11
+#900000
+0#
+0k!
+0l!
+0@!
+01
+#905000
+1#
+1k!
+1l!
+1@!
+11
+#910000
+0#
+0k!
+0l!
+0@!
+01
+#915000
+1#
+1k!
+1l!
+1@!
+11
+#920000
+0#
+0k!
+0l!
+0@!
+01
+#925000
+1#
+1k!
+1l!
+1@!
+11
+#930000
+0#
+0k!
+0l!
+0@!
+01
+#935000
+1#
+1k!
+1l!
+1@!
+11
+#940000
+0#
+0k!
+0l!
+0@!
+01
+#945000
+1#
+1k!
+1l!
+1@!
+11
+#950000
+0#
+0k!
+0l!
+0@!
+01
+#955000
+1#
+1k!
+1l!
+1@!
+11
+#960000
+0#
+0k!
+0l!
+0@!
+01
+#965000
+1#
+1k!
+1l!
+1@!
+11
+#970000
+0#
+0k!
+0l!
+0@!
+01
+#975000
+1#
+1k!
+1l!
+1@!
+11
+#980000
+0#
+0k!
+0l!
+0@!
+01
+#985000
+1#
+1k!
+1l!
+1@!
+11
+#990000
+0#
+0k!
+0l!
+0@!
+01
+#995000
+1#
+1k!
+1l!
+1@!
+11
+#1000000

@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Camilo/Desktop/Diseno1_Final/SistemaChocoIN/simulation/qsim
+vSistemaChocoIN
+Z0 !s110 1476138624
+!i10b 1
+!s100 0:P=7V?[4ULboga<ZBo[X3
+Ifa_>0NdBz6YGO8@=0@hWE1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/estudiante/Documents/ChocolatesQuesoFinal/SistemaChocoIN/simulation/qsim
+w1476138623
+8SistemaChocoIN.vo
+FSistemaChocoIN.vo
+L0 32
+Z3 OV;L;10.4b;61
+r1
+!s85 0
+31
+Z4 !s108 1476138624.000000
+!s107 SistemaChocoIN.vo|
+!s90 -work|work|SistemaChocoIN.vo|
+!i113 1
+Z5 o-work work
+n@sistema@choco@i@n
+vSistemaChocoIN_vlg_vec_tst
+R0
+!i10b 1
+!s100 Cb^1;Q4YgdN64zW4K^:SQ3
+I?HLLczeAb_N3WVX[6zW1I0
+R1
+R2
+w1476138599
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+n@sistema@choco@i@n_vlg_vec_tst

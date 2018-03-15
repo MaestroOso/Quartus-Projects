@@ -1,0 +1,115 @@
+--******************************************************--
+--        PONTIFICIA UNIVERSIDAD JAVERIANA              --
+--        DiseÃ±o de Sistemas Digitales   					  --
+--                                                      --
+-- Nombres  Damian Martinez
+--          Oscar Castelblanco
+--          Meyer Acero
+--******************************************************--                                            --
+-- Fecha    20 de Agosto de 2016
+--                                    --
+--******************************************************--
+
+--Definicion de las bibliotecas
+--Definicion de las bibliotecas
+library IEEE; 
+use IEEE.std_logic_1164.all;
+
+--******************************************************--
+-- DEFINITION DE ENTIDAD                                --
+--******************************************************--
+
+entity SistemaChocoIN is
+port(
+		INICIO: in std_logic;
+		CLK: in std_logic;
+		RESET: in std_logic;
+		--PrecioChocolate: in std_logic;
+		SensorChoco1: in std_logic;
+		SensorChoco2: in std_logic;
+		ConfirmarCaja1: in std_logic;
+		ConfirmarCaja2: in std_logic;
+		TamCajas1: in std_logic_vector(0 to 1);
+		TamCajas2: in std_logic_vector(0 to 1);
+		Seleccionador: in std_logic_vector(0 to 2);
+		FinDia: in std_logic;
+		
+		LedTGB1: out std_logic; 
+		LedTMB1: out std_logic; 
+		LedTPB1: out std_logic;
+		LedTGB2: out std_logic; 
+		LedTMB2: out std_logic; 
+		LedTPB2: out std_logic;
+		DisplayOut: out std_logic_vector(0 to 6); -- Display
+	   CatodoDisplayOut: out std_logic_vector(0 to 2);
+		SalidaPrecioChocolate: out std_logic_vector(0 to 2)
+		
+	  );
+end Entity ChocolatesQueso;              
+
+--Definicion de la arquitectura 
+--******************************************************--
+--DEFINICIÃ“N DE ARQUITECTURA                            --
+--******************************************************--
+
+architecture SistemaChocoINArch of SistemaChocoIN is
+
+component SistemaChocolate is
+port(
+		INICIO: in std_logic;
+		CLK: in std_logic;
+		RESET: in std_logic;
+		EntradaChocolate: in std_logic;
+		SensorChoco1: in std_logic;
+		SensorChoco2: in std_logic;
+		ConfirmarCaja1: in std_logic;
+		ConfirmarCaja2: in std_logic;
+		TamCajas1: in std_logic_vector(0 to 1);
+		TamCajas2: in std_logic_vector(0 to 1);
+		
+		Seleccionador: in std_logic_vector(0 to 2);
+		FinDia: in std_logic;
+		
+		LedTGB1: out std_logic; 
+		LedTMB1: out std_logic; 
+		LedTPB1: out std_logic;
+		LedTGB2: out std_logic; 
+		LedTMB2: out std_logic; 
+		LedTPB2: out std_logic;
+		
+		DisplayOut: out std_logic_vector(0 to 6); -- Display
+	   CatodoDisplayOut: out std_logic_vector(0 to 2);
+		
+		SalidaPrecioChocolate: out std_logic_vector(0 to 11);
+		
+		EstadosSistemaCentral: out std_logic_vector( 0 to 10);
+		EstadosBrazo1: out std_logic_vector(0 to 14);
+		EstadosBrazo2: out std_logic_vector(0 to 14)
+		
+	  );
+end component SistemaChocolate;
+
+component EntradaSerial IS
+PORT ( Reloj, Restablecimiento: IN STD_LOGIC ;
+Empiece : OUT STD_LOGIC  );
+end component EntradaSerial ;
+
+
+--******************************************************--
+--DEFINICIÃ“N DE 
+
+--SEÃ‘ALES DE CONEXIÃ“N                     --
+--******************************************************--
+signal Empiece_SistemaChocolate: std_logic_vector(0 to 11);
+
+
+--Instancias y Conectividad                             --
+--******************************************************--
+
+begin
+
+
+
+EntradaPrecio: EntradaSerial port map(CLK, INICIO,Empiece_SistemaChocolate);
+
+End  SistemaChocoINArch;

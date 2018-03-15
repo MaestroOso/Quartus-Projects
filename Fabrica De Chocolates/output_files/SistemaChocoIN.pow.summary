@@ -1,0 +1,12 @@
+PowerPlay Power Analyzer Status : Successful - Mon Oct 10 17:28:25 2016
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Standard Edition
+Revision Name : SistemaChocoIN
+Top-level Entity Name : SistemaChocoIN
+Family : MAX 10
+Device : 10M08SAE144C8GES
+Power Models : Final
+Total Thermal Power Dissipation : 116.67 mW
+Core Dynamic Thermal Power Dissipation : 0.00 mW
+Core Static Thermal Power Dissipation : 110.61 mW
+I/O Thermal Power Dissipation : 6.06 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

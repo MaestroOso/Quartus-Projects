@@ -1,0 +1,232 @@
+// Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "10/10/2016 17:29:59"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          SistemaChocoIN
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module SistemaChocoIN_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg AntiRebote1;
+reg AntiRebote2;
+reg CLK;
+reg ConfirmarCaja1;
+reg ConfirmarCaja2;
+reg FinDia;
+reg INICIO;
+reg RESET;
+reg [0:2] Seleccionador;
+reg SensorChoco1;
+reg SensorChoco2;
+reg [0:1] TamCajas1;
+reg [0:1] TamCajas2;
+// wires                                               
+wire [0:2] CatodoDisplayOut;
+wire Clkout;
+wire [0:6] DisplayOut;
+wire Entradachoco;
+wire [0:14] EstadosBrazo1;
+wire [0:14] EstadosBrazo2;
+wire [0:10] EstadosSC;
+wire LedFC1;
+wire LedFC2;
+wire LedTGB1;
+wire LedTGB2;
+wire LedTMB1;
+wire LedTMB2;
+wire LedTPB1;
+wire LedTPB2;
+wire [0:11] SalidaPrecioChocolate;
+
+// assign statements (if any)                          
+SistemaChocoIN i1 (
+// port map - connection between master ports and signals/registers   
+	.AntiRebote1(AntiRebote1),
+	.AntiRebote2(AntiRebote2),
+	.CatodoDisplayOut(CatodoDisplayOut),
+	.CLK(CLK),
+	.Clkout(Clkout),
+	.ConfirmarCaja1(ConfirmarCaja1),
+	.ConfirmarCaja2(ConfirmarCaja2),
+	.DisplayOut(DisplayOut),
+	.Entradachoco(Entradachoco),
+	.EstadosBrazo1(EstadosBrazo1),
+	.EstadosBrazo2(EstadosBrazo2),
+	.EstadosSC(EstadosSC),
+	.FinDia(FinDia),
+	.INICIO(INICIO),
+	.LedFC1(LedFC1),
+	.LedFC2(LedFC2),
+	.LedTGB1(LedTGB1),
+	.LedTGB2(LedTGB2),
+	.LedTMB1(LedTMB1),
+	.LedTMB2(LedTMB2),
+	.LedTPB1(LedTPB1),
+	.LedTPB2(LedTPB2),
+	.RESET(RESET),
+	.SalidaPrecioChocolate(SalidaPrecioChocolate),
+	.Seleccionador(Seleccionador),
+	.SensorChoco1(SensorChoco1),
+	.SensorChoco2(SensorChoco2),
+	.TamCajas1(TamCajas1),
+	.TamCajas2(TamCajas2)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// CLK
+always
+begin
+	CLK = 1'b0;
+	CLK = #5000 1'b1;
+	#5000;
+end 
+
+// FinDia
+initial
+begin
+	FinDia = 1'b0;
+	FinDia = #860000 1'bZ;
+end 
+
+// ConfirmarCaja1
+initial
+begin
+	ConfirmarCaja1 = 1'b0;
+	ConfirmarCaja1 = #60000 1'b1;
+	ConfirmarCaja1 = #10000 1'b0;
+	ConfirmarCaja1 = #280000 1'b1;
+	ConfirmarCaja1 = #20000 1'b0;
+	ConfirmarCaja1 = #220000 1'b1;
+	ConfirmarCaja1 = #20000 1'b0;
+end 
+
+// ConfirmarCaja2
+initial
+begin
+	ConfirmarCaja2 = 1'b0;
+	ConfirmarCaja2 = #60000 1'b1;
+	ConfirmarCaja2 = #10000 1'b0;
+	ConfirmarCaja2 = #380000 1'b1;
+	ConfirmarCaja2 = #10000 1'b0;
+	ConfirmarCaja2 = #330000 1'b1;
+	ConfirmarCaja2 = #20000 1'b0;
+end 
+
+// INICIO
+initial
+begin
+	INICIO = 1'b1;
+end 
+
+// RESET
+initial
+begin
+	RESET = 1'b1;
+end 
+// Seleccionador[ 2 ]
+initial
+begin
+	Seleccionador[2] = 1'b0;
+end 
+// Seleccionador[ 1 ]
+initial
+begin
+	Seleccionador[1] = 1'b0;
+end 
+// Seleccionador[ 0 ]
+initial
+begin
+	Seleccionador[0] = 1'b0;
+end 
+
+// SensorChoco1
+initial
+begin
+	SensorChoco1 = 1'b0;
+	SensorChoco1 = #120000 1'b1;
+	# 10000;
+	repeat(13)
+	begin
+		SensorChoco1 = 1'b0;
+		SensorChoco1 = #40000 1'b1;
+		# 10000;
+	end
+	SensorChoco1 = 1'b0;
+	SensorChoco1 = #10000 1'b1;
+	SensorChoco1 = #20000 1'b0;
+	SensorChoco1 = #10000 1'b1;
+	SensorChoco1 = #10000 1'b0;
+	SensorChoco1 = #20000 1'b1;
+	SensorChoco1 = #10000 1'b0;
+end 
+
+// SensorChoco2
+initial
+begin
+	SensorChoco2 = 1'b0;
+	SensorChoco2 = #120000 1'b1;
+	# 10000;
+	repeat(13)
+	begin
+		SensorChoco2 = 1'b0;
+		SensorChoco2 = #40000 1'b1;
+		# 10000;
+	end
+	SensorChoco2 = 1'b0;
+	SensorChoco2 = #10000 1'b1;
+	SensorChoco2 = #20000 1'b0;
+	SensorChoco2 = #10000 1'b1;
+	SensorChoco2 = #10000 1'b0;
+	SensorChoco2 = #20000 1'b1;
+	SensorChoco2 = #10000 1'b0;
+end 
+// TamCajas1[ 1 ]
+initial
+begin
+	TamCajas1[1] = 1'b1;
+end 
+// TamCajas1[ 0 ]
+initial
+begin
+	TamCajas1[0] = 1'b1;
+end 
+// TamCajas2[ 1 ]
+initial
+begin
+	TamCajas2[1] = 1'b0;
+	TamCajas2[1] = #30000 1'b1;
+	TamCajas2[1] = #800000 1'b0;
+end 
+// TamCajas2[ 0 ]
+initial
+begin
+	TamCajas2[0] = 1'b0;
+end 
+endmodule
+

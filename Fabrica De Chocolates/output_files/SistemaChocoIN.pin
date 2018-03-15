@@ -1,0 +1,216 @@
+ -- Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+ -- Your use of Altera Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Altera Program License 
+ -- Subscription Agreement, the Altera Quartus Prime License Agreement,
+ -- the Altera MegaCore Function License Agreement, or other 
+ -- applicable license agreement, including, without limitation, 
+ -- that your use is for the sole purpose of programming logic 
+ -- devices manufactured by Altera and sold by Altera or its 
+ -- authorized distributors.  Please refer to the applicable 
+ -- agreement for further details.
+ -- 
+ -- This is a Quartus Prime output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus Prime input file. This file cannot be used
+ -- to make Quartus Prime pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus Prime help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- DNU           : Do Not Use. This pin MUST NOT be connected.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.2V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ --                  Bank 1A:       2.5V
+ --                  Bank 1B:       2.5V
+ --                  Bank 2:       2.5V
+ --                  Bank 3:       2.5V
+ --                  Bank 4:       2.5V
+ --                  Bank 5:       2.5V
+ --                  Bank 6:       2.5V
+ --                  Bank 7:       2.5V
+ --                  Bank 8:       2.5V
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --                  It can also be used to report unused dedicated pins. The connection
+ --                  on the board for unused dedicated pins depends on whether this will
+ --                  be used in a future design. One example is device migration. When
+ --                  using device migration, refer to the device pin-tables. If it is a
+ --                  GND pin in the pin table or if it will not be used in a future design
+ --                  for another purpose the it MUST be connected to GND. If it is an unused
+ --                  dedicated pin, then it can be connected to a valid signal on the board
+ --                  (low, high, or toggling) if that signal is required for a different
+ --                  revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --                  This pin should be connected to GND. It may also be connected  to a
+ --                  valid signal  on the board  (low, high, or toggling)  if that signal
+ --                  is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin. Connect each pin marked GND* directly to GND
+ --                  or leave it unconnected.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ -- RESERVED_OUTPUT_DRIVEN_HIGH        : Pin is output driven high.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- Pin directions (input, output or bidir) are based on device operating in user mode.
+ ---------------------------------------------------------------------------------
+
+Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Standard Edition
+CHIP  "SistemaChocoIN"  ASSIGNED TO AN: 10M08SAE144C8GES
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+VCC_ONE                      : 1         : power  :                   : 3.0V/3.3V :           :                
+VCCA6                        : 2         : power  :                   : 3.0V    :           :                
+ANAIN1                       : 3         :        :                   :         :           :                
+REFGND                       : 4         :        :                   :         :           :                
+ADC_VREF                     : 5         :        :                   :         :           :                
+EstadosBrazo1[13]            : 6         : output : 2.5 V             :         : 1A        : N              
+EstadosBrazo1[3]             : 7         : output : 2.5 V             :         : 1A        : N              
+EstadosBrazo1[7]             : 8         : output : 2.5 V             :         : 1A        : N              
+VCCIO1A                      : 9         : power  :                   : 2.5V    : 1A        :                
+EstadosBrazo1[11]            : 10        : output : 2.5 V             :         : 1A        : N              
+EstadosBrazo1[8]             : 11        : output : 2.5 V             :         : 1A        : N              
+EstadosBrazo2[11]            : 12        : output : 2.5 V             :         : 1A        : N              
+EstadosBrazo2[6]             : 13        : output : 2.5 V             :         : 1A        : N              
+EstadosBrazo2[13]            : 14        : output : 2.5 V             :         : 1A        : N              
+EstadosBrazo2[1]             : 15        : output : 2.5 V             :         : 1B        : N              
+~ALTERA_TMS~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 16        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
+EstadosBrazo2[14]            : 17        : output : 2.5 V             :         : 1B        : N              
+~ALTERA_TCK~ / RESERVED_INPUT : 18        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
+~ALTERA_TDI~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 19        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
+~ALTERA_TDO~                 : 20        : output : 2.5 V             :         : 1B        : N              
+SalidaPrecioChocolate[0]     : 21        : output : 2.5 V             :         : 1B        : N              
+SalidaPrecioChocolate[1]     : 22        : output : 2.5 V             :         : 1B        : N              
+VCCIO1B                      : 23        : power  :                   : 2.5V    : 1B        :                
+EstadosBrazo2[7]             : 24        : output : 2.5 V             :         : 1B        : N              
+EstadosBrazo2[10]            : 25        : output : 2.5 V             :         : 1B        : N              
+SalidaPrecioChocolate[9]     : 26        : output : 2.5 V             :         : 2         : N              
+CLK                          : 27        : input  : 2.5 V             :         : 2         : Y              
+Entradachoco                 : 28        : output : 2.5 V             :         : 2         : N              
+SalidaPrecioChocolate[3]     : 29        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 30        :        :                   :         : 2         :                
+VCCIO2                       : 31        : power  :                   : 2.5V    : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : 32        :        :                   :         : 2         :                
+SalidaPrecioChocolate[7]     : 33        : output : 2.5 V             :         : 2         : N              
+VCCA2                        : 34        : power  :                   : 3.0V/3.3V :           :                
+VCCA1                        : 35        : power  :                   : 3.0V/3.3V :           :                
+VCC_ONE                      : 36        : power  :                   : 3.0V/3.3V :           :                
+VCC_ONE                      : 37        : power  :                   : 3.0V/3.3V :           :                
+Clkout                       : 38        : output : 2.5 V             :         : 3         : Y              
+SalidaPrecioChocolate[5]     : 39        : output : 2.5 V             :         : 3         : N              
+VCCIO3                       : 40        : power  :                   : 2.5V    : 3         :                
+EstadosBrazo2[12]            : 41        : output : 2.5 V             :         : 3         : N              
+GND                          : 42        : gnd    :                   :         :           :                
+EstadosBrazo2[0]             : 43        : output : 2.5 V             :         : 3         : N              
+SensorChoco2                 : 44        : input  : 2.5 V             :         : 3         : Y              
+EstadosSC[9]                 : 45        : output : 2.5 V             :         : 3         : Y              
+AntiRebote2                  : 46        : input  : 2.5 V             :         : 3         : Y              
+EstadosSC[10]                : 47        : output : 2.5 V             :         : 3         : Y              
+EstadosBrazo2[4]             : 48        : output : 2.5 V             :         : 3         : N              
+VCCIO3                       : 49        : power  :                   : 2.5V    : 3         :                
+EstadosSC[7]                 : 50        : output : 2.5 V             :         : 3         : Y              
+VCC_ONE                      : 51        : power  :                   : 3.0V/3.3V :           :                
+EstadosSC[5]                 : 52        : output : 2.5 V             :         : 3         : Y              
+GND                          : 53        : gnd    :                   :         :           :                
+EstadosBrazo2[5]             : 54        : output : 2.5 V             :         : 3         : N              
+EstadosSC[8]                 : 55        : output : 2.5 V             :         : 3         : Y              
+EstadosSC[6]                 : 56        : output : 2.5 V             :         : 3         : Y              
+EstadosSC[3]                 : 57        : output : 2.5 V             :         : 3         : Y              
+EstadosSC[1]                 : 58        : output : 2.5 V             :         : 3         : Y              
+EstadosSC[4]                 : 59        : output : 2.5 V             :         : 3         : Y              
+EstadosSC[2]                 : 60        : output : 2.5 V             :         : 3         : Y              
+EstadosBrazo2[8]             : 61        : output : 2.5 V             :         : 4         : N              
+EstadosBrazo1[10]            : 62        : output : 2.5 V             :         : 4         : N              
+GND                          : 63        : gnd    :                   :         :           :                
+EstadosBrazo1[0]             : 64        : output : 2.5 V             :         : 4         : N              
+EstadosSC[0]                 : 65        : output : 2.5 V             :         : 4         : N              
+CatodoDisplayOut[2]          : 66        : output : 2.5 V             :         : 4         : Y              
+VCCIO4                       : 67        : power  :                   : 2.5V    : 4         :                
+GND                          : 68        : gnd    :                   :         :           :                
+CatodoDisplayOut[1]          : 69        : output : 2.5 V             :         : 4         : Y              
+CatodoDisplayOut[0]          : 70        : output : 2.5 V             :         : 4         : Y              
+VCCA5                        : 71        : power  :                   : 3.0V    :           :                
+VCC_ONE                      : 72        : power  :                   : 3.0V/3.3V :           :                
+VCC_ONE                      : 73        : power  :                   : 3.0V/3.3V :           :                
+SalidaPrecioChocolate[8]     : 74        : output : 2.5 V             :         : 5         : N              
+DisplayOut[6]                : 75        : output : 2.5 V             :         : 5         : Y              
+DisplayOut[5]                : 76        : output : 2.5 V             :         : 5         : Y              
+DisplayOut[4]                : 77        : output : 2.5 V             :         : 5         : Y              
+SalidaPrecioChocolate[11]    : 78        : output : 2.5 V             :         : 5         : N              
+DisplayOut[3]                : 79        : output : 2.5 V             :         : 5         : Y              
+SalidaPrecioChocolate[6]     : 80        : output : 2.5 V             :         : 5         : N              
+DisplayOut[2]                : 81        : output : 2.5 V             :         : 5         : Y              
+VCCIO5                       : 82        : power  :                   : 2.5V    : 5         :                
+GND                          : 83        : gnd    :                   :         :           :                
+DisplayOut[1]                : 84        : output : 2.5 V             :         : 5         : Y              
+SalidaPrecioChocolate[4]     : 85        : output : 2.5 V             :         : 5         : N              
+DisplayOut[0]                : 86        : output : 2.5 V             :         : 5         : Y              
+SalidaPrecioChocolate[10]    : 87        : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : 88        :        :                   :         : 6         :                
+Seleccionador[2]             : 89        : input  : 2.5 V             :         : 6         : Y              
+EstadosBrazo1[1]             : 90        : output : 2.5 V             :         : 6         : N              
+SalidaPrecioChocolate[2]     : 91        : output : 2.5 V             :         : 6         : N              
+Seleccionador[0]             : 92        : input  : 2.5 V             :         : 6         : Y              
+EstadosBrazo2[2]             : 93        : output : 2.5 V             :         : 6         : N              
+VCCIO6                       : 94        : power  :                   : 2.5V    : 6         :                
+GND                          : 95        : gnd    :                   :         :           :                
+Seleccionador[1]             : 96        : input  : 2.5 V             :         : 6         : Y              
+LedTPB2                      : 97        : output : 2.5 V             :         : 6         : Y              
+EstadosBrazo2[9]             : 98        : output : 2.5 V             :         : 6         : N              
+ConfirmarCaja2               : 99        : input  : 2.5 V             :         : 6         : Y              
+AntiRebote1                  : 100       : input  : 2.5 V             :         : 6         : Y              
+ConfirmarCaja1               : 101       : input  : 2.5 V             :         : 6         : Y              
+SensorChoco1                 : 102       : input  : 2.5 V             :         : 6         : Y              
+VCCIO6                       : 103       : power  :                   : 2.5V    : 6         :                
+GND                          : 104       : gnd    :                   :         :           :                
+EstadosBrazo1[14]            : 105       : output : 2.5 V             :         : 6         : N              
+EstadosBrazo1[9]             : 106       : output : 2.5 V             :         : 6         : N              
+VCCA3                        : 107       : power  :                   : 3.0V/3.3V :           :                
+VCC_ONE                      : 108       : power  :                   : 3.0V/3.3V :           :                
+VCC_ONE                      : 109       : power  :                   : 3.0V/3.3V :           :                
+TamCajas2[0]                 : 110       : input  : 2.5 V             :         : 7         : Y              
+TamCajas1[0]                 : 111       : input  : 2.5 V             :         : 7         : Y              
+EstadosBrazo1[5]             : 112       : output : 2.5 V             :         : 7         : N              
+EstadosBrazo1[2]             : 113       : output : 2.5 V             :         : 7         : N              
+LedFC2                       : 114       : output : 2.5 V             :         : 7         : Y              
+VCC_ONE                      : 115       : power  :                   : 3.0V/3.3V :           :                
+GND                          : 116       : gnd    :                   :         :           :                
+VCCIO7                       : 117       : power  :                   : 2.5V    : 7         :                
+TamCajas2[1]                 : 118       : input  : 2.5 V             :         : 7         : Y              
+TamCajas1[1]                 : 119       : input  : 2.5 V             :         : 7         : Y              
+INICIO                       : 120       : input  : 2.5 V             :         : 8         : Y              
+EstadosBrazo1[12]            : 121       : output : 2.5 V             :         : 8         : N              
+EstadosBrazo1[6]             : 122       : output : 2.5 V             :         : 8         : N              
+LedFC1                       : 123       : output : 2.5 V             :         : 8         : Y              
+RESET                        : 124       : input  : 2.5 V             :         : 8         : Y              
+GND                          : 125       : gnd    :                   :         :           :                
+~ALTERA_CONFIG_SEL~ / RESERVED_INPUT : 126       : input  : 2.5 V             :         : 8         : N              
+FinDia                       : 127       : input  : 2.5 V             :         : 8         : Y              
+VCCIO8                       : 128       : power  :                   : 2.5V    : 8         :                
+~ALTERA_nCONFIG~ / RESERVED_INPUT : 129       : input  : 2.5 V Schmitt Trigger :         : 8         : N              
+EstadosBrazo1[4]             : 130       : output : 2.5 V             :         : 8         : N              
+EstadosBrazo2[3]             : 131       : output : 2.5 V             :         : 8         : N              
+LedTGB1                      : 132       : output : 2.5 V             :         : 8         : Y              
+GND                          : 133       : gnd    :                   :         :           :                
+LedTGB2                      : 134       : output : 2.5 V             :         : 8         : Y              
+LedTMB1                      : 135       : output : 2.5 V             :         : 8         : Y              
+~ALTERA_nSTATUS~ / RESERVED_INPUT : 136       : input  : 2.5 V Schmitt Trigger :         : 8         : N              
+GND                          : 137       : gnd    :                   :         :           :                
+~ALTERA_CONF_DONE~ / RESERVED_INPUT : 138       : input  : 2.5 V Schmitt Trigger :         : 8         : N              
+VCCIO8                       : 139       : power  :                   : 2.5V    : 8         :                
+LedTMB2                      : 140       : output : 2.5 V             :         : 8         : Y              
+LedTPB1                      : 141       : output : 2.5 V             :         : 8         : Y              
+GND                          : 142       : gnd    :                   :         :           :                
+VCCA4                        : 143       : power  :                   : 3.0V/3.3V :           :                
+VCC_ONE                      : 144       : power  :                   : 3.0V/3.3V :           :                
